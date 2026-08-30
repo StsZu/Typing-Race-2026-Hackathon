@@ -1,0 +1,12 @@
+* text=auto eol=lf
+
+*.md text diff=markdown
+*.html text diff=html
+*.css text diff=css
+*.js text diff=javascript
+*.json text
+*.yml text
+
+*.dic linguist-vendored
+*.aff linguist-vendored
+dictionaries/** -text linguist-vendored
