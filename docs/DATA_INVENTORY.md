@@ -8,16 +8,16 @@
 
 | Мова | Каталог | Тип | Файлів | Ліцензія або статус |
 |---|---|---|---:|---|
-| EN | dictionaries/en/wordlists/frequencywords-2018/ | частотний список | 3 | MIT |
-| EN | dictionaries/en/wordlists/hunspell-en/ | Hunspell | 5 | див. LICENSE |
-| EN | dictionaries/en/wordlists/dwyl-english-words/ | алфавітний список | 2 | Unlicense |
-| EN | dictionaries/en/training/typing-race-2026/ | навчальні банки | 28 | не заявлена |
-| EN | dictionaries/en/training/tt-exercises/ | вправи | 1 066 | не заявлена |
-| UK | dictionaries/uk/wordlists/frequencywords-2018/ | частотний список | 3 | MIT |
-| UK | dictionaries/uk/wordlists/hunspell-uk/ | Hunspell | 5 | GPL-3.0 та умови пакета |
-| UK | dictionaries/uk/training/typing-race-2026/ | навчальні банки | 28 | не заявлена |
-| UK | dictionaries/uk/training/tt-exercises/ | вправи | 713 | не заявлена |
-| UK | dictionaries/uk/training/radio-dictations/ | навчальні тексти | 16 | потребує перевірки |
+| EN | dictionaries/english/wordlists/frequencywords-2018/ | частотний список | 3 | MIT |
+| EN | dictionaries/english/wordlists/hunspell-en/ | Hunspell | 5 | див. LICENSE |
+| EN | dictionaries/english/wordlists/dwyl-english-words/ | алфавітний список | 2 | Unlicense |
+| EN | dictionaries/english/academy/typing-race-2026/ | Академія | 2 | не заявлена |
+| EN | dictionaries/english/tutor/ | курси й вправи | 1 069 | не заявлена |
+| UK | dictionaries/ukrainian/wordlists/frequencywords-2018/ | частотний список | 3 | MIT |
+| UK | dictionaries/ukrainian/wordlists/hunspell-uk/ | Hunspell | 5 | GPL-3.0 та умови пакета |
+| UK | dictionaries/ukrainian/academy/typing-race-2026/ | Академія | 2 | не заявлена |
+| UK | dictionaries/ukrainian/tutor/ | курси й вправи | 716 | не заявлена |
+| UK | dictionaries/ukrainian/texts/radio-dictations/ | навчальні тексти | 16 | потребує перевірки |
 
 ## Обсяг основних списків
 
@@ -58,16 +58,16 @@
 | TECHNICAL_SPECIFICATION.md | docs/TECHNICAL_SPECIFICATION.md |
 | SOURCES.md | docs/SOURCES.md |
 | dictionaries/TASK/ | docs/tasks/ |
-| dictionaries/en/frequencywords-2018/ | dictionaries/en/wordlists/frequencywords-2018/ |
-| dictionaries/en/hunspell-en/ | dictionaries/en/wordlists/hunspell-en/ |
-| dictionaries/en/dwyl-english-words/ | dictionaries/en/wordlists/dwyl-english-words/ |
-| dictionaries/en/typing-race-2026/ | dictionaries/en/training/typing-race-2026/ |
-| dictionaries/tt-exercises-en/ | dictionaries/en/training/tt-exercises/ |
-| dictionaries/uk/frequencywords-2018/ | dictionaries/uk/wordlists/frequencywords-2018/ |
-| dictionaries/uk/hunspell-uk/ | dictionaries/uk/wordlists/hunspell-uk/ |
-| dictionaries/uk/typing-race-2026/ | dictionaries/uk/training/typing-race-2026/ |
-| dictionaries/tt-exercises/ | dictionaries/uk/training/tt-exercises/ |
-| dictionaries/Radiodyktanty_Natsionalnoi_Yednosti/ | dictionaries/uk/training/radio-dictations/ |
+| dictionaries/en/frequencywords-2018/ | dictionaries/english/wordlists/frequencywords-2018/ |
+| dictionaries/en/hunspell-en/ | dictionaries/english/wordlists/hunspell-en/ |
+| dictionaries/en/dwyl-english-words/ | dictionaries/english/wordlists/dwyl-english-words/ |
+| dictionaries/en/typing-race-2026/ | dictionaries/english/academy/, tutor/, knowledge/ і reference/ |
+| dictionaries/tt-exercises-en/ | dictionaries/english/tutor/tt-exercises/ |
+| dictionaries/uk/frequencywords-2018/ | dictionaries/ukrainian/wordlists/frequencywords-2018/ |
+| dictionaries/uk/hunspell-uk/ | dictionaries/ukrainian/wordlists/hunspell-uk/ |
+| dictionaries/uk/typing-race-2026/ | dictionaries/ukrainian/academy/, tutor/, knowledge/, texts/ і reference/ |
+| dictionaries/tt-exercises/ | dictionaries/ukrainian/tutor/tt-exercises/ |
+| dictionaries/Radiodyktanty_Natsionalnoi_Yednosti/ | dictionaries/ukrainian/texts/radio-dictations/ |
 | усі .DS_Store | _local/macos-metadata/ |
 
 ## Цілісність

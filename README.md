@@ -6,7 +6,7 @@
 
 Суперприз: 10 000 грн та представлення найкращого рішення в підрозділах.
 
-[Відкрити сторінку хакатону](index.html) · [Прочитати технічне завдання](docs/TECHNICAL_SPECIFICATION.md) · [Переглянути словники](dictionaries/README.md)
+[Відкрити сторінку хакатону](index.html) · [Прочитати технічне завдання](docs/TECHNICAL_SPECIFICATION.md) · [Завантажити словники](dictionaries/index.html)
 
 ## Що треба створити
 
@@ -26,12 +26,9 @@
 ├── assets/                 # локальні CSS і JavaScript
 ├── docs/                   # ТЗ, правила, джерела та інвентар
 ├── dictionaries/
-│   ├── en/
-│   │   ├── wordlists/      # англійські словники
-│   │   └── training/       # англійські навчальні матеріали
-│   └── uk/
-│       ├── wordlists/      # українські словники
-│       └── training/       # українські навчальні матеріали
+│   ├── english/            # англійські словники та вправи
+│   ├── ukrainian/          # українські словники та вправи
+│   └── index.html          # каталог готових ZIP-пакетів
 └── scripts/                # перевірка даних і посилань
 ~~~
 
@@ -46,6 +43,8 @@ python3 -m http.server 8000
 Перевірки репозиторію:
 
 ~~~bash
+./scripts/build-dictionary-downloads.sh
+./scripts/update-checksums.sh
 ./scripts/verify-data.sh
 node scripts/check-links.mjs
 node scripts/check-repository.mjs
@@ -55,12 +54,12 @@ node scripts/check-repository.mjs
 
 Правила подання роботи: [docs/PARTICIPATION.md](docs/PARTICIPATION.md).
 
-Перед стартом організатор заповнює:
+- старт: 1 вересня 2026 року;
+- подання робіт: 29 вересня 2026 року;
+- демонстрація: 6 жовтня 2026 року;
+- контакт для запитань: [sts.zubar@gmail.com](mailto:sts.zubar@gmail.com).
 
-- строк подання робіт: [дата і час];
-- склад журі: [ПІБ та ролі];
-- форма або канал подання: [посилання];
-- контакт для запитань: [контакт].
+Склад журі та канал подання буде оголошено окремо.
 
 ## Дані та ліцензії
 

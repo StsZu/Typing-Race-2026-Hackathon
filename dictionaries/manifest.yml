@@ -6,111 +6,143 @@ datasets:
   - id: frequencywords-en
     language: en
     kind: frequency-list
-    path: en/wordlists/frequencywords-2018
+    path: english/wordlists/frequencywords-2018
     source: https://github.com/hermitdave/FrequencyWords
     revision: 525f9b560de45753a5ea01069454e72e9aa541c6
     license: MIT
-    license_file: en/wordlists/frequencywords-2018/LICENSE
+    license_file: english/wordlists/frequencywords-2018/LICENSE
     publication: PUBLIC
     files:
-      - path: en/wordlists/frequencywords-2018/en_50k.txt
+      - path: english/wordlists/frequencywords-2018/en_50k.txt
         records: 50000
-      - path: en/wordlists/frequencywords-2018/en_full.txt
+      - path: english/wordlists/frequencywords-2018/en_full.txt
         records: 1656996
 
   - id: dwyl-english-words
     language: en
     kind: alphabetical-word-list
-    path: en/wordlists/dwyl-english-words
+    path: english/wordlists/dwyl-english-words
     source: https://github.com/dwyl/english-words
     revision: 20f5cc9b3f0ccc8ce45d814c532b7c2031bba31c
     license: Unlicense
-    license_file: en/wordlists/dwyl-english-words/LICENSE
+    license_file: english/wordlists/dwyl-english-words/LICENSE
     publication: PUBLIC
     records: 370105
 
   - id: hunspell-en
     language: en
     kind: hunspell
-    path: en/wordlists/hunspell-en
+    path: english/wordlists/hunspell-en
     source: https://github.com/wooorm/dictionaries
     revision: 8cfea406b505e4d7df52d5a19bce525df98c54ab
     license: "MIT AND BSD-compatible; see license files"
-    license_file: en/wordlists/hunspell-en/LICENSE
+    license_file: english/wordlists/hunspell-en/LICENSE
     publication: PUBLIC
     records_declared: 49568
 
   - id: typing-race-2026-en
     language: en
     kind: training-content
-    path: en/training/typing-race-2026
+    paths:
+      - english/academy/typing-race-2026
+      - english/tutor/typing-race-2026
+      - english/knowledge/typing-race-2026
+      - english/reference/interface/typing-race-2026
     source: https://github.com/StsZu/Typing-race-2026
     revision: 4a238aa38014073ed96dde7a32c1a101456136b4
     license: NOT_DECLARED
     publication: REVIEW_REQUIRED
-    files: 28
+    source_files: 28
+    derived_file: english/academy/typing-race-2026/course.json
+    academy_modules: 20
+    academy_exercises: 83
 
   - id: tt-exercises-en
     language: en
     kind: training-exercises
-    path: en/training/tt-exercises
+    path: english/tutor/tt-exercises
     source: TT
     license: NOT_DECLARED
     publication: REVIEW_REQUIRED
-    files: 1066
+    exercises: 1066
+    derived_file: english/tutor/tt-exercises/all-exercises.json
 
   - id: frequencywords-uk
     language: uk
     kind: frequency-list
-    path: uk/wordlists/frequencywords-2018
+    path: ukrainian/wordlists/frequencywords-2018
     source: https://github.com/hermitdave/FrequencyWords
     revision: 525f9b560de45753a5ea01069454e72e9aa541c6
     license: MIT
-    license_file: uk/wordlists/frequencywords-2018/LICENSE
+    license_file: ukrainian/wordlists/frequencywords-2018/LICENSE
     publication: PUBLIC
     files:
-      - path: uk/wordlists/frequencywords-2018/uk_50k.txt
+      - path: ukrainian/wordlists/frequencywords-2018/uk_50k.txt
         records: 50000
-      - path: uk/wordlists/frequencywords-2018/uk_full.txt
+      - path: ukrainian/wordlists/frequencywords-2018/uk_full.txt
         records: 290325
 
   - id: hunspell-uk
     language: uk
     kind: hunspell
-    path: uk/wordlists/hunspell-uk
+    path: ukrainian/wordlists/hunspell-uk
     source: https://github.com/brown-uk/dict_uk
     package: https://github.com/wooorm/dictionaries
     revision: 8cfea406b505e4d7df52d5a19bce525df98c54ab
     license: GPL-3.0
-    license_file: uk/wordlists/hunspell-uk/LICENSE
+    license_file: ukrainian/wordlists/hunspell-uk/LICENSE
     publication: PUBLIC
     records_declared: 336673
 
   - id: typing-race-2026-uk
     language: uk
     kind: training-content
-    path: uk/training/typing-race-2026
+    paths:
+      - ukrainian/academy/typing-race-2026
+      - ukrainian/tutor/typing-race-2026
+      - ukrainian/knowledge/typing-race-2026
+      - ukrainian/texts/personal-exercises
+      - ukrainian/reference/interface/typing-race-2026
     source: https://github.com/StsZu/Typing-race-2026
     revision: 4a238aa38014073ed96dde7a32c1a101456136b4
     license: NOT_DECLARED
     publication: REVIEW_REQUIRED
-    files: 28
+    source_files: 28
+    derived_file: ukrainian/academy/typing-race-2026/course.json
+    academy_modules: 14
+    academy_exercises: 63
 
   - id: tt-exercises-uk
     language: uk
     kind: training-exercises
-    path: uk/training/tt-exercises
+    path: ukrainian/tutor/tt-exercises
     source: TT
     license: NOT_DECLARED
     publication: REVIEW_REQUIRED
-    files: 713
+    exercises: 713
+    derived_file: ukrainian/tutor/tt-exercises/all-exercises.json
 
   - id: radio-dictations-uk
     language: uk
     kind: training-texts
-    path: uk/training/radio-dictations
+    path: ukrainian/texts/radio-dictations
     source: "Радіодиктанти національної єдності"
     license: NOT_VERIFIED
     publication: REVIEW_REQUIRED
     files: 16
     years: "2010-2025"
+
+download_packages:
+  english:
+    all: english/downloads/english-all.zip
+    wordlists: english/downloads/english-wordlists.zip
+    academy: english/downloads/english-academy.zip
+    tutor: english/downloads/english-tutor.zip
+    knowledge: english/downloads/english-knowledge.zip
+  ukrainian:
+    all: ukrainian/downloads/ukrainian-all.zip
+    wordlists: ukrainian/downloads/ukrainian-wordlists.zip
+    academy: ukrainian/downloads/ukrainian-academy.zip
+    tutor: ukrainian/downloads/ukrainian-tutor.zip
+    knowledge: ukrainian/downloads/ukrainian-knowledge.zip
+    texts: ukrainian/downloads/ukrainian-texts.zip

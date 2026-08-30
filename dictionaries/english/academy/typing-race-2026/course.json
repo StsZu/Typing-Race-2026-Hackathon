@@ -1,0 +1,777 @@
+{
+  "id": "eng",
+  "name": "English",
+  "modules": [
+    {
+      "id": "eng-00",
+      "title": "Elementary",
+      "exercises": [
+        {
+          "id": "e1",
+          "title": "Home Row: Basic Positions",
+          "content": "a s d f j k l ; a s d f j k l ; f d s a ; l k j a f d s j ; l k",
+          "level": 1,
+          "focus": "home row key positioning, muscle memory",
+          "targetChars": "asdfghjkl"
+        },
+        {
+          "id": "e2",
+          "title": "Home Row: Rhythms",
+          "content": "asdf jkl; asdf jkl; asdf jkl; jkl; asdf",
+          "level": 1,
+          "focus": "home row rhythm and alternating-hand drills",
+          "targetChars": "asdfghjkl"
+        },
+        {
+          "id": "e68",
+          "title": "Finger Pairs",
+          "content": "fj dk sl a; fj dk sl a; a; sl dk fj",
+          "level": 1,
+          "focus": "finger pair isolation on home row",
+          "targetChars": "fjdksla;"
+        },
+        {
+          "id": "e3",
+          "title": "Common Short Words",
+          "content": "sad fad lad ask fall flask dash jail lake fall ask dad sad",
+          "level": 2,
+          "focus": "common short words from home row keys",
+          "targetChars": "sadfl"
+        },
+        {
+          "id": "e69",
+          "title": "Top Row Reach",
+          "content": "q w e r t y u i o p e r t y u i o",
+          "level": 2,
+          "focus": "top row finger reach without words",
+          "targetChars": "qwertyuiop"
+        },
+        {
+          "id": "e70",
+          "title": "Bottom Row Reach",
+          "content": "z x c v b n m v b n m z x c v b n",
+          "level": 2,
+          "focus": "bottom row finger reach without words",
+          "targetChars": "zxcvbnm"
+        }
+      ]
+    },
+    {
+      "id": "eng-02",
+      "title": "Full Keyboard",
+      "exercises": [
+        {
+          "id": "e4",
+          "title": "Top Row: Finger Reach",
+          "content": "q w e r t y u i o p q a w s e d r f u j i k o l p ;",
+          "level": 2,
+          "focus": "top row key reach training",
+          "targetChars": "qwertyuiop"
+        },
+        {
+          "id": "e6",
+          "title": "Bottom Row Practice",
+          "content": "z x c v b n m a z s x d c f v j n k m l ;",
+          "level": 2,
+          "focus": "bottom row key reach training",
+          "targetChars": "zxcvbnm"
+        },
+        {
+          "id": "e5",
+          "title": "Top Row: Common Words",
+          "content": "tree rope wire type your power quiet write port",
+          "level": 3,
+          "focus": "top row words with common patterns",
+          "targetChars": "rteyow"
+        }
+      ]
+    },
+    {
+      "id": "eng-03",
+      "title": "Words & Sentences",
+      "exercises": [
+        {
+          "id": "e8",
+          "title": "Mixed Vocabulary",
+          "content": "name zone box music calm next move bank value",
+          "level": 3,
+          "focus": "mixed keyboard vocabulary building",
+          "targetChars": ""
+        },
+        {
+          "id": "e7",
+          "title": "Basic Sentence Structure",
+          "content": "you are typing write more often keep your fingers home",
+          "level": 3,
+          "focus": "basic sentence typing flow",
+          "targetChars": ""
+        },
+        {
+          "id": "e9",
+          "title": "Code & Personal Intro",
+          "content": "my name is stanislav coding makes brain calm never look at keyboard",
+          "level": 3,
+          "focus": "personal text with code-style phrases",
+          "targetChars": ""
+        },
+        {
+          "id": "e11",
+          "title": "Numbers & Email Format",
+          "content": "123 456 789 0 10 20 30 40 email test at mail dot com",
+          "level": 3,
+          "focus": "number row and email format typing",
+          "targetChars": "1234567890"
+        }
+      ]
+    },
+    {
+      "id": "eng-04",
+      "title": "Speed Challenge",
+      "exercises": [
+        {
+          "id": "e10",
+          "title": "Accuracy vs Speed",
+          "content": "touch typing is a useful skill accuracy is more important than speed slow practice builds fast typing",
+          "level": 4,
+          "focus": "speed and accuracy building with long sentences",
+          "targetChars": ""
+        }
+      ]
+    },
+    {
+      "id": "eng-05",
+      "title": "Clusters",
+      "exercises": [
+        {
+          "id": "e12",
+          "title": "str/ght Clusters",
+          "content": "straight strength stretch strange street struggle structure strategy strictly stream strike string strong brought thought fought caught daughter naughty slaughter",
+          "level": 3,
+          "focus": "consonant clusters str- and -ght",
+          "targetChars": "strght"
+        },
+        {
+          "id": "e13",
+          "title": "tch/tion/sion",
+          "content": "kitchen scratch watching stretching catching match patch thatch station nation motion question section mention version tension decision collision explosion permission",
+          "level": 3,
+          "focus": "clusters tch, -tion, -sion endings",
+          "targetChars": "tchion"
+        },
+        {
+          "id": "e14",
+          "title": "thr/wh/wr",
+          "content": "through throw throat throne thrash thrive three threat whale where white while whisper whether whole whom write wrong wrap wrist wrath wreck wrestle wrinkle",
+          "level": 3,
+          "focus": "digraph clusters thr-, wh-, wr-",
+          "targetChars": "thrwh"
+        },
+        {
+          "id": "e15",
+          "title": "sch/scr/spr/squ",
+          "content": "school schedule scheme scholar scratch screen script scroll scream scrub spring spread sprint spray sprinkle sprout splash split splendid squash squeeze squid squint",
+          "level": 4,
+          "focus": "triple clusters sch-, scr-, spr-, squ-",
+          "targetChars": "schrsq"
+        }
+      ]
+    },
+    {
+      "id": "eng-06",
+      "title": "Rhythm",
+      "exercises": [
+        {
+          "id": "e16",
+          "title": "Alternating Short Words",
+          "content": "the and the and they are they are the and they are the and they are for but for but not for but not yet for but not yet the and they are for but not yet now the and now they are now",
+          "level": 2,
+          "focus": "rhythm drill with alternating common words",
+          "targetChars": ""
+        },
+        {
+          "id": "e17",
+          "title": "Hand Balance",
+          "content": "palm palm fist fist palm palm fist fist hand wrist hand wrist left right left right type type left right left right type fast slow fast slow fast fast slow slow fast type slow type fast type",
+          "level": 2,
+          "focus": "hand alternation balance and flow",
+          "targetChars": ""
+        }
+      ]
+    },
+    {
+      "id": "eng-07",
+      "title": "Weak Letters",
+      "exercises": [
+        {
+          "id": "e18",
+          "title": "q/x/z Words",
+          "content": "quiz quick queen quiet quote quake quality quantum extra exact exile exotic oxygen tuxedo pixel zero zone fizz buzz breeze freeze zigzag puzzle",
+          "level": 3,
+          "focus": "rare letters q, x, z in various positions",
+          "targetChars": "qxz"
+        },
+        {
+          "id": "e19",
+          "title": "j/k Focus",
+          "content": "jacket jungle judge juice major inject object project reject kayak blanket basket bracket pocket rocket socket ticket knack joke baker maker shaker spoken broken taken awoken",
+          "level": 3,
+          "focus": "letters j and k in various positions",
+          "targetChars": "jk"
+        },
+        {
+          "id": "e20",
+          "title": "Vowel-Start Words",
+          "content": "abandon about above absorb abuse accept account achieve across elephant electric element eleven email embrace emerge emotion island isolate issue itself ivory idea identity imagine ignore",
+          "level": 3,
+          "focus": "words starting with vowels, left-hand start",
+          "targetChars": "aeiou"
+        }
+      ]
+    },
+    {
+      "id": "eng-08",
+      "title": "Doubles & Caps",
+      "exercises": [
+        {
+          "id": "e21",
+          "title": "Double Letters",
+          "content": "balloon bassoon bittersweet broccoli cappuccino coffee committee corridor daffodil dossier fission giraffe goddess gutter happiness harness jazz kennel assess announce appease affair",
+          "level": 3,
+          "focus": "words with double letters ll ss ff tt pp rr cc nn",
+          "targetChars": ""
+        },
+        {
+          "id": "e22",
+          "title": "Doubles + Commas",
+          "content": "rabbit, parrot, kitten, puppy, mammal, buffalo, hippo, raccoon, squirrel, grasshopper, jellyfish, butterfly, cattle, llama, gorilla, cheetah, mammoth, bull, bass, trout, herring, cuttlefish, starfish",
+          "level": 3,
+          "focus": "double letters with comma-separated lists",
+          "targetChars": ","
+        },
+        {
+          "id": "e23",
+          "title": "Shift Drill: CamelCase",
+          "content": "JavaScript TypeScript McDonald iPhone GitHub YouTube LinkedIn WiFi PowerPoint PlayStation FedEx PayPal TikTok UNESCO NASA FBI CIA HTML CSS JSON API SDK MVP CEO CFO",
+          "level": 4,
+          "focus": "Shift key workout with CamelCase and acronyms",
+          "targetChars": ""
+        }
+      ]
+    },
+    {
+      "id": "eng-09",
+      "title": "Punctuation & Numbers",
+      "exercises": [
+        {
+          "id": "e24",
+          "title": "Hyphens",
+          "content": "well-known self-made old-fashioned up-to-date one-on-one mother-in-law brother-in-law day-to-day. Back-to-back face-to-face. Full-time part-time. Hand-to-hand. Twenty-one thirty-three forty-five sixty-seven eighty-nine",
+          "level": 3,
+          "focus": "hyphenated compound words",
+          "targetChars": "-"
+        },
+        {
+          "id": "e25",
+          "title": "Brackets & Symbols",
+          "content": "(), ( ), (), () - , () - (), )( - )(, (()) (()) \"hello\" 'world' \"yes\" 'no' (\"maybe\") ['array'] {key: value}, {name: \"test\"}, [1, 2, 3], (a + b)",
+          "level": 4,
+          "focus": "parentheses, brackets, quotes, symbols",
+          "targetChars": "()[]{}\"'"
+        },
+        {
+          "id": "e26",
+          "title": "Numbers + Words",
+          "content": "5 cats 6 dogs 65 raccoons 56 hippos 565 hyenas 465 sirens 645 sheep 656 horses 456 perch 965 swine 12 apples 34 oranges 78 bananas 90 lemons 123 grapes",
+          "level": 3,
+          "focus": "number row mixed with common nouns",
+          "targetChars": "1234567890"
+        },
+        {
+          "id": "e27",
+          "title": "Silent Letters",
+          "content": "knight knowledge kneel knob knock psalm psychology pterodactyl pneumonia debt subtle doubt lamb comb climb receipt island listen castle whistle mortgage muscle Wednesday February",
+          "level": 4,
+          "focus": "tricky English spelling with silent letters",
+          "targetChars": "kpbgw"
+        }
+      ]
+    },
+    {
+      "id": "eng-10",
+      "title": "Home-row Rolls",
+      "exercises": [
+        {
+          "id": "e28",
+          "title": "as/sa/ask — left pinky+ring",
+          "content": "as sa as sa ask task mask flask bask cask ask task mask flask",
+          "level": 2,
+          "focus": "left pinky + ring finger rolls on a/s",
+          "targetChars": "as"
+        },
+        {
+          "id": "e29",
+          "title": "df/fd — left mid+index",
+          "content": "df fd dfd fdf fade deaf faded deface drafted drifted fidget",
+          "level": 2,
+          "focus": "left middle + index reverse roll d/f",
+          "targetChars": "df"
+        },
+        {
+          "id": "e30",
+          "title": "jk/kj/; — right home center",
+          "content": "jk kj jk kj jkl lkj j;k k;j jk; ;kj jkl; ;lkj",
+          "level": 2,
+          "focus": "right hand j/k/l/; rolls for code and CLI",
+          "targetChars": "jkl;"
+        },
+        {
+          "id": "e31",
+          "title": "kl/lk — right mid+ring",
+          "content": "kl lk klk lkl milk silk bulk sulk chalk stalk walk talk",
+          "level": 2,
+          "focus": "right middle + ring reverse roll k/l",
+          "targetChars": "kl"
+        }
+      ]
+    },
+    {
+      "id": "eng-11",
+      "title": "Alternation Rhythm",
+      "exercises": [
+        {
+          "id": "e32",
+          "title": "th/he/ther — English rhythm",
+          "content": "the there then these those other rather mother weather whether",
+          "level": 3,
+          "focus": "classic English bigrams th/he with hand alternation",
+          "targetChars": "the"
+        },
+        {
+          "id": "e33",
+          "title": "in/ng/ing — endings",
+          "content": "in ing sing ring bring thing string typing reading writing",
+          "level": 3,
+          "focus": "-ing ending pattern and right-hand transition to g",
+          "targetChars": "ing"
+        },
+        {
+          "id": "e34",
+          "title": "re/er — reverse bigram",
+          "content": "re er red read real rare error never render return reverse",
+          "level": 3,
+          "focus": "re and er reverse bigrams, rhythm stalling fix",
+          "targetChars": "rer"
+        },
+        {
+          "id": "e35",
+          "title": "ou/ow/you — right upper",
+          "content": "out our you your young house sound around power flower",
+          "level": 3,
+          "focus": "right hand upper row o/u/y/w transitions",
+          "targetChars": "ouyw"
+        }
+      ]
+    },
+    {
+      "id": "eng-12",
+      "title": "Vertical Jumps",
+      "exercises": [
+        {
+          "id": "e36",
+          "title": "q/a/z — left pinky column",
+          "content": "qa aq az za qaz zaq quiz equal zebra quartz plaza",
+          "level": 3,
+          "focus": "left pinky vertical: top/home/bottom row",
+          "targetChars": "qaz"
+        },
+        {
+          "id": "e37",
+          "title": "w/s/x — left ring column",
+          "content": "ws sw sx xs wsx xsw was saw wax waxes swan sweat switch",
+          "level": 3,
+          "focus": "left ring finger vertical axis stability",
+          "targetChars": "wsx"
+        },
+        {
+          "id": "e38",
+          "title": "e/d/c — left middle column",
+          "content": "ed de ec ce dc cd decide decade cedar exceed edited needed",
+          "level": 3,
+          "focus": "left middle finger vertical — critical bottleneck",
+          "targetChars": "edc"
+        },
+        {
+          "id": "e39",
+          "title": "i/k/, + o/l/. — right verticals",
+          "content": "ik ki i, ,i k, ,k ol lo o. .o look local kilo skill milk",
+          "level": 3,
+          "focus": "right middle and ring verticals with punctuation",
+          "targetChars": "ikol,."
+        }
+      ]
+    },
+    {
+      "id": "eng-13",
+      "title": "Same-finger Friction",
+      "exercises": [
+        {
+          "id": "e40",
+          "title": "un/nu — right index overload",
+          "content": "un nu under unless unit union unusual unused nuance annual",
+          "level": 3,
+          "focus": "right index u/n same-finger micro-pause fix",
+          "targetChars": "un"
+        },
+        {
+          "id": "e41",
+          "title": "fr/rf/fv/vf — left index",
+          "content": "fr rf fv vf fry from frame fresh craft draft drift verify",
+          "level": 3,
+          "focus": "left index r/f/v area movements",
+          "targetChars": "frv"
+        },
+        {
+          "id": "e42",
+          "title": "ol/lo — right ring reverse",
+          "content": "ol lo old only also color follow hollow local slowly colony",
+          "level": 3,
+          "focus": "right ring o/l reverse in common words",
+          "targetChars": "ol"
+        },
+        {
+          "id": "e43",
+          "title": "my/ym — right index cross-row",
+          "content": "my ym my ym symbol rhythm system myself mystery dynamic",
+          "level": 3,
+          "focus": "right index m/y cross-row toxic pattern",
+          "targetChars": "my"
+        }
+      ]
+    },
+    {
+      "id": "eng-14",
+      "title": "Production Patterns",
+      "exercises": [
+        {
+          "id": "e44",
+          "title": "-ed/-ing switching",
+          "content": "tested testing coded coding moved moving planned planning started starting",
+          "level": 3,
+          "focus": "morphological ending switches in real text",
+          "targetChars": "eding"
+        },
+        {
+          "id": "e45",
+          "title": "n't/'re/'ll — contractions",
+          "content": "don't can't won't I'm you're we're they'll she'll it's that's",
+          "level": 4,
+          "focus": "apostrophe contractions drill",
+          "targetChars": "'"
+        },
+        {
+          "id": "e46",
+          "title": "Comma/period rhythm",
+          "content": "yes, no. now, later. first, second. clear, fast. slow, accurate.",
+          "level": 3,
+          "focus": "word → comma/period → space → word cycle",
+          "targetChars": ",."
+        },
+        {
+          "id": "e47",
+          "title": "Shift + quotes",
+          "content": "\"Yes,\" Anna said. \"No,\" Omar replied. \"Ready?\" \"Almost.\"",
+          "level": 4,
+          "focus": "production typing: Shift, quotes, commas, periods",
+          "targetChars": "\",.?"
+        }
+      ]
+    },
+    {
+      "id": "eng-15",
+      "title": "Straight Lines",
+      "exercises": [
+        {
+          "id": "e48",
+          "title": "Left → Right",
+          "content": "asdf jkl; asdf jkl; asdf jkl; asdf jkl; asdf jkl; asdf jkl; asdf jkl;",
+          "level": 1,
+          "focus": "straight left-to-right home row sequence",
+          "targetChars": "asdfjkl;"
+        },
+        {
+          "id": "e49",
+          "title": "Right → Left",
+          "content": ";lkj fdsa ;lkj fdsa ;lkj fdsa ;lkj fdsa ;lkj fdsa ;lkj fdsa ;lkj fdsa",
+          "level": 1,
+          "focus": "reverse right-to-left home row sequence",
+          "targetChars": ";lkjfdsa"
+        },
+        {
+          "id": "e50",
+          "title": "Forward/Back",
+          "content": "asdf fdsa jkl; ;lkj asdf fdsa jkl; ;lkj asdf fdsa jkl; ;lkj",
+          "level": 2,
+          "focus": "left forward/back + right forward/back",
+          "targetChars": "asdfjkl;"
+        },
+        {
+          "id": "e51",
+          "title": "Full Wave",
+          "content": "asdf jkl; ;lkj fdsa asdf jkl; ;lkj fdsa asdf jkl; ;lkj fdsa",
+          "level": 2,
+          "focus": "full wave pattern across home row",
+          "targetChars": "asdfjkl;"
+        }
+      ]
+    },
+    {
+      "id": "eng-16",
+      "title": "Mirror Patterns",
+      "exercises": [
+        {
+          "id": "e52",
+          "title": "Outside → Inside",
+          "content": "a; sl dk fj a; sl dk fj a; sl dk fj a; sl dk fj a; sl dk fj",
+          "level": 2,
+          "focus": "mirror movement from pinkies inward",
+          "targetChars": "a;sldk fj"
+        },
+        {
+          "id": "e53",
+          "title": "Inside → Outside",
+          "content": "fj dk sl a; fj dk sl a; fj dk sl a; fj dk sl a; fj dk sl a;",
+          "level": 2,
+          "focus": "mirror movement from index fingers outward",
+          "targetChars": "fjdksla;"
+        },
+        {
+          "id": "e54",
+          "title": "Symmetric Pairs",
+          "content": "a; fj sl dk a; fj sl dk a; fj sl dk a; fj sl dk a; fj sl dk",
+          "level": 2,
+          "focus": "symmetric finger pairs alternation",
+          "targetChars": "a;fjsldk"
+        },
+        {
+          "id": "e55",
+          "title": "Mirror Roll",
+          "content": "asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lkj asdf ;lkj",
+          "level": 2,
+          "focus": "left roll forward + right roll backward",
+          "targetChars": "asdf;lkj"
+        }
+      ]
+    },
+    {
+      "id": "eng-17",
+      "title": "Alternating Hands",
+      "exercises": [
+        {
+          "id": "e56",
+          "title": "Simple Alternation",
+          "content": "aj sk dl f; aj sk dl f; aj sk dl f; aj sk dl f; aj sk dl f;",
+          "level": 2,
+          "focus": "left-right-left-right simple alternation",
+          "targetChars": "ajskdlf;"
+        },
+        {
+          "id": "e57",
+          "title": "Reverse Alternation",
+          "content": "f; dl sk aj f; dl sk aj f; dl sk aj f; dl sk aj f; dl sk aj",
+          "level": 2,
+          "focus": "reverse alternation right-left pattern",
+          "targetChars": "f;dlskaj"
+        },
+        {
+          "id": "e58",
+          "title": "Cross Alternation",
+          "content": "ak sl d; fj ak sl d; fj ak sl d; fj ak sl d; fj ak sl d; fj",
+          "level": 2,
+          "focus": "cross-hand alternation with offset fingers",
+          "targetChars": "aksld;fj"
+        },
+        {
+          "id": "e59",
+          "title": "Wide Alternation",
+          "content": "a; sj dk fl a; sj dk fl a; sj dk fl a; sj dk fl a; sj dk fl",
+          "level": 2,
+          "focus": "wide alternation pinky-index cross patterns",
+          "targetChars": "a;sjdkfl"
+        }
+      ]
+    },
+    {
+      "id": "eng-18",
+      "title": "Finger Isolation",
+      "exercises": [
+        {
+          "id": "e60",
+          "title": "Pinky Control",
+          "content": "a; a; a; a; a; a; ;a ;a ;a ;a ;a ;a a; ;a a; ;a a; ;a",
+          "level": 1,
+          "focus": "pinky finger isolation and control",
+          "targetChars": "a;"
+        },
+        {
+          "id": "e61",
+          "title": "Ring Finger Control",
+          "content": "sl sl sl sl sl ls ls ls ls ls sl ls sl ls sl ls sl ls",
+          "level": 1,
+          "focus": "ring finger isolation and control",
+          "targetChars": "sl"
+        },
+        {
+          "id": "e62",
+          "title": "Middle Finger Control",
+          "content": "dk dk dk dk dk kd kd kd kd kd dk kd dk kd dk kd dk kd",
+          "level": 1,
+          "focus": "middle finger isolation and control",
+          "targetChars": "dk"
+        },
+        {
+          "id": "e63",
+          "title": "Index Finger Control",
+          "content": "fj fj fj fj fj jf jf jf jf jf fj jf fj jf fj jf fj jf",
+          "level": 1,
+          "focus": "index finger isolation and control",
+          "targetChars": "fj"
+        }
+      ]
+    },
+    {
+      "id": "eng-19",
+      "title": "Rhythm & Disruption",
+      "exercises": [
+        {
+          "id": "e64",
+          "title": "4-key Pulse",
+          "content": "asdf asdf asdf fdsa fdsa fdsa jkl; jkl; jkl; ;lkj ;lkj ;lkj",
+          "level": 2,
+          "focus": "pulsed 4-key groups with direction change",
+          "targetChars": "asdfjkl;"
+        },
+        {
+          "id": "e65",
+          "title": "2+2 Grouping",
+          "content": "as df jk l; as df jk l; as df jk l; fd sa ;l kj fd sa ;l kj",
+          "level": 2,
+          "focus": "2+2 key grouping with forward/reverse",
+          "targetChars": "asdfjkl;"
+        },
+        {
+          "id": "e66",
+          "title": "Center-out / Out-center",
+          "content": "fj dk sl a; a; sl dk fj fj dk sl a; a; sl dk fj",
+          "level": 2,
+          "focus": "center-outward and outward-center patterns",
+          "targetChars": "fjdksla;"
+        },
+        {
+          "id": "e67",
+          "title": "Controlled Chaos",
+          "content": "asdf a;sl dkfj jkl; fjdk sla; fdsa ;lkj ajsk dlf; f;dl skaj",
+          "level": 3,
+          "focus": "randomized home row patterns under control",
+          "targetChars": "asdfjkl;"
+        }
+      ]
+    },
+    {
+      "id": "eng-20",
+      "title": "Civic Classics",
+      "exercises": [
+        {
+          "id": "e71",
+          "title": "Self-Evident Truths",
+          "content": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",
+          "level": 4,
+          "focus": "Declaration of Independence, engrossed copy (1776) — \"unalienable\", not \"inalienable\""
+        },
+        {
+          "id": "e72",
+          "title": "Consent of the Governed",
+          "content": "That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed - That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government.",
+          "level": 4,
+          "focus": "Declaration of Independence (1776) — period capitalization of Governments, Men, People"
+        },
+        {
+          "id": "e73",
+          "title": "We the People",
+          "content": "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.",
+          "level": 4,
+          "focus": "Preamble to the Constitution of the United States (1787) — period capitalization, spelling \"defence\""
+        },
+        {
+          "id": "e74",
+          "title": "The First Amendment",
+          "content": "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.",
+          "level": 4,
+          "focus": "First Amendment to the U.S. Constitution (1791) — semicolon-chained clauses"
+        },
+        {
+          "id": "e75",
+          "title": "Declaration of Sentiments",
+          "content": "We hold these truths to be self-evident; that all men and women are created equal; that they are endowed by their Creator with certain inalienable rights; that among these are life, liberty, and the pursuit of happiness; that to secure these rights governments are instituted, deriving their just powers from the consent of the governed.",
+          "level": 4,
+          "focus": "Elizabeth Cady Stanton, Seneca Falls Convention (1848) — semicolons where the 1776 text used commas"
+        },
+        {
+          "id": "e76",
+          "title": "Fourth of July",
+          "content": "What, to the American slave, is your 4th of July? I answer: a day that reveals to him, more than all other days in the year, the gross injustice and cruelty to which he is the constant victim. To him, your celebration is a sham; your boasted liberty, an unholy license; your national greatness, swelling vanity.",
+          "level": 5,
+          "focus": "Frederick Douglass, Rochester, 5 July 1852 — dense comma and semicolon rhythm"
+        },
+        {
+          "id": "e77",
+          "title": "On Liberty",
+          "content": "The only freedom which deserves the name, is that of pursuing our own good in our own way, so long as we do not attempt to deprive others of theirs, or impede their efforts to obtain it. Each is the proper guardian of his own health, whether bodily, or mental and spiritual. Mankind are greater gainers by suffering each other to live as seems good to themselves, than by compelling each to live as seems good to the rest.",
+          "level": 5,
+          "focus": "John Stuart Mill, On Liberty (1859) — long subordinate clauses"
+        },
+        {
+          "id": "e78",
+          "title": "Gettysburg Address, Pt. 1",
+          "content": "Four score and seven years ago our fathers brought forth, on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war.",
+          "level": 4,
+          "focus": "Abraham Lincoln, Gettysburg, 19 November 1863 (Bliss copy) — pt. 1/4"
+        },
+        {
+          "id": "e79",
+          "title": "Gettysburg Address, Pt. 2",
+          "content": "We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate - we can not consecrate - we can not hallow - this ground.",
+          "level": 4,
+          "focus": "Gettysburg Address (1863) — pt. 2/4, dashes as clause breaks"
+        },
+        {
+          "id": "e80",
+          "title": "Gettysburg Address, Pt. 3",
+          "content": "The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced.",
+          "level": 4,
+          "focus": "Gettysburg Address (1863) — pt. 3/4"
+        },
+        {
+          "id": "e81",
+          "title": "Gettysburg Address, Pt. 4",
+          "content": "It is rather for us to be here dedicated to the great task remaining before us - that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion - that we here highly resolve that these dead shall not have died in vain - that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from the earth.",
+          "level": 5,
+          "focus": "Gettysburg Address (1863) — pt. 4/4, four dash-linked clauses in one sentence"
+        },
+        {
+          "id": "e82",
+          "title": "With Malice Toward None",
+          "content": "With malice toward none; with charity for all; with firmness in the right, as God gives us to see the right, let us strive on to finish the work we are in; to bind up the nation's wounds; to care for him who shall have borne the battle, and for his widow, and his orphan - to do all which may achieve and cherish a just and lasting peace among ourselves, and with all nations.",
+          "level": 5,
+          "focus": "Abraham Lincoln, Second Inaugural Address, 4 March 1865"
+        },
+        {
+          "id": "e83",
+          "title": "Freedom or Death",
+          "content": "I am here as a soldier who has temporarily left the field of battle in order to explain - it seems strange it should have to be explained - what civil war is like when civil war is waged by women.",
+          "level": 4,
+          "focus": "Emmeline Pankhurst, Hartford, Connecticut, 13 November 1913"
+        }
+      ]
+    }
+  ]
+}
