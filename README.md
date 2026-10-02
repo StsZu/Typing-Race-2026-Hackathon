@@ -55,7 +55,7 @@ node scripts/check-repository.mjs
 Правила подання роботи: [docs/PARTICIPATION.md](docs/PARTICIPATION.md).
 
 - старт: 1 вересня 2026 року;
-- подання робіт: 29 вересня 2026 року;
+- подання робіт: 5 жовтня 2026 року, 23:59 за Києвом (продовжено з 29 вересня);
 - демонстрація: 6 жовтня 2026 року;
 - контакт для запитань: [sts.zubar@gmail.com](mailto:sts.zubar@gmail.com).
 
