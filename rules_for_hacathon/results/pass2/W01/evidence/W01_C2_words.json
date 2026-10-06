@@ -1,0 +1,8 @@
+{"method":"6.2, DOM .tt-typing-inner, Words & bigrams (Level 8 / tier 7) lessons 1-6 + Drills",
+ "en":{"opened_alphabet":"asdfjkl+qwertyuiop+zxcvbnm (all 26 lowercase, після Level 2-4 lesson 1)",
+  "lessons":["is er le ou ea ne ere ter wit was for focus they time value you","es re me an is ve has nde ion thi with and learn word quick write","ou er it or as at ith hat tha ion home work brown over word light","ve he or te th ro ere ist ion ing home quick with this with sound","of ha of ic re nd tha ion her for light fast they value time the","at ea of es hi is ter all his for this play when work with home"],
+  "words":36,"outside_alphabet":0},
+ "uk":{"opened_alphabet":"фівапро+йцукенгш+ячсмит (LANGDATA.uk home/top/bottom; л д ж є щ з х ї ґ ь б ю ' не відкриваються жодним рядковим уроком)",
+  "lessons":["то ро ор на ла ан ько нти ати при птах ліс світ кіт кіт пес","ен де ім не пр го ста іст аль ста поле рука світ море сонце ранок","ов ре во то на ор кож ань кож ько море ліс ранок сонце світ небо","ре ва на то ор ти про ого ько нти швидко рука пес ліс поле слово","го ти во де ти ся ові аль ені ста ліс швидко дім день тато море","ро мо не ва ов по про ого при ько ліс дім тато море вода тато"],
+  "words":36,"outside_alphabet":16,"examples":["птах","ліс","поле","небо","швидко","слово","дім","день","вода"],
+  "drill_uk":"фіа оаф фаа іоі роо опф оіо ооп мама мама море море пес пес ріка світ (0 поза алфавітом)"}}

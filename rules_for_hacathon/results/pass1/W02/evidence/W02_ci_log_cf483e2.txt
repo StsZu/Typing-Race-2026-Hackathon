@@ -1,0 +1,763 @@
+test	UNKNOWN STEP	﻿2026-10-02T11:49:32.9765478Z Current runner version: '2.337.0'
+test	UNKNOWN STEP	2026-10-02T11:49:32.9793417Z ##[group]Runner Image Provisioner
+test	UNKNOWN STEP	2026-10-02T11:49:32.9794508Z Hosted Compute Agent
+test	UNKNOWN STEP	2026-10-02T11:49:32.9795236Z Version: 20260901.588
+test	UNKNOWN STEP	2026-10-02T11:49:32.9796159Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+test	UNKNOWN STEP	2026-10-02T11:49:32.9796962Z Build Date: 2026-09-01T19:56:44Z
+test	UNKNOWN STEP	2026-10-02T11:49:32.9797727Z Worker ID: {03ef7e81-0c20-460a-85c1-2948a88be82c}
+test	UNKNOWN STEP	2026-10-02T11:49:32.9798484Z Azure Region: northcentralus
+test	UNKNOWN STEP	2026-10-02T11:49:32.9799192Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:32.9800933Z ##[group]Operating System
+test	UNKNOWN STEP	2026-10-02T11:49:32.9801581Z Ubuntu
+test	UNKNOWN STEP	2026-10-02T11:49:32.9802232Z 24.04.5
+test	UNKNOWN STEP	2026-10-02T11:49:32.9802862Z LTS
+test	UNKNOWN STEP	2026-10-02T11:49:32.9803462Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:32.9804055Z ##[group]Runner Image
+test	UNKNOWN STEP	2026-10-02T11:49:32.9804679Z Image: ubuntu-24.04
+test	UNKNOWN STEP	2026-10-02T11:49:32.9805391Z Version: 20260927.320.1
+test	UNKNOWN STEP	2026-10-02T11:49:32.9806966Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+test	UNKNOWN STEP	2026-10-02T11:49:32.9808639Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+test	UNKNOWN STEP	2026-10-02T11:49:32.9809614Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:32.9811026Z ##[group]GITHUB_TOKEN Permissions
+test	UNKNOWN STEP	2026-10-02T11:49:32.9813339Z Contents: read
+test	UNKNOWN STEP	2026-10-02T11:49:32.9814080Z Metadata: read
+test	UNKNOWN STEP	2026-10-02T11:49:32.9814674Z Packages: read
+test	UNKNOWN STEP	2026-10-02T11:49:32.9815651Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:32.9818224Z Secret source: Actions
+test	UNKNOWN STEP	2026-10-02T11:49:32.9819301Z Cache mode: write
+test	UNKNOWN STEP	2026-10-02T11:49:32.9820269Z Prepare workflow directory
+test	UNKNOWN STEP	2026-10-02T11:49:33.0170468Z Prepare all required actions
+test	UNKNOWN STEP	2026-10-02T11:49:33.0219214Z Getting action download info
+test	UNKNOWN STEP	2026-10-02T11:49:33.2785358Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test	UNKNOWN STEP	2026-10-02T11:49:33.3581539Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test	UNKNOWN STEP	2026-10-02T11:49:33.5586281Z Complete job name: test
+test	UNKNOWN STEP	2026-10-02T11:49:33.6353300Z ##[group]Run actions/checkout@v4
+test	UNKNOWN STEP	2026-10-02T11:49:33.6354167Z with:
+test	UNKNOWN STEP	2026-10-02T11:49:33.6354690Z   repository: gaidukanna97-star/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:33.6358840Z   token: ***
+test	UNKNOWN STEP	2026-10-02T11:49:33.6359290Z   ssh-strict: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6359740Z   ssh-user: git
+test	UNKNOWN STEP	2026-10-02T11:49:33.6360197Z   persist-credentials: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6360698Z   clean: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6361149Z   sparse-checkout-cone-mode: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6361678Z   fetch-depth: 1
+test	UNKNOWN STEP	2026-10-02T11:49:33.6362114Z   fetch-tags: false
+test	UNKNOWN STEP	2026-10-02T11:49:33.6362565Z   show-progress: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6363010Z   lfs: false
+test	UNKNOWN STEP	2026-10-02T11:49:33.6363428Z   submodules: false
+test	UNKNOWN STEP	2026-10-02T11:49:33.6363885Z   set-safe-directory: true
+test	UNKNOWN STEP	2026-10-02T11:49:33.6364392Z   allow-unsafe-pr-checkout: false
+test	UNKNOWN STEP	2026-10-02T11:49:33.6365098Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:33.7424642Z Syncing repository: gaidukanna97-star/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:33.7428052Z ##[group]Getting Git version info
+test	UNKNOWN STEP	2026-10-02T11:49:33.7429672Z Working directory is '/home/runner/work/solo-typing-trainer/solo-typing-trainer'
+test	UNKNOWN STEP	2026-10-02T11:49:33.7431664Z [command]/usr/bin/git version
+test	UNKNOWN STEP	2026-10-02T11:49:33.7461924Z git version 2.55.0
+test	UNKNOWN STEP	2026-10-02T11:49:33.7483465Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:33.7499265Z Temporarily overriding HOME='/home/runner/work/_temp/32da7fd7-2ebc-47d5-8df3-160b26bdf0db' before making global git config changes
+test	UNKNOWN STEP	2026-10-02T11:49:33.7501532Z Adding repository directory to the temporary git global config as a safe directory
+test	UNKNOWN STEP	2026-10-02T11:49:33.7506394Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/solo-typing-trainer/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:33.7558452Z Deleting the contents of '/home/runner/work/solo-typing-trainer/solo-typing-trainer'
+test	UNKNOWN STEP	2026-10-02T11:49:33.7563909Z ##[group]Initializing the repository
+test	UNKNOWN STEP	2026-10-02T11:49:33.7569191Z [command]/usr/bin/git init /home/runner/work/solo-typing-trainer/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:33.7657288Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	UNKNOWN STEP	2026-10-02T11:49:33.7659515Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	UNKNOWN STEP	2026-10-02T11:49:33.7666359Z hint: to use in all of your new repositories, which will suppress this warning,
+test	UNKNOWN STEP	2026-10-02T11:49:33.7667847Z hint: call:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7668685Z hint:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7669645Z hint: 	git config --global init.defaultBranch <name>
+test	UNKNOWN STEP	2026-10-02T11:49:33.7670772Z hint:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7671845Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	UNKNOWN STEP	2026-10-02T11:49:33.7673536Z hint: 'development'. The just-created branch can be renamed via this command:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7674900Z hint:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7675706Z hint: 	git branch -m <name>
+test	UNKNOWN STEP	2026-10-02T11:49:33.7676766Z hint:
+test	UNKNOWN STEP	2026-10-02T11:49:33.7677959Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	UNKNOWN STEP	2026-10-02T11:49:33.7680164Z Initialized empty Git repository in /home/runner/work/solo-typing-trainer/solo-typing-trainer/.git/
+test	UNKNOWN STEP	2026-10-02T11:49:33.7683986Z [command]/usr/bin/git remote add origin https://github.com/gaidukanna97-star/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:33.7726432Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:33.7727972Z ##[group]Disabling automatic garbage collection
+test	UNKNOWN STEP	2026-10-02T11:49:33.7729303Z [command]/usr/bin/git config --local gc.auto 0
+test	UNKNOWN STEP	2026-10-02T11:49:33.7766132Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:33.7767436Z ##[group]Setting up auth
+test	UNKNOWN STEP	2026-10-02T11:49:33.7771915Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	UNKNOWN STEP	2026-10-02T11:49:33.7809629Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	UNKNOWN STEP	2026-10-02T11:49:33.8179712Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	UNKNOWN STEP	2026-10-02T11:49:33.8230727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	UNKNOWN STEP	2026-10-02T11:49:33.8493734Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	UNKNOWN STEP	2026-10-02T11:49:33.8533990Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	UNKNOWN STEP	2026-10-02T11:49:33.8781424Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	UNKNOWN STEP	2026-10-02T11:49:33.8825278Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:33.8826780Z ##[group]Fetching the repository
+test	UNKNOWN STEP	2026-10-02T11:49:33.8837101Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +cf483e2541cb0ff2eb62444b7cdf70944ddba51b:refs/remotes/origin/main
+test	UNKNOWN STEP	2026-10-02T11:49:34.4290492Z From https://github.com/gaidukanna97-star/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:49:34.4292626Z  * [new ref]         cf483e2541cb0ff2eb62444b7cdf70944ddba51b -> origin/main
+test	UNKNOWN STEP	2026-10-02T11:49:34.4297710Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:34.4299151Z ##[group]Determining the checkout info
+test	UNKNOWN STEP	2026-10-02T11:49:34.4300514Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:34.4302012Z [command]/usr/bin/git sparse-checkout disable
+test	UNKNOWN STEP	2026-10-02T11:49:34.4354851Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	UNKNOWN STEP	2026-10-02T11:49:34.4391994Z ##[group]Checking out the ref
+test	UNKNOWN STEP	2026-10-02T11:49:34.4403565Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test	UNKNOWN STEP	2026-10-02T11:49:34.4905463Z Switched to a new branch 'main'
+test	UNKNOWN STEP	2026-10-02T11:49:34.4909367Z branch 'main' set up to track 'origin/main'.
+test	UNKNOWN STEP	2026-10-02T11:49:34.4918257Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:34.4968709Z [command]/usr/bin/git log -1 --format=%H
+test	UNKNOWN STEP	2026-10-02T11:49:34.5000933Z cf483e2541cb0ff2eb62444b7cdf70944ddba51b
+test	UNKNOWN STEP	2026-10-02T11:49:34.5403116Z ##[group]Run actions/setup-node@v4
+test	UNKNOWN STEP	2026-10-02T11:49:34.5404382Z with:
+test	UNKNOWN STEP	2026-10-02T11:49:34.5405290Z   node-version: 22
+test	UNKNOWN STEP	2026-10-02T11:49:34.5406549Z   always-auth: false
+test	UNKNOWN STEP	2026-10-02T11:49:34.5407586Z   check-latest: false
+test	UNKNOWN STEP	2026-10-02T11:49:34.5417350Z   token: ***
+test	UNKNOWN STEP	2026-10-02T11:49:34.5418288Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:34.6898343Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+test	UNKNOWN STEP	2026-10-02T11:49:34.6903359Z (node:2295) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	UNKNOWN STEP	2026-10-02T11:49:34.6906883Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	UNKNOWN STEP	2026-10-02T11:49:34.6909333Z ##[group]Environment details
+test	UNKNOWN STEP	2026-10-02T11:49:35.0168377Z node: v22.23.3
+test	UNKNOWN STEP	2026-10-02T11:49:35.0170198Z npm: 10.9.9
+test	UNKNOWN STEP	2026-10-02T11:49:35.0171857Z yarn: 1.22.22
+test	UNKNOWN STEP	2026-10-02T11:49:35.0174799Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:35.0362172Z ##[group]Run npm test
+test	UNKNOWN STEP	2026-10-02T11:49:35.0363312Z ^[[36;1mnpm test^[[0m
+test	UNKNOWN STEP	2026-10-02T11:49:35.0604271Z shell: /usr/bin/bash -e {0}
+test	UNKNOWN STEP	2026-10-02T11:49:35.0605396Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:35.2122795Z 
+test	UNKNOWN STEP	2026-10-02T11:49:35.2131786Z > solo-typing-trainer@1.0.0 test
+test	UNKNOWN STEP	2026-10-02T11:49:35.2133130Z > node --test
+test	UNKNOWN STEP	2026-10-02T11:49:35.2133675Z 
+test	UNKNOWN STEP	2026-10-02T11:49:35.3048238Z TAP version 13
+test	UNKNOWN STEP	2026-10-02T11:49:35.3767047Z # Subtest: перевірка імені та пароля
+test	UNKNOWN STEP	2026-10-02T11:49:35.3769294Z ok 1 - перевірка імені та пароля
+test	UNKNOWN STEP	2026-10-02T11:49:35.3770844Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.3772095Z   duration_ms: 1.422495
+test	UNKNOWN STEP	2026-10-02T11:49:35.3773507Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.3774759Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:35.3796040Z # Subtest: створення кабінету, вхід, хибний пароль
+test	UNKNOWN STEP	2026-10-02T11:49:35.3798460Z ok 2 - створення кабінету, вхід, хибний пароль
+test	UNKNOWN STEP	2026-10-02T11:49:35.3817128Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.3827245Z   duration_ms: 16.091549
+test	UNKNOWN STEP	2026-10-02T11:49:35.3837077Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.3838696Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:35.3841386Z # Subtest: однакові паролі в різних кабінетах мають різні хеші (сіль)
+test	UNKNOWN STEP	2026-10-02T11:49:35.3844187Z ok 3 - однакові паролі в різних кабінетах мають різні хеші (сіль)
+test	UNKNOWN STEP	2026-10-02T11:49:35.3846716Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.3848197Z   duration_ms: 3.308139
+test	UNKNOWN STEP	2026-10-02T11:49:35.3849841Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.3851301Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:35.4209606Z # Subtest: кабінети незалежні: у кожного свій прогрес
+test	UNKNOWN STEP	2026-10-02T11:49:35.4212659Z ok 4 - кабінети незалежні: у кожного свій прогрес
+test	UNKNOWN STEP	2026-10-02T11:49:35.4214774Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.4216450Z   duration_ms: 38.430959
+test	UNKNOWN STEP	2026-10-02T11:49:35.4218212Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.4219793Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:35.4267792Z # Subtest: кабінет і прогрес зберігаються після перезавантаження
+test	UNKNOWN STEP	2026-10-02T11:49:35.4277742Z ok 5 - кабінет і прогрес зберігаються після перезавантаження
+test	UNKNOWN STEP	2026-10-02T11:49:35.4282868Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.4284316Z   duration_ms: 4.456962
+test	UNKNOWN STEP	2026-10-02T11:49:35.4312102Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.4337001Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:35.4377519Z # Subtest: зміна пароля та видалення кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:35.4379915Z ok 6 - зміна пароля та видалення кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:35.4396043Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:35.4426999Z   duration_ms: 5.204399
+test	UNKNOWN STEP	2026-10-02T11:49:35.4434700Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:35.4458167Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0729147Z # Subtest: прогрес, збережений до появи кабінетів, переходить до першого кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:36.0730727Z ok 7 - прогрес, збережений до появи кабінетів, переходить до першого кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:36.0747891Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0748384Z   duration_ms: 3.255801
+test	UNKNOWN STEP	2026-10-02T11:49:36.0748902Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0749336Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0750139Z # Subtest: пошкоджені дані кабінетів не ламають застосунок
+test	UNKNOWN STEP	2026-10-02T11:49:36.0751068Z ok 8 - пошкоджені дані кабінетів не ламають застосунок
+test	UNKNOWN STEP	2026-10-02T11:49:36.0751643Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0752060Z   duration_ms: 0.632314
+test	UNKNOWN STEP	2026-10-02T11:49:36.0752516Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0752990Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0753572Z # Subtest: звання визначаються досвідом
+test	UNKNOWN STEP	2026-10-02T11:49:36.0754275Z ok 9 - звання визначаються досвідом
+test	UNKNOWN STEP	2026-10-02T11:49:36.0754909Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0755381Z   duration_ms: 0.595338
+test	UNKNOWN STEP	2026-10-02T11:49:36.0756031Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0756452Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0757363Z # Subtest: досвід дає лише зарахована спроба; швидкість без точності не винагороджується
+test	UNKNOWN STEP	2026-10-02T11:49:36.0759141Z ok 10 - досвід дає лише зарахована спроба; швидкість без точності не винагороджується
+test	UNKNOWN STEP	2026-10-02T11:49:36.0759806Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0760212Z   duration_ms: 266.428293
+test	UNKNOWN STEP	2026-10-02T11:49:36.0760671Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0761091Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0761847Z # Subtest: підвищення звання та досягнення за темп лише на словах
+test	UNKNOWN STEP	2026-10-02T11:49:36.0762790Z ok 11 - підвищення звання та досягнення за темп лише на словах
+test	UNKNOWN STEP	2026-10-02T11:49:36.0763374Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0763774Z   duration_ms: 180.368522
+test	UNKNOWN STEP	2026-10-02T11:49:36.0764615Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0765190Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0766007Z # Subtest: серія днів і заняття дня
+test	UNKNOWN STEP	2026-10-02T11:49:36.0766712Z ok 12 - серія днів і заняття дня
+test	UNKNOWN STEP	2026-10-02T11:49:36.0767229Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0767633Z   duration_ms: 186.843898
+test	UNKNOWN STEP	2026-10-02T11:49:36.0768096Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0768507Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.0769428Z # Subtest: гейміфікація входить до експорту й переживає імпорт; чужі поля відкидаються
+test	UNKNOWN STEP	2026-10-02T11:49:36.0770570Z ok 13 - гейміфікація входить до експорту й переживає імпорт; чужі поля відкидаються
+test	UNKNOWN STEP	2026-10-02T11:49:36.0771227Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.0771638Z   duration_ms: 1.184025
+test	UNKNOWN STEP	2026-10-02T11:49:36.0772090Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.0772496Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.1026691Z # Subtest: пороги сертифікатів: золото від 250 SPM, обидві умови обов’язкові
+test	UNKNOWN STEP	2026-10-02T11:49:36.1032840Z ok 14 - пороги сертифікатів: золото від 250 SPM, обидві умови обов’язкові
+test	UNKNOWN STEP	2026-10-02T11:49:36.1033883Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.1034686Z   duration_ms: 2.056762
+test	UNKNOWN STEP	2026-10-02T11:49:36.1035334Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.1036361Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.1037356Z # Subtest: швидкість без точності сертифіката не дає
+test	UNKNOWN STEP	2026-10-02T11:49:36.1038415Z ok 15 - швидкість без точності сертифіката не дає
+test	UNKNOWN STEP	2026-10-02T11:49:36.1039156Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.1039732Z   duration_ms: 0.347975
+test	UNKNOWN STEP	2026-10-02T11:49:36.1040400Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.1040979Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.1041805Z # Subtest: підказка, чого бракує до наступного рівня
+test	UNKNOWN STEP	2026-10-02T11:49:36.1042856Z ok 16 - підказка, чого бракує до наступного рівня
+test	UNKNOWN STEP	2026-10-02T11:49:36.1043576Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.1044148Z   duration_ms: 0.535427
+test	UNKNOWN STEP	2026-10-02T11:49:36.1044764Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.1045324Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.1046700Z # Subtest: текст зрізу: зв’язний, достатньо довгий, набирається в розкладці, різний у різних спробах
+test	UNKNOWN STEP	2026-10-02T11:49:36.1048356Z ok 17 - текст зрізу: зв’язний, достатньо довгий, набирається в розкладці, різний у різних спробах
+test	UNKNOWN STEP	2026-10-02T11:49:36.1049287Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.1049871Z   duration_ms: 417.996188
+test	UNKNOWN STEP	2026-10-02T11:49:36.1050488Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.1051101Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.1052105Z # Subtest: сертифікат записується в кабінет, дає досвід і досягнення
+test	UNKNOWN STEP	2026-10-02T11:49:36.1053357Z ok 18 - сертифікат записується в кабінет, дає досвід і досягнення
+test	UNKNOWN STEP	2026-10-02T11:49:36.1054741Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.1055382Z   duration_ms: 191.194659
+test	UNKNOWN STEP	2026-10-02T11:49:36.1056465Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.1057051Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.5777942Z # Subtest: uk: є повний маршрут через три етапи
+test	UNKNOWN STEP	2026-10-02T11:49:36.5837495Z ok 19 - uk: є повний маршрут через три етапи
+test	UNKNOWN STEP	2026-10-02T11:49:36.5860748Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.5976697Z   duration_ms: 1.539211
+test	UNKNOWN STEP	2026-10-02T11:49:36.6036452Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6136393Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6157129Z # Subtest: uk: вправи етапу 2 складаються лише з уже відкритих символів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6190414Z ok 20 - uk: вправи етапу 2 складаються лише з уже відкритих символів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6191007Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6191366Z   duration_ms: 67.810468
+test	UNKNOWN STEP	2026-10-02T11:49:36.6191755Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6192102Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6192754Z # Subtest: uk: гами етапу 1 теж не виходять за відкриті клавіші
+test	UNKNOWN STEP	2026-10-02T11:49:36.6193573Z ok 21 - uk: гами етапу 1 теж не виходять за відкриті клавіші
+test	UNKNOWN STEP	2026-10-02T11:49:36.6194103Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6194430Z   duration_ms: 30.200968
+test	UNKNOWN STEP	2026-10-02T11:49:36.6194797Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6195112Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6196190Z # Subtest: uk: відкритих символів стає тільки більше, нові клавіші — малими порціями
+test	UNKNOWN STEP	2026-10-02T11:49:36.6197185Z ok 22 - uk: відкритих символів стає тільки більше, нові клавіші — малими порціями
+test	UNKNOWN STEP	2026-10-02T11:49:36.6197733Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6198044Z   duration_ms: 0.811654
+test	UNKNOWN STEP	2026-10-02T11:49:36.6198403Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6198718Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6199620Z # Subtest: uk: перша вправа — вказівні пальці домашнього ряду, слова з'являються після домашнього ряду
+test	UNKNOWN STEP	2026-10-02T11:49:36.6200910Z ok 23 - uk: перша вправа — вказівні пальці домашнього ряду, слова з'являються після домашнього ряду
+test	UNKNOWN STEP	2026-10-02T11:49:36.6236807Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6246827Z   duration_ms: 1.032357
+test	UNKNOWN STEP	2026-10-02T11:49:36.6247435Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6248244Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6249400Z # Subtest: uk: слова етапу 2 — реальні слова з похідного словника або з явного списку
+test	UNKNOWN STEP	2026-10-02T11:49:36.6250799Z ok 24 - uk: слова етапу 2 — реальні слова з похідного словника або з явного списку
+test	UNKNOWN STEP	2026-10-02T11:49:36.6251600Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6252127Z   duration_ms: 8.378245
+test	UNKNOWN STEP	2026-10-02T11:49:36.6252711Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6253235Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6254138Z # Subtest: uk: усі вправи можна набрати в розкладці, тексти детерміновані
+test	UNKNOWN STEP	2026-10-02T11:49:36.6255315Z ok 25 - uk: усі вправи можна набрати в розкладці, тексти детерміновані
+test	UNKNOWN STEP	2026-10-02T11:49:36.6257092Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6257683Z   duration_ms: 283.6267
+test	UNKNOWN STEP	2026-10-02T11:49:36.6258260Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6258767Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6259659Z # Subtest: uk: Академія — біграми, триграми, переходи одним пальцем
+test	UNKNOWN STEP	2026-10-02T11:49:36.6260739Z ok 26 - uk: Академія — біграми, триграми, переходи одним пальцем
+test	UNKNOWN STEP	2026-10-02T11:49:36.6261461Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6261991Z   duration_ms: 1.784952
+test	UNKNOWN STEP	2026-10-02T11:49:36.6262976Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6263491Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6264203Z # Subtest: uk: послідовне відкриття вправ
+test	UNKNOWN STEP	2026-10-02T11:49:36.6265079Z ok 27 - uk: послідовне відкриття вправ
+test	UNKNOWN STEP	2026-10-02T11:49:36.6266044Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6266602Z   duration_ms: 0.787427
+test	UNKNOWN STEP	2026-10-02T11:49:36.6267221Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6267785Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6268756Z # Subtest: uk: відкриті символи учня та вільні вправи не виходять за них
+test	UNKNOWN STEP	2026-10-02T11:49:36.6269836Z ok 28 - uk: відкриті символи учня та вільні вправи не виходять за них
+test	UNKNOWN STEP	2026-10-02T11:49:36.6270526Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6271265Z   duration_ms: 2.535684
+test	UNKNOWN STEP	2026-10-02T11:49:36.6271815Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6272289Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6272963Z # Subtest: uk: заняття дня має чотири частини
+test	UNKNOWN STEP	2026-10-02T11:49:36.6274106Z ok 29 - uk: заняття дня має чотири частини
+test	UNKNOWN STEP	2026-10-02T11:49:36.6274883Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6275253Z   duration_ms: 0.344389
+test	UNKNOWN STEP	2026-10-02T11:49:36.6275643Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6276433Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6277079Z # Subtest: en: є повний маршрут через три етапи
+test	UNKNOWN STEP	2026-10-02T11:49:36.6277763Z ok 30 - en: є повний маршрут через три етапи
+test	UNKNOWN STEP	2026-10-02T11:49:36.6278211Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6278539Z   duration_ms: 0.153582
+test	UNKNOWN STEP	2026-10-02T11:49:36.6278904Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6279221Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6279905Z # Subtest: en: вправи етапу 2 складаються лише з уже відкритих символів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6280794Z ok 31 - en: вправи етапу 2 складаються лише з уже відкритих символів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6281305Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6281631Z   duration_ms: 41.509292
+test	UNKNOWN STEP	2026-10-02T11:49:36.6282028Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6282340Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6282957Z # Subtest: en: гами етапу 1 теж не виходять за відкриті клавіші
+test	UNKNOWN STEP	2026-10-02T11:49:36.6283754Z ok 32 - en: гами етапу 1 теж не виходять за відкриті клавіші
+test	UNKNOWN STEP	2026-10-02T11:49:36.6284233Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6284538Z   duration_ms: 16.237538
+test	UNKNOWN STEP	2026-10-02T11:49:36.6284921Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6285254Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6286159Z # Subtest: en: відкритих символів стає тільки більше, нові клавіші — малими порціями
+test	UNKNOWN STEP	2026-10-02T11:49:36.6297253Z ok 33 - en: відкритих символів стає тільки більше, нові клавіші — малими порціями
+test	UNKNOWN STEP	2026-10-02T11:49:36.6297837Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6298157Z   duration_ms: 0.362517
+test	UNKNOWN STEP	2026-10-02T11:49:36.6298532Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6298859Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6299709Z # Subtest: en: перша вправа — вказівні пальці домашнього ряду, слова з'являються після домашнього ряду
+test	UNKNOWN STEP	2026-10-02T11:49:36.6300873Z ok 34 - en: перша вправа — вказівні пальці домашнього ряду, слова з'являються після домашнього ряду
+test	UNKNOWN STEP	2026-10-02T11:49:36.6301472Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6301795Z   duration_ms: 0.166121
+test	UNKNOWN STEP	2026-10-02T11:49:36.6302166Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6302489Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6303249Z # Subtest: en: слова етапу 2 — реальні слова з похідного словника або з явного списку
+test	UNKNOWN STEP	2026-10-02T11:49:36.6304259Z ok 35 - en: слова етапу 2 — реальні слова з похідного словника або з явного списку
+test	UNKNOWN STEP	2026-10-02T11:49:36.6305148Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6305463Z   duration_ms: 6.334523
+test	UNKNOWN STEP	2026-10-02T11:49:36.6306066Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6306383Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6307069Z # Subtest: en: усі вправи можна набрати в розкладці, тексти детерміновані
+test	UNKNOWN STEP	2026-10-02T11:49:36.6307941Z ok 36 - en: усі вправи можна набрати в розкладці, тексти детерміновані
+test	UNKNOWN STEP	2026-10-02T11:49:36.6308447Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6308755Z   duration_ms: 302.446233
+test	UNKNOWN STEP	2026-10-02T11:49:36.6309136Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6309444Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6310273Z # Subtest: en: Академія — біграми, триграми, переходи одним пальцем
+test	UNKNOWN STEP	2026-10-02T11:49:36.6311101Z ok 37 - en: Академія — біграми, триграми, переходи одним пальцем
+test	UNKNOWN STEP	2026-10-02T11:49:36.6311632Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6311943Z   duration_ms: 1.431058
+test	UNKNOWN STEP	2026-10-02T11:49:36.6312302Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6312608Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6313088Z # Subtest: en: послідовне відкриття вправ
+test	UNKNOWN STEP	2026-10-02T11:49:36.6313711Z ok 38 - en: послідовне відкриття вправ
+test	UNKNOWN STEP	2026-10-02T11:49:36.6314155Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6314453Z   duration_ms: 0.143837
+test	UNKNOWN STEP	2026-10-02T11:49:36.6314843Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6315148Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6316157Z # Subtest: en: відкриті символи учня та вільні вправи не виходять за них
+test	UNKNOWN STEP	2026-10-02T11:49:36.6317027Z ok 39 - en: відкриті символи учня та вільні вправи не виходять за них
+test	UNKNOWN STEP	2026-10-02T11:49:36.6317536Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6317849Z   duration_ms: 1.00111
+test	UNKNOWN STEP	2026-10-02T11:49:36.6318213Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6318523Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6319078Z # Subtest: en: заняття дня має чотири частини
+test	UNKNOWN STEP	2026-10-02T11:49:36.6319704Z ok 40 - en: заняття дня має чотири частини
+test	UNKNOWN STEP	2026-10-02T11:49:36.6320126Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6320464Z   duration_ms: 0.11257
+test	UNKNOWN STEP	2026-10-02T11:49:36.6320940Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6321248Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6321865Z # Subtest: добір слів адаптується до слабких клавіш і переходів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6322687Z ok 41 - добір слів адаптується до слабких клавіш і переходів
+test	UNKNOWN STEP	2026-10-02T11:49:36.6323181Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6323495Z   duration_ms: 31.678806
+test	UNKNOWN STEP	2026-10-02T11:49:36.6323860Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6324171Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6324804Z # Subtest: слабка клавіша, яку ще не відкрито, у вправу не потрапляє
+test	UNKNOWN STEP	2026-10-02T11:49:36.6325632Z ok 42 - слабка клавіша, яку ще не відкрито, у вправу не потрапляє
+test	UNKNOWN STEP	2026-10-02T11:49:36.6326288Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6326595Z   duration_ms: 0.501286
+test	UNKNOWN STEP	2026-10-02T11:49:36.6326959Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6327269Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6327882Z # Subtest: зворотний зв’язок: одна конкретна наступна дія
+test	UNKNOWN STEP	2026-10-02T11:49:36.6328611Z ok 43 - зворотний зв’язок: одна конкретна наступна дія
+test	UNKNOWN STEP	2026-10-02T11:49:36.6329080Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6329385Z   duration_ms: 4.297792
+test	UNKNOWN STEP	2026-10-02T11:49:36.6329737Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6330042Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:36.6330575Z # Subtest: власний текст: безпечна перевірка формату
+test	UNKNOWN STEP	2026-10-02T11:49:36.6331288Z ok 44 - власний текст: безпечна перевірка формату
+test	UNKNOWN STEP	2026-10-02T11:49:36.6331748Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:36.6332051Z   duration_ms: 3.289001
+test	UNKNOWN STEP	2026-10-02T11:49:36.6332400Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:36.6332712Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5330029Z # Subtest: контрольні суми незмінної сировини збігаються з маніфестом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5331342Z ok 45 - контрольні суми незмінної сировини збігаються з маніфестом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5332307Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5332883Z   duration_ms: 11.845414
+test	UNKNOWN STEP	2026-10-02T11:49:41.5333455Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5333968Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5334894Z # Subtest: у каталозі dictionaries/ немає файлів поза маніфестом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5336329Z ok 46 - у каталозі dictionaries/ немає файлів поза маніфестом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5339407Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5339933Z   duration_ms: 0.667927
+test	UNKNOWN STEP	2026-10-02T11:49:41.5340506Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5341031Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5342007Z # Subtest: вхідні словники читаються у правильному кодуванні (UTF-8)
+test	UNKNOWN STEP	2026-10-02T11:49:41.5343504Z ok 47 - вхідні словники читаються у правильному кодуванні (UTF-8)
+test	UNKNOWN STEP	2026-10-02T11:49:41.5344217Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5344720Z   duration_ms: 176.703323
+test	UNKNOWN STEP	2026-10-02T11:49:41.5345283Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5345963Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5346763Z # Subtest: нормалізація слів не підміняє і, ї, є, ґ
+test	UNKNOWN STEP	2026-10-02T11:49:41.5347647Z ok 48 - нормалізація слів не підміняє і, ї, є, ґ
+test	UNKNOWN STEP	2026-10-02T11:49:41.5348272Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5348757Z   duration_ms: 4.751226
+test	UNKNOWN STEP	2026-10-02T11:49:41.5349297Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5349782Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5350977Z # Subtest: повторний запуск обробки дає той самий результат, і він збігається зі збереженим
+test	UNKNOWN STEP	2026-10-02T11:49:41.5352210Z ok 49 - повторний запуск обробки дає той самий результат, і він збігається зі збереженим
+test	UNKNOWN STEP	2026-10-02T11:49:41.5352962Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5353453Z   duration_ms: 2557.402009
+test	UNKNOWN STEP	2026-10-02T11:49:41.5354034Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5361610Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5362568Z # Subtest: похідний словник: формат, сортування, фільтри
+test	UNKNOWN STEP	2026-10-02T11:49:41.5363523Z ok 50 - похідний словник: формат, сортування, фільтри
+test	UNKNOWN STEP	2026-10-02T11:49:41.5364183Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5364683Z   duration_ms: 21.178989
+test	UNKNOWN STEP	2026-10-02T11:49:41.5365250Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5365932Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5367137Z # Subtest: n-грами: вага — сума частот слів, слово рахується один раз
+test	UNKNOWN STEP	2026-10-02T11:49:41.5368309Z ok 51 - n-грами: вага — сума частот слів, слово рахується один раз
+test	UNKNOWN STEP	2026-10-02T11:49:41.5369023Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5369530Z   duration_ms: 0.286472
+test	UNKNOWN STEP	2026-10-02T11:49:41.5370125Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5370621Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5371409Z # Subtest: обробка: дублікати зливаються, сортування стабільне
+test	UNKNOWN STEP	2026-10-02T11:49:41.5372377Z ok 52 - обробка: дублікати зливаються, сортування стабільне
+test	UNKNOWN STEP	2026-10-02T11:49:41.5373048Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5373527Z   duration_ms: 0.905215
+test	UNKNOWN STEP	2026-10-02T11:49:41.5374057Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5374558Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5375414Z # Subtest: Hunspell: розгортання форм і відсіювання власних назв
+test	UNKNOWN STEP	2026-10-02T11:49:41.5376621Z ok 53 - Hunspell: розгортання форм і відсіювання власних назв
+test	UNKNOWN STEP	2026-10-02T11:49:41.5400018Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5419025Z   duration_ms: 0.421125
+test	UNKNOWN STEP	2026-10-02T11:49:41.5419638Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5433165Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5434657Z # Subtest: офлайн: service worker кешує всі модулі та дані, потрібні для базового навчання
+test	UNKNOWN STEP	2026-10-02T11:49:41.5436280Z ok 54 - офлайн: service worker кешує всі модулі та дані, потрібні для базового навчання
+test	UNKNOWN STEP	2026-10-02T11:49:41.5437146Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5437643Z   duration_ms: 4.277192
+test	UNKNOWN STEP	2026-10-02T11:49:41.5438206Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5438710Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5439451Z # Subtest: у репозиторії немає секретів
+test	UNKNOWN STEP	2026-10-02T11:49:41.5440233Z ok 55 - у репозиторії немає секретів
+test	UNKNOWN STEP	2026-10-02T11:49:41.5440825Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5441317Z   duration_ms: 9.290534
+test	UNKNOWN STEP	2026-10-02T11:49:41.5442162Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5442648Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5686356Z # Subtest: кожна підтримувана клавіша має рівно одне призначення пальця
+test	UNKNOWN STEP	2026-10-02T11:49:41.5687333Z ok 56 - кожна підтримувана клавіша має рівно одне призначення пальця
+test	UNKNOWN STEP	2026-10-02T11:49:41.5687852Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5688186Z   duration_ms: 1.616147
+test	UNKNOWN STEP	2026-10-02T11:49:41.5688564Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5688884Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5689616Z # Subtest: кожен символ розкладки веде рівно до однієї клавіші й одного пальця
+test	UNKNOWN STEP	2026-10-02T11:49:41.5690988Z ok 57 - кожен символ розкладки веде рівно до однієї клавіші й одного пальця
+test	UNKNOWN STEP	2026-10-02T11:49:41.5691567Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5691895Z   duration_ms: 0.686626
+test	UNKNOWN STEP	2026-10-02T11:49:41.5692274Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5692589Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5693126Z # Subtest: QWERTY: таблиця пальців із ТЗ 2.1
+test	UNKNOWN STEP	2026-10-02T11:49:41.5693763Z ok 58 - QWERTY: таблиця пальців із ТЗ 2.1
+test	UNKNOWN STEP	2026-10-02T11:49:41.5694196Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5694507Z   duration_ms: 1.217075
+test	UNKNOWN STEP	2026-10-02T11:49:41.5694916Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5695226Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5695893Z # Subtest: ЙЦУКЕН: таблиця пальців із ТЗ 2.2
+test	UNKNOWN STEP	2026-10-02T11:49:41.5696523Z ok 59 - ЙЦУКЕН: таблиця пальців із ТЗ 2.2
+test	UNKNOWN STEP	2026-10-02T11:49:41.5696936Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5697240Z   duration_ms: 0.250397
+test	UNKNOWN STEP	2026-10-02T11:49:41.5697592Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5697897Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5698446Z # Subtest: домашня позиція: ASDF JKL; та ФІВА ОЛДЖ
+test	UNKNOWN STEP	2026-10-02T11:49:41.5699130Z ok 60 - домашня позиція: ASDF JKL; та ФІВА ОЛДЖ
+test	UNKNOWN STEP	2026-10-02T11:49:41.5699568Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5699907Z   duration_ms: 0.233773
+test	UNKNOWN STEP	2026-10-02T11:49:41.5700256Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5700573Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5701086Z # Subtest: Shift — мізинцем протилежної руки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5701709Z ok 61 - Shift — мізинцем протилежної руки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5702283Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5702594Z   duration_ms: 0.175154
+test	UNKNOWN STEP	2026-10-02T11:49:41.5702946Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5703312Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5703989Z # Subtest: українські і, ї, є, ґ — окремі символи з власними клавішами
+test	UNKNOWN STEP	2026-10-02T11:49:41.5704860Z ok 62 - українські і, ї, є, ґ — окремі символи з власними клавішами
+test	UNKNOWN STEP	2026-10-02T11:49:41.5705354Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5705658Z   duration_ms: 0.576028
+test	UNKNOWN STEP	2026-10-02T11:49:41.5706551Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5706878Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5707655Z # Subtest: нормалізація: апострофи, лапки, тире, пробіли — за задокументованим правилом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5708650Z ok 63 - нормалізація: апострофи, лапки, тире, пробіли — за задокументованим правилом
+test	UNKNOWN STEP	2026-10-02T11:49:41.5709240Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5709551Z   duration_ms: 0.319322
+test	UNKNOWN STEP	2026-10-02T11:49:41.5709912Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5710222Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5710690Z # Subtest: визначення чужої розкладки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5711265Z ok 64 - визначення чужої розкладки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5711657Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5711964Z   duration_ms: 0.753667
+test	UNKNOWN STEP	2026-10-02T11:49:41.5712674Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5712991Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5713545Z # Subtest: аналіз переходів і схема слова з ТЗ 5.3
+test	UNKNOWN STEP	2026-10-02T11:49:41.5714233Z ok 65 - аналіз переходів і схема слова з ТЗ 5.3
+test	UNKNOWN STEP	2026-10-02T11:49:41.5714681Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5714988Z   duration_ms: 0.911935
+test	UNKNOWN STEP	2026-10-02T11:49:41.5715338Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5715643Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5716489Z # Subtest: SPM: фіксовані приклади
+test	UNKNOWN STEP	2026-10-02T11:49:41.5717035Z ok 66 - SPM: фіксовані приклади
+test	UNKNOWN STEP	2026-10-02T11:49:41.5717417Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5717716Z   duration_ms: 1.427924
+test	UNKNOWN STEP	2026-10-02T11:49:41.5718060Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5718648Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5719138Z # Subtest: точність: фіксовані приклади
+test	UNKNOWN STEP	2026-10-02T11:49:41.5719662Z ok 67 - точність: фіксовані приклади
+test	UNKNOWN STEP	2026-10-02T11:49:41.5720058Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5720362Z   duration_ms: 0.289617
+test	UNKNOWN STEP	2026-10-02T11:49:41.5720705Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5721020Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5721493Z # Subtest: SPM і WPM у підсумку спроби
+test	UNKNOWN STEP	2026-10-02T11:49:41.5722086Z ok 68 - SPM і WPM у підсумку спроби
+test	UNKNOWN STEP	2026-10-02T11:49:41.5722474Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5722772Z   duration_ms: 4.325944
+test	UNKNOWN STEP	2026-10-02T11:49:41.5723128Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5723439Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5724240Z # Subtest: режим «зупинка на помилці»: хибний символ не просуває курсор і входить у статистику
+test	UNKNOWN STEP	2026-10-02T11:49:41.5725266Z ok 69 - режим «зупинка на помилці»: хибний символ не просуває курсор і входить у статистику
+test	UNKNOWN STEP	2026-10-02T11:49:41.5726020Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5726324Z   duration_ms: 1.12675
+test	UNKNOWN STEP	2026-10-02T11:49:41.5726669Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5727010Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5727735Z # Subtest: режим Backspace: виправлена помилка все одно входить до статистики
+test	UNKNOWN STEP	2026-10-02T11:49:41.5728693Z ok 70 - режим Backspace: виправлена помилка все одно входить до статистики
+test	UNKNOWN STEP	2026-10-02T11:49:41.5729233Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5729545Z   duration_ms: 0.484601
+test	UNKNOWN STEP	2026-10-02T11:49:41.5729896Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5730233Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5730940Z # Subtest: режим Backspace: спроба не завершується з невиправленою помилкою
+test	UNKNOWN STEP	2026-10-02T11:49:41.5731867Z ok 71 - режим Backspace: спроба не завершується з невиправленою помилкою
+test	UNKNOWN STEP	2026-10-02T11:49:41.5732401Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5732701Z   duration_ms: 1.282995
+test	UNKNOWN STEP	2026-10-02T11:49:41.5733052Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5733353Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5733884Z # Subtest: швидкість не зараховується без точності
+test	UNKNOWN STEP	2026-10-02T11:49:41.5734547Z ok 72 - швидкість не зараховується без точності
+test	UNKNOWN STEP	2026-10-02T11:49:41.5734977Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5735279Z   duration_ms: 0.527635
+test	UNKNOWN STEP	2026-10-02T11:49:41.5735650Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5736285Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5736861Z # Subtest: рівень визначається і швидкістю, і точністю
+test	UNKNOWN STEP	2026-10-02T11:49:41.5737546Z ok 73 - рівень визначається і швидкістю, і точністю
+test	UNKNOWN STEP	2026-10-02T11:49:41.5737964Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5738272Z   duration_ms: 0.200753
+test	UNKNOWN STEP	2026-10-02T11:49:41.5738607Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5739203Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5739842Z # Subtest: темп не блокує початківця, якщо вимогу швидкості вимкнено
+test	UNKNOWN STEP	2026-10-02T11:49:41.5740634Z ok 74 - темп не блокує початківця, якщо вимогу швидкості вимкнено
+test	UNKNOWN STEP	2026-10-02T11:49:41.5741095Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5741392Z   duration_ms: 0.568347
+test	UNKNOWN STEP	2026-10-02T11:49:41.5741727Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5742012Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5742477Z # Subtest: незавершена спроба не зараховується
+test	UNKNOWN STEP	2026-10-02T11:49:41.5743113Z ok 75 - незавершена спроба не зараховується
+test	UNKNOWN STEP	2026-10-02T11:49:41.5743532Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5743838Z   duration_ms: 0.525312
+test	UNKNOWN STEP	2026-10-02T11:49:41.5744448Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5744760Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5745270Z # Subtest: затримки переходів і ритм
+test	UNKNOWN STEP	2026-10-02T11:49:41.5746087Z ok 76 - затримки переходів і ритм
+test	UNKNOWN STEP	2026-10-02T11:49:41.5746461Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5746758Z   duration_ms: 0.308936
+test	UNKNOWN STEP	2026-10-02T11:49:41.5747096Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5747397Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5748087Z # Subtest: апостроф нормалізується, українські літери не підміняються
+test	UNKNOWN STEP	2026-10-02T11:49:41.5748922Z ok 77 - апостроф нормалізується, українські літери не підміняються
+test	UNKNOWN STEP	2026-10-02T11:49:41.5749424Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5749729Z   duration_ms: 1.291087
+test	UNKNOWN STEP	2026-10-02T11:49:41.5750076Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5750379Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5751047Z # Subtest: адреси сервера: той самий сайт, GitHub Pages і файл із диска
+test	UNKNOWN STEP	2026-10-02T11:49:41.5751902Z ok 78 - адреси сервера: той самий сайт, GitHub Pages і файл із диска
+test	UNKNOWN STEP	2026-10-02T11:49:41.5752401Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5752704Z   duration_ms: 1.92288
+test	UNKNOWN STEP	2026-10-02T11:49:41.5753082Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5753388Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5754185Z # Subtest: клієнт знаходить сервер, передає помилки сервера й відрізняє їх від відсутності зв’язку
+test	UNKNOWN STEP	2026-10-02T11:49:41.5755243Z ok 79 - клієнт знаходить сервер, передає помилки сервера й відрізняє їх від відсутності зв’язку
+test	UNKNOWN STEP	2026-10-02T11:49:41.5755974Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5756510Z   duration_ms: 20.355249
+test	UNKNOWN STEP	2026-10-02T11:49:41.5756901Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5757192Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5757852Z # Subtest: вхід з іншого пристрою: копія серверного кабінету в браузері
+test	UNKNOWN STEP	2026-10-02T11:49:41.5758673Z ok 80 - вхід з іншого пристрою: копія серверного кабінету в браузері
+test	UNKNOWN STEP	2026-10-02T11:49:41.5759165Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5759466Z   duration_ms: 15.899889
+test	UNKNOWN STEP	2026-10-02T11:49:41.5759808Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5760102Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5760767Z # Subtest: локальний кабінет: відновлення пароля за секретним питанням
+test	UNKNOWN STEP	2026-10-02T11:49:41.5761641Z ok 81 - локальний кабінет: відновлення пароля за секретним питанням
+test	UNKNOWN STEP	2026-10-02T11:49:41.5762130Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5762445Z   duration_ms: 18.912382
+test	UNKNOWN STEP	2026-10-02T11:49:41.5762813Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5763110Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5763893Z # Subtest: гість: без імені й пароля, прогрес лишається в браузері й переходить до нового кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:41.5764921Z ok 82 - гість: без імені й пароля, прогрес лишається в браузері й переходить до нового кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:41.5765521Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5766024Z   duration_ms: 15.574379
+test	UNKNOWN STEP	2026-10-02T11:49:41.5766384Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5766688Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5767477Z # Subtest: реєстрація: лише ім’я, пароль і секретне питання; секрети не зберігаються відкрито
+test	UNKNOWN STEP	2026-10-02T11:49:41.5768493Z ok 83 - реєстрація: лише ім’я, пароль і секретне питання; секрети не зберігаються відкрито
+test	UNKNOWN STEP	2026-10-02T11:49:41.5769039Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5769346Z   duration_ms: 13.505799
+test	UNKNOWN STEP	2026-10-02T11:49:41.5769681Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5769965Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5770799Z # Subtest: вхід з іншого пристрою повертає збережений прогрес
+test	UNKNOWN STEP	2026-10-02T11:49:41.5771495Z ok 84 - вхід з іншого пристрою повертає збережений прогрес
+test	UNKNOWN STEP	2026-10-02T11:49:41.5771908Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5772192Z   duration_ms: 18.527612
+test	UNKNOWN STEP	2026-10-02T11:49:41.5772604Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5772923Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5773695Z # Subtest: конфлікт: прогрес, змінений на іншому пристрої, не перезаписується мовчки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5774966Z ok 85 - конфлікт: прогрес, змінений на іншому пристрої, не перезаписується мовчки
+test	UNKNOWN STEP	2026-10-02T11:49:41.5775518Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5776024Z   duration_ms: 12.553042
+test	UNKNOWN STEP	2026-10-02T11:49:41.5776404Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5776723Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5777272Z # Subtest: відновлення пароля за секретним питанням
+test	UNKNOWN STEP	2026-10-02T11:49:41.5777968Z ok 86 - відновлення пароля за секретним питанням
+test	UNKNOWN STEP	2026-10-02T11:49:41.5778421Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5778709Z   duration_ms: 29.724438
+test	UNKNOWN STEP	2026-10-02T11:49:41.5779102Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5779428Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5779956Z # Subtest: захист від підбору пароля та відповіді
+test	UNKNOWN STEP	2026-10-02T11:49:41.5780610Z ok 87 - захист від підбору пароля та відповіді
+test	UNKNOWN STEP	2026-10-02T11:49:41.5781071Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5781364Z   duration_ms: 60.328654
+test	UNKNOWN STEP	2026-10-02T11:49:41.5781763Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5782159Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5782896Z # Subtest: токен: підробка, чужий секрет і завершений строк відхиляються
+test	UNKNOWN STEP	2026-10-02T11:49:41.5783823Z ok 88 - токен: підробка, чужий секрет і завершений строк відхиляються
+test	UNKNOWN STEP	2026-10-02T11:49:41.5784326Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5784654Z   duration_ms: 8.291605
+test	UNKNOWN STEP	2026-10-02T11:49:41.5785021Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5785342Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5786225Z # Subtest: зміна пароля, зміна секретного питання, видалення кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:41.5787092Z ok 89 - зміна пароля, зміна секретного питання, видалення кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:41.5787638Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5787962Z   duration_ms: 30.19653
+test	UNKNOWN STEP	2026-10-02T11:49:41.5788348Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5788665Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5789257Z # Subtest: непридатний або завеликий прогрес відхиляється
+test	UNKNOWN STEP	2026-10-02T11:49:41.5790020Z ok 90 - непридатний або завеликий прогрес відхиляється
+test	UNKNOWN STEP	2026-10-02T11:49:41.5790516Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5790812Z   duration_ms: 14.557184
+test	UNKNOWN STEP	2026-10-02T11:49:41.5791164Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5791483Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5791964Z # Subtest: порожнє сховище дає новий профіль
+test	UNKNOWN STEP	2026-10-02T11:49:41.5792616Z ok 91 - порожнє сховище дає новий профіль
+test	UNKNOWN STEP	2026-10-02T11:49:41.5793009Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5793330Z   duration_ms: 1.305349
+test	UNKNOWN STEP	2026-10-02T11:49:41.5793650Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5793930Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5795345Z # Subtest: після «перезавантаження» зберігаються відкриті уроки та особисті результати
+test	UNKNOWN STEP	2026-10-02T11:49:41.5796528Z ok 92 - після «перезавантаження» зберігаються відкриті уроки та особисті результати
+test	UNKNOWN STEP	2026-10-02T11:49:41.5796955Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5797282Z   duration_ms: 185.151576
+test	UNKNOWN STEP	2026-10-02T11:49:41.5797644Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5798006Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5798697Z # Subtest: невдала спроба обнуляє серію і не дає рекорду швидкості
+test	UNKNOWN STEP	2026-10-02T11:49:41.5799436Z ok 93 - невдала спроба обнуляє серію і не дає рекорду швидкості
+test	UNKNOWN STEP	2026-10-02T11:49:41.5799860Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5800131Z   duration_ms: 0.332722
+test	UNKNOWN STEP	2026-10-02T11:49:41.5800707Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5800978Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5801474Z # Subtest: історія обмежена, щоб не переповнити сховище
+test	UNKNOWN STEP	2026-10-02T11:49:41.5802144Z ok 94 - історія обмежена, щоб не переповнити сховище
+test	UNKNOWN STEP	2026-10-02T11:49:41.5802597Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5802866Z   duration_ms: 0.896742
+test	UNKNOWN STEP	2026-10-02T11:49:41.5803148Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5803397Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5803924Z # Subtest: пошкоджені дані у сховищі не ламають застосунок
+test	UNKNOWN STEP	2026-10-02T11:49:41.5804597Z ok 95 - пошкоджені дані у сховищі не ламають застосунок
+test	UNKNOWN STEP	2026-10-02T11:49:41.5804992Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5805459Z   duration_ms: 0.724543
+test	UNKNOWN STEP	2026-10-02T11:49:41.5805989Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5806258Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5806652Z # Subtest: експорт та імпорт прогресу
+test	UNKNOWN STEP	2026-10-02T11:49:41.5807146Z ok 96 - експорт та імпорт прогресу
+test	UNKNOWN STEP	2026-10-02T11:49:41.5807499Z   ---
+test	UNKNOWN STEP	2026-10-02T11:49:41.5807764Z   duration_ms: 1.186549
+test	UNKNOWN STEP	2026-10-02T11:49:41.5808092Z   type: 'test'
+test	UNKNOWN STEP	2026-10-02T11:49:41.5808390Z   ...
+test	UNKNOWN STEP	2026-10-02T11:49:41.5808655Z 1..96
+test	UNKNOWN STEP	2026-10-02T11:49:41.5808933Z # tests 96
+test	UNKNOWN STEP	2026-10-02T11:49:41.5809220Z # suites 0
+test	UNKNOWN STEP	2026-10-02T11:49:41.5809500Z # pass 96
+test	UNKNOWN STEP	2026-10-02T11:49:41.5809779Z # fail 0
+test	UNKNOWN STEP	2026-10-02T11:49:41.5810083Z # cancelled 0
+test	UNKNOWN STEP	2026-10-02T11:49:41.5810386Z # skipped 0
+test	UNKNOWN STEP	2026-10-02T11:49:41.5810672Z # todo 0
+test	UNKNOWN STEP	2026-10-02T11:49:41.5811024Z # duration_ms 6315.613633
+test	UNKNOWN STEP	2026-10-02T11:49:41.6011467Z ##[group]Run npm run test:e2e
+test	UNKNOWN STEP	2026-10-02T11:49:41.6011933Z ^[[36;1mnpm run test:e2e^[[0m
+test	UNKNOWN STEP	2026-10-02T11:49:41.6085447Z shell: /usr/bin/bash -e {0}
+test	UNKNOWN STEP	2026-10-02T11:49:41.6085719Z env:
+test	UNKNOWN STEP	2026-10-02T11:49:41.6086210Z   BROWSER: /usr/bin/google-chrome
+test	UNKNOWN STEP	2026-10-02T11:49:41.6086494Z ##[endgroup]
+test	UNKNOWN STEP	2026-10-02T11:49:41.7158053Z 
+test	UNKNOWN STEP	2026-10-02T11:49:41.7158677Z > solo-typing-trainer@1.0.0 test:e2e
+test	UNKNOWN STEP	2026-10-02T11:49:41.7159276Z > node scripts/e2e.mjs
+test	UNKNOWN STEP	2026-10-02T11:49:41.7159593Z 
+test	UNKNOWN STEP	2026-10-02T11:49:43.7389595Z ✔ посібник: мотивація, постава, пальці, правила, поради — доступний без кабінету
+test	UNKNOWN STEP	2026-10-02T11:49:43.9381550Z ✔ кабінет створено на сервері: ім’я, пароль і секретне питання
+test	UNKNOWN STEP	2026-10-02T11:49:44.1344087Z ✔ новий профіль, українська, шлях із закритими вправами
+test	UNKNOWN STEP	2026-10-02T11:49:44.2977010Z ✔ розучування з підказкою, залік без екранної клавіатури
+test	UNKNOWN STEP	2026-10-02T11:49:44.5834006Z ✔ помилка врахована, чужа розкладка/Alt/dead key не ламають спробу, є наступна дія
+test	UNKNOWN STEP	2026-10-02T11:49:45.3313326Z ✔ три успішні спроби поспіль закріплюють вправу
+test	UNKNOWN STEP	2026-10-02T11:49:45.7854888Z ✔ прогрес і особистий результат збережено після перезавантаження
+test	UNKNOWN STEP	2026-10-02T11:49:46.7959547Z ✔ вихід → вхід як з іншого комп’ютера, відновлення пароля за секретним питанням, кабінет
+test	UNKNOWN STEP	2026-10-02T11:49:46.9787722Z ✔ неточна спроба не зарахована, запропоновано точкове повторення
+test	UNKNOWN STEP	2026-10-02T11:49:47.4427688Z ✔ етап 2: «ждала діло далі лід аж ждала влада дала …» — лише відкриті клавіші
+test	UNKNOWN STEP	2026-10-02T11:49:48.1374991Z ✔ етап 3: вправа Академії на частотні біграми
+test	UNKNOWN STEP	2026-10-02T11:50:46.1150453Z ✔ зріз швидкості: неточна спроба без сертифіката, точна — золотий сертифікат
+test	UNKNOWN STEP	2026-10-02T11:50:46.9058259Z ✔ статистика, джерела й ліцензії, заняття дня, власний текст, налаштування
+test	UNKNOWN STEP	2026-10-02T11:50:47.4245495Z ✔ англійська розкладка працює, профілі мов незалежні
+test	UNKNOWN STEP	2026-10-02T11:50:48.3454314Z ✔ гість: тренування без кабінету, прогрес переживає перезавантаження і переходить до нового кабінету
+test	UNKNOWN STEP	2026-10-02T11:50:48.7344537Z ✔ вузький екран без горизонтального прокручування, навігація клавішею Tab
+test	UNKNOWN STEP	2026-10-02T11:50:49.0347410Z ✔ консоль браузера без помилок
+test	UNKNOWN STEP	2026-10-02T11:50:49.0347666Z 
+test	UNKNOWN STEP	2026-10-02T11:50:49.0347837Z Наскрізну перевірку пройдено.
+test	UNKNOWN STEP	2026-10-02T11:50:49.6390541Z Post job cleanup.
+test	UNKNOWN STEP	2026-10-02T11:50:49.7691128Z (node:2934) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	UNKNOWN STEP	2026-10-02T11:50:49.7692385Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	UNKNOWN STEP	2026-10-02T11:50:49.7887640Z Post job cleanup.
+test	UNKNOWN STEP	2026-10-02T11:50:49.8791001Z [command]/usr/bin/git version
+test	UNKNOWN STEP	2026-10-02T11:50:49.8834145Z git version 2.55.0
+test	UNKNOWN STEP	2026-10-02T11:50:49.8871410Z Temporarily overriding HOME='/home/runner/work/_temp/9b67711d-66c1-42ab-9f3b-d0ff404f4872' before making global git config changes
+test	UNKNOWN STEP	2026-10-02T11:50:49.8872973Z Adding repository directory to the temporary git global config as a safe directory
+test	UNKNOWN STEP	2026-10-02T11:50:49.8877090Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/solo-typing-trainer/solo-typing-trainer
+test	UNKNOWN STEP	2026-10-02T11:50:49.8922923Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	UNKNOWN STEP	2026-10-02T11:50:49.8962286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	UNKNOWN STEP	2026-10-02T11:50:49.9237869Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	UNKNOWN STEP	2026-10-02T11:50:49.9268939Z http.https://github.com/.extraheader
+test	UNKNOWN STEP	2026-10-02T11:50:49.9280534Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test	UNKNOWN STEP	2026-10-02T11:50:49.9325250Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	UNKNOWN STEP	2026-10-02T11:50:49.9689610Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	UNKNOWN STEP	2026-10-02T11:50:49.9742026Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	UNKNOWN STEP	2026-10-02T11:50:50.0217032Z Cleaning up orphan processes
+test	UNKNOWN STEP	2026-10-02T11:50:50.0510747Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

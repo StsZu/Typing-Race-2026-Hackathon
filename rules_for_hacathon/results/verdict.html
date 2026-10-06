@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Висновок журі Typing Race</title>
+<meta name="description" content="Висновок аудиту трьох робіт Typing Race 2026 за правилами v1.2 після двох незалежних проходів: бали, порівняння і переможець." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --primary: #0b57d0; --on-primary: #fff;
+    --primary-container: #d3e3fd; --on-primary-container: #041e49;
+    --tertiary-container: #fad8fd; --on-tertiary-container: #28132e;
+    --success: #146c2e; --success-container: #c4eed0; --on-success-container: #002109;
+    --warning-container: #ffefc7; --on-warning-container: #402d00;
+    --error: #ba1a1a; --error-container: #ffdad6; --on-error-container: #410002;
+    --surface: #f8f9ff; --surface-low: #f1f3f9; --surface-card: #ffffff; --surface-high: #e7e8ee;
+    --on-surface: #1a1b21; --on-surface-variant: #44474f;
+    --outline: #74777f; --outline-variant: #c4c6d0;
+    --gold: #a86b00; --gold-container: #ffe8b3;
+    --bar-bg: #e1e2e8;
+    --w01: #7b1fa2; --w02: #0b57d0; --w03: #00796b;
+    --shadow: 0 1px 2px rgba(0,0,0,.08), 0 2px 6px 2px rgba(0,0,0,.05);
+    --radius-lg: 24px; --radius-md: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --primary: #a8c7fa; --on-primary: #062e6f;
+      --primary-container: #0842a0; --on-primary-container: #d3e3fd;
+      --tertiary-container: #573e5c; --on-tertiary-container: #fad8fd;
+      --success: #8bd8a0; --success-container: #0f5223; --on-success-container: #c4eed0;
+      --warning-container: #5c4300; --on-warning-container: #ffefc7;
+      --error: #ffb4ab; --error-container: #93000a; --on-error-container: #ffdad6;
+      --surface: #111318; --surface-low: #191c20; --surface-card: #1d2024; --surface-high: #282a2f;
+      --on-surface: #e2e2e9; --on-surface-variant: #c4c6d0;
+      --outline: #8e9099; --outline-variant: #44474f;
+      --gold: #ffc65c; --gold-container: #5a3d00;
+      --bar-bg: #33353a;
+      --w01: #d59ee6; --w02: #a8c7fa; --w03: #6fd3c2;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --primary: #a8c7fa; --on-primary: #062e6f;
+    --primary-container: #0842a0; --on-primary-container: #d3e3fd;
+    --tertiary-container: #573e5c; --on-tertiary-container: #fad8fd;
+    --success: #8bd8a0; --success-container: #0f5223; --on-success-container: #c4eed0;
+    --warning-container: #5c4300; --on-warning-container: #ffefc7;
+    --error: #ffb4ab; --error-container: #93000a; --on-error-container: #ffdad6;
+    --surface: #111318; --surface-low: #191c20; --surface-card: #1d2024; --surface-high: #282a2f;
+    --on-surface: #e2e2e9; --on-surface-variant: #c4c6d0;
+    --outline: #8e9099; --outline-variant: #44474f;
+    --gold: #ffc65c; --gold-container: #5a3d00;
+    --bar-bg: #33353a;
+    --w01: #d59ee6; --w02: #a8c7fa; --w03: #6fd3c2;
+    --shadow: none;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--surface); color: var(--on-surface);
+    font: 15px/1.55 "Roboto", system-ui, sans-serif;
+  }
+  a { color: var(--primary); }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; font-weight: 500; }
+  h2 { font-size: 21px; font-weight: 500; margin: 0 0 14px; }
+  h3 { font-size: 17px; font-weight: 500; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--on-surface-variant); }
+  .mono { font-family: "Roboto Mono", ui-monospace, monospace; }
+  section { margin-top: 32px; }
+  .card { background: var(--surface-card); border: 1px solid var(--outline-variant); border-radius: var(--radius-lg); padding: 22px; box-shadow: var(--shadow); }
+  .chip { display: inline-block; padding: 3px 10px; border-radius: 8px; font-size: 12.5px; font-weight: 500; }
+  .chip.warn { background: var(--warning-container); color: var(--on-warning-container); }
+  .chip.ok { background: var(--success-container); color: var(--on-success-container); }
+  .chip.info { background: var(--primary-container); color: var(--on-primary-container); }
+  .chip.err { background: var(--error-container); color: var(--on-error-container); }
+
+  .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: stretch; margin-top: 20px; }
+  .winner { background: var(--gold-container); border: none; }
+  .winner .label { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 700; color: var(--gold); }
+  .winner .name { font-size: 26px; font-weight: 500; margin: 4px 0 8px; }
+  .winner .score { font-size: 56px; font-weight: 700; line-height: 1; }
+  .winner .score small { font-size: 20px; font-weight: 500; }
+  .stamp { border: 2px dashed var(--outline); border-radius: var(--radius-md); padding: 16px; }
+
+  .podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .place { border-radius: var(--radius-md); padding: 16px; background: var(--surface-low); border-top: 5px solid var(--c); }
+  .place .pos { font-size: 13px; font-weight: 700; color: var(--on-surface-variant); text-transform: uppercase; letter-spacing: .06em; }
+  .place .t { font-size: 18px; font-weight: 500; margin: 2px 0; }
+  .place .big { font-size: 38px; font-weight: 700; color: var(--c); line-height: 1.1; }
+  .place .meta { font-size: 13px; color: var(--on-surface-variant); }
+
+  .cats { display: grid; gap: 12px; }
+  .cat-row { display: grid; grid-template-columns: 210px 1fr; gap: 12px; align-items: center; }
+  .cat-row .cname { font-size: 14px; }
+  .bars { display: grid; gap: 4px; }
+  .bar { display: grid; grid-template-columns: 40px 1fr 54px; gap: 8px; align-items: center; font-size: 12.5px; }
+  .track { height: 10px; border-radius: 5px; background: var(--bar-bg); overflow: hidden; }
+  .fill { height: 100%; border-radius: 5px; background: var(--c); }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; margin-bottom: 14px; }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var(--c); margin-right: 6px; vertical-align: -1px; }
+
+  .why { display: grid; gap: 12px; }
+  .why .item { display: grid; grid-template-columns: 34px 1fr; gap: 12px; }
+  .why .num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--primary-container); color: var(--on-primary-container); font-weight: 700; }
+
+  .table-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--outline-variant); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; background: var(--surface-card); }
+  th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--outline-variant); vertical-align: top; }
+  thead th { background: var(--surface-high); font-weight: 500; position: sticky; top: 0; }
+  td.n { text-align: center; font-family: "Roboto Mono", monospace; white-space: nowrap; }
+  td.full { color: var(--success); }
+  td.low { color: var(--error); font-weight: 700; }
+  td.mid { color: var(--on-surface); }
+  tr.cat td { background: var(--surface-low); font-weight: 500; }
+  .note-cell { color: var(--on-surface-variant); font-size: 12.5px; }
+
+  .works { display: grid; gap: 18px; }
+  .work { border-left: 6px solid var(--c); }
+  .work-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+  .work-head .score { font-size: 30px; font-weight: 700; color: var(--c); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 12px; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  .links { font-size: 13px; word-break: break-all; }
+
+  .callout { border-radius: var(--radius-md); padding: 14px 16px; background: var(--warning-container); color: var(--on-warning-container); }
+  .callout + .callout { margin-top: 10px; }
+  footer { margin-top: 40px; font-size: 12.5px; color: var(--on-surface-variant); }
+
+  @media (max-width: 760px) {
+    .hero, .cols { grid-template-columns: 1fr; }
+    .podium { grid-template-columns: 1fr; }
+    .cat-row { grid-template-columns: 1fr; gap: 4px; }
+    h1 { font-size: 24px; }
+    .winner .score { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <span class="chip ok">Остаточний висновок · два проходи, звірено за §10.2</span>
+  <h1>Typing Race 2026: висновок аудиту</h1>
+  <p class="muted">Три роботи перевірено за правилами <span class="mono">COMPETITION_RULES.md</span> v1.2: кроки P1–P24, рубрики A–F (100 балів) і G (поза сотнею). Аудит проведено 6 жовтня 2026 року двома незалежними проходами. У кожному проході кожну роботу перевіряв окремий аудитор у власному ізольованому профілі браузера, без порівняння з іншими і без доступу до результатів іншого проходу. Порівняння нижче зроблено вже після підрахунку балів, як вимагає §4.6.</p>
+
+  <div class="hero">
+    <div class="card winner">
+      <div class="label">Переможець</div>
+      <div class="name">W02 · «Соло» — тренажер сенсорного набору</div>
+      <div class="score">100<small> / 100</small></div>
+      <p style="margin-top:12px">Єдина робота, яка взяла всі підкритерії A–F. Педагогіка, облік введення, метрики, словники, доступність і тести виконані без жодної втрати балу. Обидва незалежні проходи дали 100. Від W03 (95) її відділяють три пункти: облік введення (B1), доступність клавіатурного шляху (D2) і зелений CI (F3).</p>
+    </div>
+    <div class="stamp">
+      <h3>Звірка двох проходів</h3>
+      <p>W01: 74 і 73 · W02: 100 і 100 · W03: 97 і 95. Усі розбіжності не перевищують 3 балів, тому за §10.2 береться нижчий бал. Третій прохід не потрібен.</p>
+      <p>Розійшлися лише два підкритерії: D3 у W01 (3 → 2) і D2 у W03 (4 → 2). Порядок місць обидва проходи дали однаковий.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Підсумкове ранжування</h2>
+    <div class="podium">
+      <div class="place" style="--c: var(--w02)">
+        <div class="pos">1 місце · 15 000 грн*</div>
+        <div class="t">W02 · Соло</div>
+        <div class="big">100</div>
+        <div class="meta">відмінна · G: не вимагається (0)<br>caps немає · прийнята</div>
+      </div>
+      <div class="place" style="--c: var(--w03)">
+        <div class="pos">2 місце · 10 000 грн*</div>
+        <div class="t">W03 · Typing-Race</div>
+        <div class="big">95</div>
+        <div class="meta">відмінна · G: 10 / 10<br>caps немає · прийнята</div>
+      </div>
+      <div class="place" style="--c: var(--w01)">
+        <div class="pos">3 місце · 5 000 грн*</div>
+        <div class="t">W01 · TypTap</div>
+        <div class="big">73</div>
+        <div class="meta">прийнятна · G: 10 / 10<br>caps немає · прийнята</div>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:10px;font-size:13px">* Усі три роботи пройшли поріг MIN_PRIZE = 60 і не мають умов неприйняття за §9.1. Тайбрейк не знадобився: усі підсумки різні. Бали — нижчий із двох проходів (§10.2). Апеляції — 3 доби після публікації.</p>
+  </section>
+
+  <section>
+    <h2>Бали за категоріями</h2>
+    <div class="card">
+      <div class="legend">
+        <span style="--c: var(--w01)">W01 TypTap</span>
+        <span style="--c: var(--w02)">W02 Соло</span>
+        <span style="--c: var(--w03)">W03 Typing-Race</span>
+      </div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Чому перемагає W02</h2>
+    <div class="card why">
+      <div class="item"><div class="num">1</div><div><strong>Повний бал у кожному підкритерії A–F.</strong> Аудитор не знайшов жодного підкритерію, де W02 отримала б нижче за максимальний якір. Слова етапу 2 на звичайному шляху новачка повністю вкладаються у відкритий алфавіт (EN 80/80, UK 72/72). Залік проходить без клавіатури й підказок, а метрики сходяться з ручним розрахунком до 0,1 %.</div></div>
+      <div class="item"><div class="num">2</div><div><strong>B1: облік введення (5 проти 3 у W03).</strong> W02 в обох проходах відхилила вставку з буфера, синтетичний <span class="mono">insertText</span> і серію ідентичних подій. W03 в обох проходах отримала 3: у першому одна синтетична подія з усім текстом зарахувала залікову спробу, у другому — миттєва серія натискань (67 816 зн/хв).</div></div>
+      <div class="item"><div class="num">3</div><div><strong>D2: клавіатурна доступність (4 проти 2 у W03, прохід 2).</strong> У W03 у порядку Tab є 4 фокусовані <span class="mono">div</span> статус-бару без ролі й доступного імені. У W02 кожен елемент має роль, ім'я й видимий фокус, Lighthouse Accessibility 100.</div></div>
+      <div class="item"><div class="num">4</div><div><strong>F3: тести підтверджено (2 проти 1 у W03).</strong> У W02 на аудитованому комміті <span class="mono">cf483e2</span> CI зелений: 96/96 модульних перевірок і 17 e2e-сценаріїв. У W03 на <span class="mono">80d8375</span> CI червоний: падають 1 з 801 модульного тесту і 9 з 233 e2e.</div></div>
+      <div class="item"><div class="num">5</div><div><strong>Гонка W03 на місце не впливає.</strong> W03 має справжній мультиплеєр (G = 10), у W02 гонки немає (G = 0, без штрафу). За §1 і §10.3 бали G враховуються лише для розв'язання нічиєї. Нічиєї немає (100 проти 95), тому G на порядок місць не впливає.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Таблиця підкритеріїв</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Підкритерій</th><th>Макс</th><th>W01</th><th>W02</th><th>W03</th><th>Що вирішило різницю</th></tr></thead>
+        <tbody id="subs"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Роботи окремо</h2>
+    <div class="works">
+
+      <article class="card work" style="--c: var(--w02)">
+        <div class="work-head"><h3>W02 · «Соло» — тренажер сенсорного набору</h3><span class="score">100 / 100</span></div>
+        <div class="links muted">Демо: solo-typing-trainer.vercel.app · Репо: github.com/gaidukanna97-star/solo-typing-trainer · HEAD cf483e2 (02.10.2026)</div>
+        <p style="margin-top:10px">Три етапи обома мовами: гами з поступовим відкриттям клавіш, слова лише з відкритих літер і Академія з 10 модулів. Критерій закріплення: 3 заліки поспіль із точністю від 97 % і швидкістю від 100 зн/хв. Окремі сторінки джерел і ліцензій, відтворюваний збір словників із SHA-256. Lighthouse 100/100/100 на desktop і mobile. Навчання працює офлайн, сторонніх доменів немає.</p>
+        <div class="cols">
+          <div><h3>Сильні сторони</h3><ul>
+            <li>Чітка педагогіка: тренування з підказками, залік без них, закріплення трьома спробами.</li>
+            <li>Чесні метрики: обчислення сходяться, виправлені помилки входять у статистику, наступна вправа будується з реальних помилок.</li>
+            <li>Інженерія: 96 тестів і e2e у CI, жодного секрету в історії git, офлайн через service worker.</li>
+          </ul></div>
+          <div><h3>Недоліки (на бал не вплинули)</h3><ul>
+            <li>Немає фільтра неправдоподібного темпу: миттєвий набір зараховано на 96–237 тис. зн/хв, з'явилися досягнення й рекорд. Ліміт 1200 зн/хв діє лише в «Зрізі швидкості».</li>
+            <li>На українській екранній клавіатурі не намальовано <span class="mono">ґ</span>, вона є лише в підказці «AltGr + Г».</li>
+            <li>Зсув макета на старті (CLS 0,15 у трасі) і повторні запити favicon.</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="card work" style="--c: var(--w03)">
+        <div class="work-head"><h3>W03 · Typing-Race</h3><span class="score">95 / 100 · G 10</span></div>
+        <div class="links muted">Демо: typing-race-rosy.vercel.app · Репо: github.com/prodelt/typing-race-hackathon · HEAD 80d8375 (05.10.2026, 23:54). Production-деплой зроблено о 23:55, після дедлайну пушів у main немає.</div>
+        <p style="margin-top:10px">Навчальна частина за рівнем майже як у W02: три етапи обома мовами, клавіші відкриваються після 3 заліків поспіль від 95 %, залік без підказок, Академія з частотними біграмами й критерієм 97 %. Є відтворюваний конвеєр словників, сторінка ліцензій, CSP і HSTS. Плюс справжні перегони: приватні кімнати, живий прогрес суперника із затримкою близько 0,2 с, сервер перевіряє журнал натискань, рейтинг Elo.</p>
+        <div class="cols">
+          <div><h3>Сильні сторони</h3><ul>
+            <li>Цілісна педагогіка: 3 етапи × 2 мови, поступове відкриття, точність понад швидкість.</li>
+            <li>Аналітика: розбір за клавішами й переходами, теплова карта, ритм, конкретна наступна дія.</li>
+            <li>Найкраща реалізація змагання серед робіт: G = 10, серверна валідація заїздів.</li>
+          </ul></div>
+          <div><h3>Недоліки, що коштували балів</h3><ul>
+            <li><strong>B1 −2:</strong> одна синтетична подія з усім текстом зараховує залікову спробу, і рекорд у профілі спотворюється. Справжній paste блокується.</li>
+            <li><strong>D2 −2:</strong> 4 фокусовані <span class="mono">div</span> статус-бару без ролі й доступного імені (прохід 2).</li>
+            <li><strong>F3 −1:</strong> на аудитованому комміті CI червоний: архітектурний тест і e2e з axe на Profile та <span class="mono">result.spec</span>.</li>
+            <li>Без втрати балів: «Ще заїзд» переводить із приватної кімнати в публічну, а лічильник показує «4 з 3».</li>
+          </ul></div>
+        </div>
+      </article>
+
+      <article class="card work" style="--c: var(--w01)">
+        <div class="work-head"><h3>W01 · TypTap</h3><span class="score">73 / 100 · G 10</span></div>
+        <div class="links muted">Демо: typtap.alliancegroup95.com · Репо: github.com/artyd/TypTap · HEAD b7d9323 (15.09.2026)</div>
+        <p style="margin-top:10px">Найбільше «фіч»: 12 рівнів × 6 уроків обома мовами, заліки без клавіатури, поріг точності 80 %, тренування слабких клавіш із тепловою картою, 16 мініігор, робочий мультиплеєр (WebSocket) і серверний лідерборд. Однак у педагогічному ядрі є системні дефекти, і вони коштують 27 балів.</p>
+        <div class="cols">
+          <div><h3>Сильні сторони</h3><ul>
+            <li>Мультиплеєр із живим прогресом (≈1 с) і серверним лідербордом: G = 10.</li>
+            <li>Адаптивні вправи за реальними помилками, теплова карта, аналіз ритму.</li>
+            <li>Реальний поріг 80 %, уроки-заліки без клавіатури, робота офлайн.</li>
+          </ul></div>
+          <div><h3>Недоліки, що коштували балів</h3><ul>
+            <li><strong>C2 −4, A2 −3:</strong> слова уроків виходять за межі відкритих клавіш (8/30 EN). Частина літер (g h, л д ж щ з х ї ь б ю ґ) не відкривається жодним рядковим уроком. Український «домашній ряд» подано як <span class="mono">фівапро</span>.</li>
+            <li><strong>B1 −4:</strong> регістр не перевіряється («world» замість «World» дає 100 %). Миттєві синтетичні натискання зараховують урок, і результат потрапляє в глобальний лідерборд.</li>
+            <li><strong>E1 −2, A3 −2, A5 −2, D2 −2, C4 −2, D3 −1:</strong> точність ігнорує виправлені помилки. Підказка наступної клавіші за замовчуванням увімкнена в уроках, що змінюють прогрес. Поріг швидкості не діє. На мобільному 7 пунктів навігації без доступного імені, картка ERRORS обрізана. Скриптів обробки словників немає.</li>
+          </ul></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Застереження для організатора</h2>
+    <div class="callout"><strong>Звірка.</strong> Два проходи виконано окремими аудиторами без доступу до результатів один одного. Розбіжності: W01 −1 (D3), W02 0, W03 −2 (D2). Взято нижчі бали, третій прохід не потрібен. Таблиця нижче показує бали проходу з нижчим підсумком.</div>
+    <div class="callout"><strong>Чутливість B1 (§4.4.4).</strong> Миттєвий посимвольний ввід зараховують усі три роботи. W02 приймає навіть недовірені синтетичні натискання (до 310 тис. зн/хв) — обидва аудитори W02 поставили 5, бо буквальна перевірка §4.4.4 (вставка, серія ідентичних подій) пройдена. Аудитор W03 у проході 2 за аналогічну поведінку поставив 3. Якщо застосувати суворіше трактування до всіх, W02 = 98, W03 = 95, W01 = 73 — порядок місць не змінюється. W01 має B1 = 1 через окремий дефект: регістр не перевіряється.</div>
+    <div class="callout"><strong>Побічні ефекти аудиту.</strong> У публічних лідербордах W01 і W03 з'являлися тестові профілі аудиторів. W01: профілі обох проходів скинуто, з рейтингу зникли, але рядки з нікнеймами лишились у БД (видалення в продукті немає). W03: профілі проходу 2 видалено кнопкою «Видалити мої дані», а рядки AuditW03A/AuditW03B з проходу 1 лишилися. Учасників варто попередити.</div>
+    <div class="callout"><strong>Що не перевірено в жодній роботі.</strong> Кирилицю набирали синтетичними подіями (ланцюжок §8.4.1, бали за це не знижено). <span class="mono">prefers-reduced-motion</span> перевірено лише за CSS і перемикачами продуктів, бо MCP не емулює цей параметр. Темп 120–200 мс для довіреного вводу витримати не вдалося. Тести не запускали локально, лише дивилися CI-логи. Часу подання немає, але він потрібен лише для останнього тайбрейку. GIF-записи не робилися.</div>
+    <div class="callout"><strong>Ризик 9.1.5 у W03 (не порушення).</strong> Тексти Академії взято з пакета організаторів, для якого ліцензію не задекларовано. Учасник чесно це вказав. Організатору варто підтвердити, що матеріали можна використовувати.</div>
+  </section>
+
+  <footer>
+    Повні висновки за шаблоном §11.2 з доказами: <span class="mono">rules_for_hacathon/results/pass1/W0N/report.md</span>, бали: <span class="mono">W0N/result.json</span>, скриншоти, звіти Lighthouse і траси: <span class="mono">W0N/evidence/</span>.<br>
+    Зведення: <span class="mono">RESULTS.md</span>, <span class="mono">results.json</span>; висновки проходу 2: <span class="mono">pass2/W0N/report.md</span>.<br>Правила v1.2 · аудит 06.10.2026 · інструмент chrome-devtools MCP, ізольовані контексти W0N-pass1 і W0N-pass2. Документ для журі, контактів учасників тут немає.
+  </footer>
+</main>
+
+<script>
+  const W = {
+    W01: {"A1":4,"A2":7,"A3":4,"A4":4,"A5":2,"B1":1,"B2":4,"B3":4,"B4":3,"B5":4,"C1":4,"C2":0,"C3":4,"C4":1,"D1":4,"D2":2,"D3":2,"D4":3,"E1":2,"E2":2,"E3":2,"E4":2,"F1":2,"F2":2,"F3":1,"F4":1,"F5":2,"G1":3,"G2":4,"G3":2,"G4":1},
+    W02: {"A1":6,"A2":10,"A3":6,"A4":4,"A5":4,"B1":5,"B2":4,"B3":4,"B4":3,"B5":4,"C1":4,"C2":4,"C3":4,"C4":3,"D1":4,"D2":4,"D3":3,"D4":4,"E1":4,"E2":2,"E3":2,"E4":2,"F1":2,"F2":2,"F3":2,"F4":2,"F5":2,"G1":0,"G2":0,"G3":0,"G4":0},
+    W03: {"A1":6,"A2":10,"A3":6,"A4":4,"A5":4,"B1":3,"B2":4,"B3":4,"B4":3,"B5":4,"C1":4,"C2":4,"C3":4,"C4":3,"D1":4,"D2":2,"D3":3,"D4":4,"E1":4,"E2":2,"E3":2,"E4":2,"F1":2,"F2":2,"F3":1,"F4":2,"F5":2,"G1":3,"G2":4,"G3":2,"G4":1}
+  };
+  const CATS = [
+    ["A","Педагогічна цілісність",30,[["A1","Пальці й домашній ряд",6],["A2","Три етапи",10],["A3","Залік без підказки",6],["A4","Точність перед швидкістю",4],["A5","Академія й умови переходу",4]]],
+    ["B","Працездатність і надійність",20,[["B1","Обробка введення, античит",5],["B2","Дві мови й розкладки",4],["B3","Життєвий цикл вправи",4],["B4","Блокувальні помилки",3],["B5","Без платних сервісів",4]]],
+    ["C","Словники й алгоритм",15,[["C1","Джерела й ліцензії",4],["C2","Слова з вивчених символів",4],["C3","Частотність, n-грами",4],["C4","Відтворювана обробка",3]]],
+    ["D","UX і доступність",15,[["D1","Зрозумілий шлях",4],["D2","Клавіатурна доступність",4],["D3","Три viewport-и",3],["D4","Контраст, розмір, рух, звук",4]]],
+    ["E","Аналітика й адаптація",10,[["E1","Метрики спроби",4],["E2","Аналіз помилок і ритму",2],["E3","Прогрес між сесіями",2],["E4","Адаптивна наступна вправа",2]]],
+    ["F","Якість реалізації",10,[["F1","Стабільність демо",2],["F2","Репозиторій",2],["F3","Збірка і тести",2],["F4","Безпека",2],["F5","Документація AI, джерел",2]]],
+    ["G","Змагання (поза 100)",10,[["G1","Створення і приєднання",3],["G2","Живий прогрес",4],["G3","Підсумок і особа",2],["G4","Чесність архітектури",1]]]
+  ];
+  const NOTES = {
+    A1:"W01: немає вправ на повернення; UK-набір «фівапро»",
+    A2:"W01: етап 2 курсу не обмежений відкритими клавішами",
+    A3:"W01: підказка ввімкнена в уроках 1–5, що змінюють прогрес",
+    A5:"W01: поріг не показано до спроби, speed-gate не діє",
+    B1:"W01: регістр не перевіряється; W03: синтетична вставка (п.1) і миттєва серія (п.2) зараховують залік",
+    C2:"W01: 8/30 слів поза алфавітом; W02 80/80, W03 52/52",
+    C4:"W01: списки вручну, скриптів немає",
+    D2:"W01: 7 пунктів мобільної навігації без імені; W03: 4 фокусовані div без ролі й імені (п.2)",
+    D3:"W01: на 390 px картка ERRORS обрізана (п.2)",
+    D4:"W01: контраст другорядного тексту 3,14:1, цифр 2,65:1",
+    E1:"W01: точність 98 % замість 92,7 % (виправлені помилки ігноруються)",
+    F3:"W02: CI зелений; W03: CI червоний; W01: тести є, CI їх не запускає",
+    F4:"W01: перезапис профілю за ніком, сервер довіряє клієнтським WPM",
+    G1:"W02: гонки немає (без штрафу)"
+  };
+  const cats = document.getElementById("cats");
+  const ids = ["W01","W02","W03"], col = {W01:"var(--w01)",W02:"var(--w02)",W03:"var(--w03)"};
+  const sum = (w,c) => Object.entries(W[w]).filter(([k]) => k[0]===c).reduce((a,[,v]) => a+v, 0);
+  for (const [c,name,max] of CATS) {
+    const row = document.createElement("div"); row.className = "cat-row";
+    row.innerHTML = `<div class="cname"><strong>${c}</strong> · ${name} <span class="muted">/ ${max}</span></div>`;
+    const bars = document.createElement("div"); bars.className = "bars";
+    for (const w of ids) {
+      const v = sum(w,c);
+      bars.insertAdjacentHTML("beforeend", `<div class="bar" style="--c:${col[w]}"><span>${w}</span><div class="track" role="img" aria-label="${w}: ${v} з ${max}"><div class="fill" style="width:${v/max*100}%"></div></div><span class="mono">${v}/${max}</span></div>`);
+    }
+    row.appendChild(bars); cats.appendChild(row);
+  }
+  const tb = document.getElementById("subs");
+  const cls = (v,m) => v===m ? "full" : (v<=m/2 ? "low" : "mid");
+  for (const [c,name,max,subs] of CATS) {
+    tb.insertAdjacentHTML("beforeend", `<tr class="cat"><td>${c}. ${name}</td><td class="n">${max}</td>${ids.map(w=>`<td class="n">${sum(w,c)}</td>`).join("")}<td></td></tr>`);
+    for (const [k,n,m] of subs) {
+      tb.insertAdjacentHTML("beforeend", `<tr><td>${k} ${n}</td><td class="n">${m}</td>${ids.map(w=>`<td class="n ${cls(W[w][k],m)}">${W[w][k]}</td>`).join("")}<td class="note-cell">${NOTES[k]||""}</td></tr>`);
+    }
+  }
+  tb.insertAdjacentHTML("beforeend", `<tr class="cat"><td>Разом A–F (final)</td><td class="n">100</td>${ids.map(w=>`<td class="n">${"ABCDEF".split("").reduce((a,c)=>a+sum(w,c),0)}</td>`).join("")}<td class="note-cell">caps і неприйняття — немає в жодній роботі</td></tr>`);
+</script>
+</body>
+</html>

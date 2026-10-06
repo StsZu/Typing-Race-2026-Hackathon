@@ -1,0 +1,25 @@
+CI run 37372630208 on 80d8375 (push main, 2026-10-05T20:54:35Z)
+e2e against a local Supabase	success
+typecheck, lint, unit, build	failure
+secret scan	success
+e2e	failure
+--- unit
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+ FAIL   arch  tools/architecture.test.ts > the seam boundary (Constitution III, plan.md "Agreed Test Seams") > keeps a DOM input event listener behind its seam
+ Test Files  1 failed | 58 passed (59)
+      Tests  1 failed | 800 passed | 3 skipped (804)
+--- e2e
+  9 failed
+    [chromium] › e2e/meta-screens.spec.ts:137:3 › Profile › has no accessibility violations, light and dark 
+    [chromium] › e2e/result.spec.ts:249:3 › US2 the result of an attempt › below the accuracy floor the one Next Action lowers the tempo to a named speed (scenario 4) 
+    [chromium] › e2e/result.spec.ts:269:3 › US2 the result of an attempt › above the floor, the weakest sampled Transition is named with its two fingers (scenario 5) 
+    [chromium] › e2e/result.spec.ts:297:3 › US2 the result of an attempt › with uneven rhythm and no weak Transition the one Next Action asks for even tempo (scenario 6, r
+    [chromium] › e2e/settings.spec.ts:886:7 › US5 accessibility audit of every screen (SC-011) › Profile in the light theme has no accessibility violations 
+    [chromium] › e2e/settings.spec.ts:886:7 › US5 accessibility audit of every screen (SC-011) › Profile in the dark theme has no accessibility violations 
+    [chromium] › e2e/settings.spec.ts:886:7 › US5 accessibility audit of every screen (SC-011) › Profile in the lowVision theme has no accessibility violations 
+    [chromium] › e2e/stage1-moves.spec.ts:76:1 › the result names the weakest Transition and its one button opens a drill of that move 
+    [chromium] › e2e/viewport-1024.spec.ts:46:3 › Profile fits 1024 px and has no accessibility violation 
+  42 skipped
+  224 passed (4.2m)
+"Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1",
+ent color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 15.0pt (20px), font weight: normal). Expected contrast ratio of 4.5:1",

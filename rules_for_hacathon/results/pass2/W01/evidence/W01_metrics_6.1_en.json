@@ -1,0 +1,6 @@
+{"lesson":"Orientation — lesson 2 (EN)","text":"ff fj jj jj fj jj jjj jlj jkj fjk kfj llj","N":41,"k_errors":3,"corrected":2,
+ "keystrokes":"d,BS,ff fj, jj jj ,d,BS,fj jj jjj, jlj jkj, fjk kfj ll,k(uncorrected at last char)",
+ "T_first_to_last_keydown_s":14.638,"expected_cpm_60N_over_T":168.1,"product":{"wpm":33,"cpm":164,"accuracy":"98%","errors":3,"time":"15s"},
+ "cpm_deviation":"-2.4% (OK, product counts only correct chars: 60*40/14.638=163.9)",
+ "accuracy_expected":"(41-3)/41=92.7%","accuracy_deviation_pp":5.3,"verdict":"accuracy computed only from uncorrected errors -> fail 6.1",
+ "mid_test_observation":"after 2 errors corrected by Backspace: ACCURACY 100%, ERRORS 2"}
