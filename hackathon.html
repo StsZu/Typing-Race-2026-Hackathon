@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Хакатон програм-тренажерів сенсорного набору українською та англійською мовами.">
+  <title>Typing Race 2026 Hackathon</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Typing Race 2026 — на початок">
+        <span class="brand-mark" aria-hidden="true">TR</span>
+        <span>Typing Race <strong>2026</strong></span>
+      </a>
+      <nav aria-label="Основна навігація">
+        <a href="#idea">Ідея</a>
+        <a href="#program">Програма</a>
+        <a href="#data">Словники</a>
+        <a href="#score">Оцінювання</a>
+        <a href="#participation">Участь</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Idea Challenge · практичний хакатон</p>
+          <h1>Навчіть руки<br><span>друкувати без погляду</span></h1>
+          <p class="hero-lead">Створіть браузерний тренажер, у якому кожна клавіша має свій палець, точність передує швидкості, а словники працюють як гами на фортепіано.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="docs/TECHNICAL_SPECIFICATION.md">Прочитати ТЗ</a>
+            <a class="button button-secondary" href="#data">Обрати словники</a>
+          </div>
+          <dl class="hero-stats" aria-label="Головні параметри хакатону">
+            <div><dt>30 000 грн</dt><dd>призовий фонд · 15 000 / 10 000 / 5 000</dd></div>
+            <div><dt>2 мови</dt><dd>українська та English</dd></div>
+            <div><dt>100 балів</dt><dd>прозора оцінка</dd></div>
+          </dl>
+        </div>
+
+        <div class="keyboard-card" aria-label="Схема домашнього ряду клавіатури">
+          <div class="keyboard-head">
+            <span>HOME ROW</span>
+            <span class="status-dot">готово до старту</span>
+          </div>
+          <div class="keyboard" aria-hidden="true">
+            <span class="key left-pinky">A<small>Ф</small></span>
+            <span class="key left-ring">S<small>І</small></span>
+            <span class="key left-middle">D<small>В</small></span>
+            <span class="key left-index">F<small>А</small></span>
+            <span class="key right-index">J<small>О</small></span>
+            <span class="key right-middle">K<small>Л</small></span>
+            <span class="key right-ring">L<small>Д</small></span>
+            <span class="key right-pinky">;<small>Ж</small></span>
+          </div>
+          <div class="rhythm" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <p class="keyboard-note">Одна клавіша — один палець.<br>Після руху — повернення на домашній ряд.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles section" id="idea">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Головна ідея</p>
+          <h2>Сенсорний набір — це моторна навичка</h2>
+          <p>Руки зберігають стабільне положення, пальці рухаються до своїх клавіш, а погляд залишається на екрані. Швидкість зростає тільки на основі точної та ритмічної роботи.</p>
+        </div>
+        <div class="principle-grid">
+          <article>
+            <span class="number">01</span>
+            <h3>Закріплення</h3>
+            <p>Кожна фізична клавіша постійно належить одному визначеному пальцю.</p>
+          </article>
+          <article>
+            <span class="number">02</span>
+            <h3>Положення</h3>
+            <p>Пальці повертаються на домашній ряд, а руки не шукають клавіші по всій клавіатурі.</p>
+          </article>
+          <article>
+            <span class="number">03</span>
+            <h3>Погляд</h3>
+            <p>Залікові вправи прибирають екранні підказки й роблять підглядання зайвим.</p>
+          </article>
+          <article>
+            <span class="number">04</span>
+            <h3>Пріоритет</h3>
+            <p>Спочатку точність і рівний ритм. Лише після стабільного результату — нова швидкість.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="program section" id="program">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Навчальна програма</p>
+          <h2>Словники як гами на фортепіано</h2>
+          <p>Випадкового тексту недостатньо. Вправи мають створювати короткі повторювані рухи й відкривати складність поступово.</p>
+        </div>
+        <ol class="stage-list">
+          <li>
+            <div class="stage-index">1</div>
+            <div>
+              <p class="stage-label">Основа</p>
+              <h3>Клавіатурні гами</h3>
+              <p>Домашній ряд, послідовні клавіші, дзеркальні рухи, ізоляція пальців і переходи між рядами.</p>
+              <div class="typing-sample">asdf&nbsp; jkl;&nbsp; · &nbsp;фіва&nbsp; олдж</div>
+            </div>
+          </li>
+          <li>
+            <div class="stage-index">2</div>
+            <div>
+              <p class="stage-label">Автоматизація</p>
+              <h3>Слова з відкритих клавіш</h3>
+              <p>Короткі частотні слова складаються тільки з уже вивчених символів. Підказка зникає у заліковій спробі.</p>
+              <div class="typing-sample">дім&nbsp; ритм&nbsp; рух&nbsp; · &nbsp;skill&nbsp; flow&nbsp; focus</div>
+            </div>
+          </li>
+          <li>
+            <div class="stage-index">3</div>
+            <div>
+              <p class="stage-label">Академія</p>
+              <h3>Частотні комбінації та швидкість</h3>
+              <p>Біграми, триграми, морфеми, складні переходи, пунктуація та реальні тексти без втрати точності.</p>
+              <div class="typing-sample">ст&nbsp; пр&nbsp; ння&nbsp; · &nbsp;th&nbsp; ing&nbsp; tion</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="requirements section" id="requirements">
+      <div class="container requirements-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Завдання учасника</p>
+          <h2>Зберіть повний навчальний цикл</h2>
+          <p>Технології обирає команда. Базове навчання має працювати без AI API, платного сервісу або секретного ключа.</p>
+          <a class="text-link" href="docs/TECHNICAL_SPECIFICATION.md">Усі функціональні вимоги →</a>
+        </div>
+        <ul class="check-list">
+          <li>Українська та англійська мови</li>
+          <li>Три обов’язкові рівні навчання</li>
+          <li>Академія з модулями та прогресом</li>
+          <li>SPM, точність, помилки й час</li>
+          <li>Адаптація до слабких клавіш</li>
+          <li>Збереження прогресу в браузері</li>
+          <li>Клавіатурна навігація й адаптивність</li>
+          <li>Документовані джерела словників</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="data section" id="data">
+      <div class="container">
+        <div class="section-heading heading-row">
+          <div>
+            <p class="eyebrow">Стартові дані</p>
+            <h2>Оберіть мову — завантажте пакет</h2>
+            <p>Усі матеріали розкладено за призначенням: списки слів, Академія, Тренажер, Бібліотека знань і додаткові тексти.</p>
+          </div>
+          <a class="button button-secondary" href="dictionaries/index.html">Відкрити каталог</a>
+        </div>
+
+        <div class="language-package-grid">
+          <article class="language-package">
+            <div class="language-title"><span>UK</span><h3>Українська</h3></div>
+            <p>Частотні словники, Hunspell, Академія, 713 вправ TT, тематичні матеріали й радіодиктанти.</p>
+            <ul><li>Списки слів</li><li>Академія</li><li>Тренажер</li><li>Бібліотека знань</li><li>Додаткові тексти</li></ul>
+            <div class="language-package-actions"><a class="button button-primary" href="dictionaries/ukrainian/downloads/ukrainian-all.zip" download>Завантажити ZIP</a><a href="dictionaries/index.html#ukrainian">Обрати категорію →</a></div>
+          </article>
+          <article class="language-package">
+            <div class="language-title"><span>EN</span><h3>English</h3></div>
+            <p>Frequency lists, Hunspell, DWYL, Academy, 1,066 TT exercises, and topic-based texts.</p>
+            <ul><li>Word lists</li><li>Academy</li><li>Tutor</li><li>Knowledge library</li></ul>
+            <div class="language-package-actions"><a class="button button-primary" href="dictionaries/english/downloads/english-all.zip" download>Download ZIP</a><a href="dictionaries/index.html#english">Choose a category →</a></div>
+          </article>
+        </div>
+
+        <p class="data-note">Для швидкої інтеграції використовуйте готові JSON-файли Академії та Тренажера. Джерела й ліцензійні статуси наведені в <a href="dictionaries/manifest.yml">маніфесті</a> та <a href="docs/DATA_POLICY.md">політиці даних</a>.</p>
+      </div>
+    </section>
+
+    <section class="score section" id="score">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Оцінювання</p>
+          <h2>100 балів за результат, який навчає</h2>
+        </div>
+        <div class="score-table-wrap">
+          <table>
+            <thead><tr><th>Критерій</th><th>Що перевіряємо</th><th>Бали</th></tr></thead>
+            <tbody>
+              <tr><td>Педагогічна цілісність</td><td>Пальці, три етапи, поступовість, Академія</td><td>30</td></tr>
+              <tr><td>Працездатність і надійність</td><td>Набір, метрики, прогрес, стабільність</td><td>20</td></tr>
+              <tr><td>Словники й алгоритм вправ</td><td>Відкриті символи, частотність, n-грами, ліцензії</td><td>15</td></tr>
+              <tr><td>UX і доступність</td><td>Зрозумілий шлях, читабельність, клавіатура</td><td>15</td></tr>
+              <tr><td>Аналітика й адаптація</td><td>Слабкі переходи, ритм, наступна дія</td><td>10</td></tr>
+              <tr><td>Якість реалізації</td><td>Структура, тести, документація, безпека</td><td>10</td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="2">Разом</td><td>100</td></tr></tfoot>
+          </table>
+        </div>
+
+        <div class="evaluation-tool">
+          <div class="evaluation-tool-heading">
+            <div>
+              <p class="eyebrow">Промпт для журі</p>
+              <h3>Одна методика для всіх робіт</h3>
+              <p>Скопіюйте промпт у AI-асистент із доступом до браузера й передайте йому посилання на демо, репозиторій і технічне завдання учасника.</p>
+            </div>
+            <button class="button button-primary copy-prompt" type="button" data-copy-target="evaluation-prompt" aria-live="polite">Копіювати промпт</button>
+          </div>
+
+          <details class="prompt-disclosure">
+            <summary>Відкрити повний промпт оцінювання</summary>
+            <pre><code id="evaluation-prompt">Ти — незалежний член журі хакатону програм-тренажерів сенсорного друку. Оціни роботу за шкалою від 0 до 100 балів. Працюй лише з перевіреними доказами: особисто відкрий демо, виконай вправи, а за наявності репозиторію переглянь документацію, ліцензії та результати тестів. Не нараховуй бали за заявлені, але не продемонстровані можливості.
+
+Вхідні дані:
+- демо: [URL]
+- репозиторій: [URL або «не надано»]
+- технічне завдання: [URL або текст]
+
+Обов’язкова перевірка:
+1. Відкрий демо в настільному та мобільному розмірі вікна.
+2. Перевір українську й англійську мови та правильність відповідних розкладок.
+3. Пройди щонайменше по одній вправі кожного з трьох етапів: клавіатурні гами; слова з уже відкритих клавіш; частотні комбінації та швидкість.
+4. Навмисно зроби правильне й неправильне натискання, перевір блокування помилки, точність, швидкість, час і завершення вправи.
+5. Перевір, чи зникають підказки у заліковій спробі й чи можна виконувати вправу без погляду на клавіатуру.
+6. Перезавантаж сторінку та перевір збереження прогресу.
+7. Пройди основний шлях лише клавіатурою; перевір видимий фокус, читабельність, контраст і роботу без анімації, якщо система просить зменшити рух.
+8. Якщо є імпорт файлу, завантаж коректний TXT або MD і перевір повідомлення про помилку для некоректного файла.
+9. Перевір консоль браузера на помилки. За наявності репозиторію запусти описані збірку й тести та перевір джерела й ліцензії словників.
+
+Шкала оцінювання:
+
+A. Педагогічна цілісність — 30 балів
+- 6: правильне закріплення «одна клавіша — один палець», домашній ряд і повернення пальців.
+- 10: повні три етапи навчання: гами; слова з відкритих символів; частотні комбінації та швидкість.
+- 6: вправи роблять підглядання зайвим; у заліковому режимі немає підказки наступної клавіші.
+- 4: точність і рівний ритм мають пріоритет перед швидкістю.
+- 4: Академія має послідовні модулі та зрозумілі умови переходу.
+
+B. Працездатність і надійність — 20 балів
+- 5: введення, правильні й помилкові натискання обробляються коректно.
+- 4: українська й англійська мови та розкладки працюють.
+- 4: вправу можна почати, завершити, повторити й продовжити без тупикових станів.
+- 3: немає блокувальних помилок інтерфейсу чи консолі.
+- 4: базове навчання працює без платного AI API або секретного ключа.
+
+C. Словники й алгоритм вправ — 15 балів
+- 4: джерела, ліцензії, очищення та атрибуція словників задокументовані.
+- 4: слова вправи складаються тільки з уже вивчених символів.
+- 4: використано частотність, біграми, триграми або типові переходи.
+- 3: можна використати власний текст або файл із безпечною перевіркою формату.
+
+D. UX і доступність — 15 балів
+- 4: навчальний шлях і наступна дія зрозумілі без додаткової інструкції.
+- 4: усі ключові дії доступні клавіатурою, фокус видимий, елементи мають коректні ролі й назви.
+- 3: інтерфейс придатний для настільного й мобільного екрана.
+- 4: достатній контраст, читабельний текст, підтримка зменшеного руху й базових допоміжних технологій.
+
+E. Аналітика й адаптація — 10 балів
+- 4: показано швидкість, точність, кількість помилок і час.
+- 2: є аналіз помилкових клавіш, переходів або ритму.
+- 2: прогрес та історія зберігаються між сесіями.
+- 2: система пропонує наступну або адаптивну вправу за слабкими місцями.
+
+F. Якість реалізації — 10 балів
+- 2: опубліковане демо стабільно відкривається.
+- 2: репозиторій має зрозумілі інструкції запуску й структуру.
+- 2: збірка та автоматизовані тести проходять.
+- 2: не виявлено секретів, небезпечної обробки даних або невиправданого збору персональних даних.
+- 2: задокументовано використання AI, джерела даних і ліцензійні обмеження.
+
+Правила доказовості:
+- Для кожного підкритерію наведи конкретний доказ: екран, дія, файл, команда або результат тесту.
+- Якщо перевірка неможлива, постав «Н/П» і 0 балів за цей підкритерій, але відрізняй від функції, яка перевірена й не працює.
+- Не округлюй оцінку вгору «за задум». Нараховуй лише ціле число балів у межах кожного підкритерію.
+- Не знімай бали двічі за один дефект без чіткого пояснення різних наслідків.
+
+Граничні обмеження:
+- демо не відкривається: підсумок не більше 20;
+- немає робочої вправи набору: не більше 35;
+- є лише тест швидкості без послідовного навчання: не більше 55;
+- працює лише одна з двох обов’язкових мов: не більше 85.
+Після підрахунку застосуй найнижче релевантне обмеження.
+
+Формат відповіді:
+1. Дата, браузер, розмір екрана й перелік отриманих матеріалів.
+2. Короткий висновок у 2–3 реченнях.
+3. Таблиця: категорія | доказ | бал | максимум.
+4. Застосовані граничні обмеження або «немає».
+5. Підсумок: [X]/100.
+6. Рівень: 90–100 — відмінна робота; 75–89 — сильна; 60–74 — прийнятна, потребує доопрацювання; 40–59 — часткова; 0–39 — не відповідає основним вимогам.
+7. Три найсильніші сторони, три пріоритетні поліпшення та окремий список неперевірених доказів.</code></pre>
+          </details>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="participation section" id="participation">
+      <div class="container participation-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Як взяти участь</p>
+          <h2>Від ідеї до робочого демо</h2>
+          <p>Покажіть не кількість згенерованого коду, а перевірений навчальний результат.</p>
+          <a class="button button-primary" href="docs/PARTICIPATION.md">Правила подання</a>
+        </div>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Прочитайте ТЗ</h3><p>Оберіть архітектуру та зафіксуйте мінімальний навчальний шлях.</p></div></li>
+          <li><span>02</span><div><h3>Візьміть дані</h3><p>Оберіть словники, перевірте ліцензії та контрольні суми.</p></div></li>
+          <li><span>03</span><div><h3>Створіть і перевірте</h3><p>Пройдіть усі три рівні, протестуйте метрики й доступність.</p></div></li>
+          <li><span>04</span><div><h3>Опублікуйте демо</h3><p>Надайте репозиторій, робоче посилання та декларацію використання AI.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="dates section" id="dates">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Строки й контакт</p>
+          <h2>Організаційні дані</h2>
+        </div>
+        <div class="date-grid">
+          <div><span>Старт</span><strong>1 вересня 2026</strong></div>
+          <div><span>Подання робіт</span><strong>5 жовтня 2026, 23:59</strong></div>
+          <div><span>Демонстрація</span><strong>6 жовтня 2026</strong></div>
+          <div><span>Контакт</span><strong><a href="mailto:sts.zubar@gmail.com">sts.zubar@gmail.com</a></strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="container narrow">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Коротко про головне</h2>
+        </div>
+        <details>
+          <summary>Чи можна використовувати AI?</summary>
+          <p>Так. Опишіть, які інструменти використали, що вони створили та як ви перевірили результат. Основні уроки не повинні залежати від зовнішнього AI API.</p>
+        </details>
+        <details>
+          <summary>Чи обмежені технології?</summary>
+          <p>Ні. Рішення має працювати в сучасному браузері й мати відтворюваний запуск. Сервер дозволений, але не є обов’язковим.</p>
+        </details>
+        <details>
+          <summary>Можна працювати командою?</summary>
+          <p>Так, якщо організатор не встановить іншого правила. У поданні вкажіть учасників і внесок кожного.</p>
+        </details>
+        <details>
+          <summary>Можна додати власні словники?</summary>
+          <p>Так, якщо джерело, ліцензія, спосіб очищення й атрибуція задокументовані.</p>
+        </details>
+        <details>
+          <summary>Чи треба дивитися в камеру?</summary>
+          <p>Ні. Тренажер має будувати вправи так, щоб підглядання було зайвим, але не повинен удавати технічний контроль погляду без спеціального обладнання.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">TR</span><span>Typing Race 2026</span></a>
+        <p>Хакатон програм-тренажерів сенсорного набору.</p>
+      </div>
+      <div class="footer-links">
+        <a href="docs/TECHNICAL_SPECIFICATION.md">Технічне завдання</a>
+        <a href="dictionaries/index.html">Словники</a>
+        <a href="docs/SOURCES.md">Джерела</a>
+        <a href="docs/DATA_POLICY.md">Політика даних</a>
+      </div>
+      <p class="copyright">Матеріали хакатону · <span data-year>2026</span></p>
+    </div>
+  </footer>
+</body>
+</html>

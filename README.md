@@ -6,7 +6,7 @@
 
 Призовий фонд: 30 000 грн — 15 000 грн за перше місце, 10 000 грн за друге та 5 000 грн за третє. Найкраще рішення буде представлене в підрозділах.
 
-[Відкрити сторінку хакатону](index.html) · [Прочитати технічне завдання](docs/TECHNICAL_SPECIFICATION.md) · [Завантажити словники](dictionaries/index.html)
+[Тренажери учасників](index.html) · [Відкрити сторінку хакатону](hackathon.html) · [Прочитати технічне завдання](docs/TECHNICAL_SPECIFICATION.md) · [Завантажити словники](dictionaries/index.html)
 
 ## Що треба створити
 
@@ -22,7 +22,8 @@
 
 ~~~text
 .
-├── index.html              # стартова сторінка GitHub Pages
+├── index.html              # стартова сторінка GitHub Pages: добірка тренажерів
+├── hackathon.html          # сторінка хакатону (колишня index.html)
 ├── assets/                 # локальні CSS і JavaScript
 ├── docs/                   # ТЗ, правила, джерела та інвентар
 ├── dictionaries/
