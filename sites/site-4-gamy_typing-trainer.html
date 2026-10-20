@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Гами — опис роботи</title>
+<meta name="description" content="Typing Race 2026: опис і орієнтовна оцінка роботи «Гами», поданої після завершення оцінювання." />
+<style>
+  :root {
+    --bg: #f8f9ff; --surface: #ffffff; --surface-2: #eef1f8; --text: #1a1b21; --muted: #4a4e57;
+    --line: #d5d8e0; --primary: #0b57d0; --primary-soft: #d3e3fd; --on-primary-soft: #041e49;
+    --ok: #146c2e; --ok-soft: #d6f5dd; --warn: #7a5300; --warn-soft: #fff1cc; --bad: #ba1a1a; --bad-soft: #ffe1dc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111318; --surface: #1b1d23; --surface-2: #242730; --text: #e3e3ea; --muted: #b0b4be;
+      --line: #393c46; --primary: #a8c7fa; --primary-soft: #1f3a66; --on-primary-soft: #d3e3fd;
+      --ok: #8fdc9f; --ok-soft: #173d22; --warn: #f2c66b; --warn-soft: #3d300d; --bad: #ffb4ab; --bad-soft: #4d1a16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111318; --surface: #1b1d23; --surface-2: #242730; --text: #e3e3ea; --muted: #b0b4be;
+    --line: #393c46; --primary: #a8c7fa; --primary-soft: #1f3a66; --on-primary-soft: #d3e3fd;
+    --ok: #8fdc9f; --ok-soft: #173d22; --warn: #f2c66b; --warn-soft: #3d300d; --bad: #ffb4ab; --bad-soft: #4d1a16;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1000px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 8px 0 6px; }
+  h2 { font-size: 1.3rem; margin: 40px 0 12px; }
+  h3 { font-size: 1.05rem; margin: 0 0 6px; }
+  p { margin: 0 0 10px; }
+  a { color: var(--primary); overflow-wrap: anywhere; }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .92em; background: var(--surface-2); padding: 1px 5px; border-radius: 6px; }
+  .eyebrow { color: var(--muted); font-size: .9rem; letter-spacing: .02em; }
+  .lead { color: var(--muted); font-size: 1.08rem; max-width: 760px; }
+  .banner { background: var(--warn-soft); color: var(--text); border-left: 4px solid var(--warn); padding: 12px 16px; border-radius: 12px; margin: 20px 0; }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+  .score { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
+  .score .big { font-size: 3.4rem; font-weight: 700; line-height: 1; color: var(--primary); }
+  .score .big small { font-size: 1.1rem; color: var(--muted); font-weight: 500; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+  .pill.ok { background: var(--ok-soft); color: var(--ok); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.info { background: var(--primary-soft); color: var(--on-primary-soft); }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--surface-2); font-weight: 600; font-size: .92rem; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .table-wrap { overflow-x: auto; border-radius: 16px; }
+  .bar { height: 8px; background: var(--surface-2); border-radius: 4px; margin-top: 6px; }
+  .bar span { display: block; height: 100%; border-radius: 4px; background: var(--primary); }
+  .stages { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .stage .n { font-weight: 700; color: var(--primary); }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .muted { color: var(--muted); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+  @media (max-width: 560px) { h1 { font-size: 1.6rem; } .score .big { font-size: 2.8rem; } th, td { padding: 8px; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Typing Race 2026 · робота подана після завершення оцінювання · W04 (поза заліком)</div>
+  <h1>«Гами» — тренажер сенсорного набору</h1>
+  <p class="lead">Статичний браузерний тренажер набору наосліп українською (ЙЦУКЕН) і англійською (QWERTY). Головна ідея — вправи як гами на фортепіано: короткий повторюваний рух, одна мета на вправу, нова складність лише після засвоєння попередньої.</p>
+
+  <div class="banner"><strong>Спрощена перевірка, 8 жовтня 2026.</strong> Повний протокол P1–P24 і два проходи не виконувались. Оцінка орієнтовна й показує, яким міг бути результат за умови вчасного подання. Місце не присуджується.</div>
+
+  <div class="grid">
+    <div class="card"><h3>Демо</h3><a href="https://apteka95video-source.github.io/gamy-typing-trainer/#/">apteka95video-source.github.io/gamy-typing-trainer</a></div>
+    <div class="card"><h3>Репозиторій</h3><a href="https://github.com/apteka95video-source/gamy-typing-trainer">github.com/apteka95video-source/gamy-typing-trainer</a><p class="muted" style="margin-top:6px">У поданні вказано <code>apteka95video-source.github.io/</code> — ця адреса повертає 404; репозиторій знайдено за назвою.</p></div>
+    <div class="card"><h3>Формат</h3><p>Індивідуально. Репозиторій створено 7.10.2026, 10 комітів. Код написано з Claude Code, є декларація AI.</p></div>
+  </div>
+
+  <h2>Орієнтовна оцінка</h2>
+  <div class="card score">
+    <div class="big">≈ 96 <small>/ 100</small></div>
+    <div>
+      <p><span class="pill info">діапазон 92–98</span> <span class="pill ok">рівень «відмінна»</span></p>
+      <p>Категорія G (змагання) — 0, функцію не заявлено, штрафу немає.</p>
+      <p class="muted">У вчасному заліку робота посіла б, найімовірніше, <strong>2-ге місце</strong>: між «Соло» (100) і Typing-Race (95). За рівного балу з Typing-Race тайбрейк вирішує B (20 проти 18) раніше за G.</p>
+    </div>
+  </div>
+
+  <div class="table-wrap" style="margin-top:16px">
+  <table>
+    <thead><tr><th>Категорія</th><th class="num">Бал</th><th>На чому ґрунтується</th></tr></thead>
+    <tbody>
+      <tr><td>A. Педагогічна цілісність<div class="bar"><span style="width:96.7%"></span></div></td><td class="num">29–30 / 30</td><td>Три етапи обома мовами, клавіші відкриваються по дві; схема пальців і домашній ряд; залік без клавіатури й підказки; поріг точності 95/96/97 % видно до старту; Академія з 10 модулів і критерієм «3 успішні спроби поспіль». Повністю всі етапи аудитор не проходив.</td></tr>
+      <tr><td>B. Працездатність і надійність<div class="bar"><span style="width:100%"></span></div></td><td class="num">19–20 / 20</td><td>Помилки рахуються, режим «зупинка на помилці» працює. Античит відтворено: автоматичний ввід зі швидкістю 675 зн/хв не зараховано. Консоль чиста. Сервера й ключів немає.</td></tr>
+      <tr><td>C. Словники й алгоритм<div class="bar"><span style="width:100%"></span></div></td><td class="num">15 / 15</td><td>Сторінка «Джерела та ліцензії»; FrequencyWords (MIT), Hunspell (MIT / GPL-3.0); скрипти <code>build-data</code> і <code>build-curriculum</code>; контрольні суми 16 файлів збігаються. Модулі Академії побудовані на частотних біграмах, триграмах і морфемах.</td></tr>
+      <tr><td>D. UX і доступність<div class="bar"><span style="width:93.3%"></span></div></td><td class="num">13–15 / 15</td><td>Стартовий екран одразу пропонує три шляхи; пропуск до вмісту, ролі й імена в a11y-дереві; на вузькому екрані горизонтальної прокрутки немає. Клавіатурний шлях і контраст не перевірялися (за документацією — axe-core і Lighthouse 100).</td></tr>
+      <tr><td>E. Аналітика й адаптація<div class="bar"><span style="width:100%"></span></div></td><td class="num">9–10 / 10</td><td>Після спроби — швидкість, точність, помилки, час і формули обчислень; розбір помилок, найповільніші переходи, графік ритму; вправа «Слабкі місця»; конкретна наступна дія.</td></tr>
+      <tr><td>F. Якість реалізації<div class="bar"><span style="width:90%"></span></div></td><td class="num">8–9 / 10</td><td>Модульних тестів 64 з 64 пройдено локально; є e2e на Playwright і CI. Розгорнутий README, декларація AI, джерела. Мінус — неробоче посилання на репозиторій у поданні.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Три етапи навчання</h2>
+  <div class="stages">
+    <div class="card stage"><div class="n">Етап 1 · Клавіатурні гами</div><p>Послідовності без змісту: <code>ааа аа а</code>, <code>фіва олдж … ждло авіф</code>, дзеркальні пари, чергування рук, вертикальні переходи, Shift, знаки, цифри. Позначено: «Механіка: це рухи, а не слова».</p></div>
+    <div class="card stage"><div class="n">Етап 2 · Слова з вивчених клавіш</div><p>Справжні слова зі словника, усі символи яких уже відкриті. Окремі вправи на апостроф, дефіс, великі літери та <code>ґ є ї і</code>.</p></div>
+    <div class="card stage"><div class="n">Етап 3 · Академія</div><p>10 модулів: біграми «ти», «на», «не»…, триграми, закінчення й префікси, переходи одним пальцем, перекати, подвоєння, знаки й числа, речення, абзаци, темпові серії (від 150 зн/хв разом із точністю).</p></div>
+  </div>
+  <p class="muted" style="margin-top:10px">Обсяг: українською 23 уроки й 225 вправ, англійською 21 урок і 206 вправ.</p>
+
+  <h2>Що перевірено</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>У демо (Chrome, ізольований профіль)</h3>
+      <ul>
+        <li>Демо відкривається з першої спроби, HTTP 200.</li>
+        <li>Курс, вправа етапу 1 і сторінка Академії відкриваються.</li>
+        <li>Помилковий символ у режимі «зупинка на помилці» зафіксовано.</li>
+        <li>Автоматичний ввід не зараховано; метрики показано з формулою.</li>
+        <li>Консоль без помилок; ширина 390 px без горизонтальної прокрутки.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>У репозиторії</h3>
+      <ul>
+        <li><code>npm run verify:checksums</code> — 16 файлів збігаються.</li>
+        <li><code>npm test</code> — 64 з 64.</li>
+        <li>Секретів і зовнішніх запитів не знайдено; єдиний <code>fetch</code> завантажує власні JSON.</li>
+        <li>Є README, <code>docs/pedagogy.md</code>, <code>docs/data-sources.md</code>, <code>docs/ai-declaration.md</code>.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Не перевірялось</h3>
+      <ul>
+        <li>Повне проходження трьох етапів обома мовами.</li>
+        <li>Збір 30 слів етапу 2 з DOM (покрито тестом <code>curriculum.test.mjs</code>).</li>
+        <li>Reload і збереження прогресу, Lighthouse, клавіатурний шлях, reduced-motion.</li>
+        <li>Наскрізні тести Playwright.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Сильні сторони й зауваження</h2>
+  <div class="grid">
+    <div class="card">
+      <h3><span class="pill ok">сильне</span></h3>
+      <ul>
+        <li>Найбільш продумана методика серед поданих робіт: мета кожної вправи написана на її екрані.</li>
+        <li>Чесний залік: без підказок, з порогом точності й серією з трьох спроб.</li>
+        <li>Відтворювана обробка словників із контрольними сумами та фільтром російських слів.</li>
+        <li>Працює без сервера й офлайн (PWA), нічого не надсилає в мережу.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="pill warn">зауваження</span></h3>
+      <ul>
+        <li>Подано після завершення оцінювання.</li>
+        <li>Посилання на репозиторій у поданні неробоче.</li>
+        <li>Немає змагання між учасниками (G = 0); на рішення про місце це не впливає.</li>
+        <li>Оцінка спирається частково на документацію й тести автора, а не на повний аудит.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>Спрощена перевірка за правилами v1.2 (<code>rules_for_hacathon/COMPETITION_RULES.md</code>), 8 жовтня 2026. Офіційні результати не змінюються.</footer>
+</main>
+</body>
+</html>
