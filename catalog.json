@@ -12,7 +12,8 @@
     "links": [
       "https://github.com/gaidukanna97-star/solo-typing-trainer"
     ],
-    "image": "images/app-0.webp"
+    "image": "images/trainer-solo-banner.webp",
+    "imageAlt": "Ілюстрація: руки на домашньому ряді, сходинки з клавіш ведуть до аркуша з текстом і трьох позначок успішних спроб."
   },
   {
     "name": "Typing-Race",
@@ -27,7 +28,8 @@
     "links": [
       "https://github.com/prodelt/typing-race-hackathon"
     ],
-    "image": "images/app-1.webp"
+    "image": "images/trainer-typing-race-banner.webp",
+    "imageAlt": "Ілюстрація: три машини на гоночній трасі поруч із карткою аналітики — графіками й клавіатурою з підсвіченими помилками."
   },
   {
     "name": "TypTap",
@@ -43,7 +45,8 @@
       "https://github.com/artyd/TypTap",
       "https://artyd.github.io/TypTap/"
     ],
-    "image": "images/app-2.webp"
+    "image": "images/trainer-typtap-banner.webp",
+    "imageAlt": "Ілюстрація: вісім усміхнених персонажів-гравців над чотирма мініграми з клавіш."
   },
   {
     "name": "Гами",
@@ -57,7 +60,9 @@
     "url": "https://apteka95video-source.github.io/gamy-typing-trainer/#/",
     "links": [
       "https://github.com/apteka95video-source/gamy-typing-trainer"
-    ]
+    ],
+    "image": "images/trainer-gamy-banner.webp",
+    "imageAlt": "Ілюстрація: палець натискає клавіші, що піднімаються, як гама на фортепіано, над ними нотний стан."
   },
   {
     "name": "Touch Type Race Academy",
@@ -73,7 +78,7 @@
       "https://stszu.github.io/Typing-race-2026-guide/",
       "https://github.com/StsZu/Typing-race-2026"
     ],
-    "image": "images/touch-type-race-icon.png",
-    "imageKind": "icon"
+    "image": "images/trainer-academy-banner.webp",
+    "imageAlt": "Ілюстрація: три машини в кольорах прапорів мчать дорогою, поруч робот із картатим прапорцем і глобус онлайн-гри."
   }
 ]
