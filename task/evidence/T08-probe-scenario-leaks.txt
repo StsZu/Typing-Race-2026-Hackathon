@@ -1,0 +1,13 @@
+keyLabels.0 → Й1 | Й: ⟦livyi mizynets⟧
+keyLabels.1 → Ц2 | Ц: ⟦livyi bezimennyi⟧
+keyLabels.2 → У3 | У: ⟦livyi serednii⟧
+keyTip → ⟦Ф — ⟦livyi mizynets⟧. Pislia natyskannia poverny palets u domashniu pozytsiiu.⟧
+title → Не гальмуй / Just Type
+audio → ⟦Pisnia Не гальмуй / Just Type⟧
+cover → ⟦Obkladynka pisni Не гальмуй / Just Type⟧
+cards.0 → 01 / ⟦POSLIDOVNYI KURS⟧ | Ілюстрація: руки на домашньому ряді, сходинки з клавіш ведуть до
+cards.1 → 02 / ⟦ANALITYKA TA PEREHONY⟧ | Ілюстрація: три машини на гоночній трасі поруч із карткою а
+cards.2 → 03 / ⟦NAVCHANNIA CHEREZ HRU⟧ | Ілюстрація: вісім усміхнених персонажів-гравців над чотирма
+cards.3 → 04 / ⟦METODYCHNA PRAKTYKA⟧ | Ілюстрація: палець натискає клавіші, що піднімаються, як гама
+cards.4 → 05 / ⟦TRY MOVY⟧ | Ілюстрація: три машини в кольорах прапорів мчать дорогою, поруч робот із
+steps 28 | sample keyTip: ⟦Ф — ⟦livyi mizynets⟧. Pislia natyskannia poverny palets u domashniu pozytsiiu.⟧ | durationLabel: ⟦30 sekundy⟧ | status: ⟦Drukui protiahom 30 sekundy. Taimer pochnetsia z pershoho symvolu.⟧

@@ -1,0 +1,4 @@
+file:///private/tmp/claude-501/-Users-szubar-Projects-Educational-courses-2026-Typing-race-2026-hackathon/bcbd0308-b6d3-48ff-a05d-35c08bcd3c5f/scratchpad/t08-export/scripts/check-repository.mjs:38
+Error: Знайдено застаріле позначення у:
+sites/site-5-typing-race-2026.md
+Node.js v26.8.1

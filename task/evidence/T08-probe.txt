@@ -1,0 +1,26 @@
+{
+ "missing": 0,
+ "textUnitsTranslated": 139,
+ "textUnitsTotal": 139,
+ "paramsRendered": [
+  "⟦30 sekund⟧: false",
+  "⟦60 sekund⟧: false",
+  "⟦100 khv⟧: true",
+  "⟦6 hod 40 khv⟧: true",
+  "⟦0 / 30 dniv⟧: true"
+ ],
+ "protectedKept": [
+  "id=\"saved-week\": true",
+  "id=\"timer\": true",
+  "id=\"duration-label\": true",
+  "name=\"calc-unit\" value=\"spm\": true"
+ ],
+ "htmlLang": "<html lang=\"en\">",
+ "messagesTranslated": "⟦probil⟧",
+ "cyrillicLeaks": [
+  "@alt=⟦Obkladynka pisni Не гальмуй / Just Type⟧",
+  "@aria-label=⟦Pisnia Не гальмуй / Just Type⟧"
+ ],
+ "unprefixedUrls": []
+}
+templates 5 5 identical except ../ prefix: true
