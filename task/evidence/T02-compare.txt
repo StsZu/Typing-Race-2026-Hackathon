@@ -1,0 +1,54 @@
+[
+ {
+  "song": 0,
+  "lang": "uk",
+  "textEqual": true,
+  "lyricsEqual": true,
+  "labelsEqual": true,
+  "h4": 9,
+  "labelLangBefore": "uk",
+  "labelLangAfter": "uk"
+ },
+ {
+  "song": 1,
+  "lang": "pl",
+  "textEqual": true,
+  "lyricsEqual": true,
+  "labelsEqual": true,
+  "h4": 9,
+  "labelLangBefore": "pl",
+  "labelLangAfter": "uk"
+ },
+ {
+  "song": 2,
+  "lang": "en",
+  "textEqual": true,
+  "lyricsEqual": true,
+  "labelsEqual": true,
+  "h4": 8,
+  "labelLangBefore": "en",
+  "labelLangAfter": "uk"
+ },
+ {
+  "song": 3,
+  "lang": "en",
+  "textEqual": true,
+  "lyricsEqual": true,
+  "labelsEqual": true,
+  "h4": 8,
+  "labelLangBefore": "en",
+  "labelLangAfter": "uk"
+ },
+ {
+  "song": 4,
+  "lang": "en",
+  "textEqual": true,
+  "lyricsEqual": true,
+  "labelsEqual": true,
+  "h4": 9,
+  "labelLangBefore": "en",
+  "labelLangAfter": "uk"
+ }
+]
+ALL OK: true
+templates 5 5 identical without h4: true

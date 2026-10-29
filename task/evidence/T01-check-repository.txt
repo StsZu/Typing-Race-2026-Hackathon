@@ -1,0 +1,12 @@
+file:///private/tmp/claude-501/-Users-szubar-Projects-Educational-courses-2026-Typing-race-2026-hackathon/bcbd0308-b6d3-48ff-a05d-35c08bcd3c5f/scratchpad/clean-export/scripts/check-repository.mjs:38
+  throw new Error("Знайдено застаріле позначення у:\n" + legacyFiles.join("\n"));
+        ^
+
+Error: Знайдено застаріле позначення у:
+sites/site-5-typing-race-2026.md
+    at file:///private/tmp/claude-501/-Users-szubar-Projects-Educational-courses-2026-Typing-race-2026-hackathon/bcbd0308-b6d3-48ff-a05d-35c08bcd3c5f/scratchpad/clean-export/scripts/check-repository.mjs:38:9
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at async node:internal/modules/esm/loader:650:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.8.1
