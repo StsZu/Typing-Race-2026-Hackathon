@@ -76,7 +76,10 @@
 
 ## Хвиля 4 — English
 
-- [ ] **T11 Метадані мовних версій** — `index.html`, генератор — `hreflang`, canonical, `og:locale(:alternate)`, `og:url` від основи `https://stszu.github.io/Typing-Race-2026-Hackathon/` (C6). Done: SC-04 у частині метаданих; у `index.html` немає `chatgpt.site`.
+- [x] **T11 Метадані мовних версій** — `index.html`, генератор — `hreflang`, canonical, `og:locale(:alternate)`, `og:url` від основи `https://stszu.github.io/Typing-Race-2026-Hackathon/` (C6). Done: SC-04 у частині метаданих; у `index.html` немає `chatgpt.site`.
+  - Виконано: в `index.html` `og:url` змінено з `chatgpt.site` на GitHub Pages і додано `<link rel="canonical">` — він є базовою адресою для генератора. Генератор для мови виставляє `canonical` і `og:url` на `<база><мова>/`, `og:locale` (`en_US`, `pl_PL`) і міняє `og:locale:alternate`. Взаємні `hreflang` (uk, зібрані мови, `x-default` → uk) і `og:locale:alternate` живуть в `index.html`; збірка зупиняється й друкує точний фрагмент, якщо їхній набір не відповідає зібраним мовам. Тому зараз, поки `en/` і `pl/` немає, `index.html` посилань на них не має — вони з'являться разом з першою збіркою en (T12/T16).
+  - Перевірено: `T11-probe.mjs` у копії репозиторію — без тегів збірка падає з підказкою (код 1); з тегами для en — код 0 і правильні метадані en; зайвий тег pl — код 1; en + pl — кожна сторінка з власними canonical/`og:url`/`og:locale` і рештою мов в `og:locale:alternate`. `--verify-uk` і `check-i18n` чисті; у `index.html` 0 входжень `chatgpt.site`.
+  - Докази: `T11-probe.mjs`, `T11-probe.txt`, `T11-diff-index.txt`, `T11-check-links.txt`.
 - [ ] **T12 `locales/en.json`** — Done: SC-03 для `en`.
 - [ ] **T13 Перемикач мови** — `index.html`, `app.js`, `style.css`. Done: SC-08, FR-10; на 360 px закріплена шапка en/pl не вища за 160 px (українська — 128 px, T10). Також: клавіатура героя й початкова схема за мовою сторінки (FR-07).
 - [ ] **T14 Каталог за мовами** — `catalog.json`, `catalog.js` (після погодження схеми). Done: FR-09 на `en/`.

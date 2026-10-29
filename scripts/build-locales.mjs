@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { build, extractUk } from "./i18n-html.mjs";
+import { build, extractUk, getAttr, parse, render, setAttr } from "./i18n-html.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
@@ -47,15 +47,47 @@ if (process.argv.includes("--pseudo")) {
   process.exit(0);
 }
 
+// Метадані мовних версій (T11). Базова адреса — <link rel="canonical"> в index.html.
+const OG_LOCALE = { uk: "uk_UA", en: "en_US", pl: "pl_PL" };
+const base = (source.match(/<link rel="canonical" href="([^"]+)">/) || [])[1];
+const pageUrl = lang => base + (lang === "uk" ? "" : lang + "/");
+const walk = (n, fn) => (n.children || []).forEach(c => { if (c.type === "el") { fn(c); walk(c, fn); } });
+function localizeHead(html, lang) {
+  const tree = parse(html);
+  walk(tree, el => {
+    const rel = getAttr(el, "rel"), prop = getAttr(el, "property");
+    if (el.tag === "link" && rel === "canonical") setAttr(el, "href", pageUrl(lang));
+    if (el.tag === "meta" && prop === "og:url") setAttr(el, "content", pageUrl(lang));
+    if (el.tag === "meta" && prop === "og:locale") setAttr(el, "content", OG_LOCALE[lang]);
+    if (el.tag === "meta" && prop === "og:locale:alternate" && getAttr(el, "content") === OG_LOCALE[lang]) setAttr(el, "content", OG_LOCALE.uk);
+  });
+  return render(tree);
+}
+// index.html має містити взаємні hreflang і og:locale:alternate саме для зібраних мов — не більше й не менше.
+function headTags(langs) {
+  return [...["uk", ...langs].map(l => `<link rel="alternate" hreflang="${l}" href="${pageUrl(l)}">`), `<link rel="alternate" hreflang="x-default" href="${pageUrl("uk")}">`, ...langs.map(l => `<meta property="og:locale:alternate" content="${OG_LOCALE[l]}">`)];
+}
+const presentTags = () => [...source.matchAll(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">|<meta property="og:locale:alternate" content="[^"]*">/g)].map(m => m[0]);
+
 const dir = path.join(root, "locales");
 const langs = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => /^[a-z]{2}\.json$/.test(f)).map(f => f.slice(0, 2)).filter(l => l !== "uk") : [];
+if (!base) { console.error("index.html: немає <link rel=\"canonical\" href=\"…\">"); process.exit(1); }
+const expected = langs.length ? headTags(langs) : [];
+const present = presentTags();
+if (expected.join("\n") !== present.join("\n")) {
+  console.error("index.html: посилання між мовними версіями не відповідають зібраним мовам (" + (langs.join(", ") || "лише uk") + ").");
+  console.error(expected.length ? "Вставте після <link rel=\"canonical\">, замінивши наявні:\n" + expected.join("") : "Приберіть усі <link rel=\"alternate\" hreflang> і og:locale:alternate.");
+  process.exit(1);
+}
 if (!langs.length) { console.log("У locales/ немає словників en/pl — нічого збирати."); process.exit(0); }
 
 let failed = false;
 for (const lang of langs) {
   const raw = JSON.parse(fs.readFileSync(path.join(dir, `${lang}.json`), "utf8"));
   const dict = Object.fromEntries(Object.entries(raw).map(([k, v]) => [k, v && typeof v === "object" && "text" in v ? v.text : v]));
-  const { html, missing } = build(source, { lang, dict, prefix: "../" });
+  const built = build(source, { lang, dict, prefix: "../" });
+  const { missing } = built;
+  const html = localizeHead(built.html, lang);
   if (missing.length) { console.error(`${lang}: немає перекладу для ${missing.length} ключів: ${missing.join(", ")}`); failed = true; continue; }
   fs.mkdirSync(path.join(root, lang), { recursive: true });
   fs.writeFileSync(path.join(root, lang, "index.html"), html);
