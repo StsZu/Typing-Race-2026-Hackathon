@@ -1,0 +1,24 @@
+== SC-01 небажані терміни (index.html, en/, pl/, locales/)
+en/index.html:0
+index.html:0
+locales/en.json:0
+pl/index.html:0
+locales/pl.json:0
+== SC-03/SC-09 check-i18n --release
+Перевірено: uk, en, pl. Ключів в основі: 228. Помилок: 0, попереджень: 0.
+== згенеровані сторінки
+en: en/index.html актуальний
+pl: pl/index.html актуальний
+uk: збірка збігається з index.html (145 статичних ключів, 63 ключів словника)
+== SC-07 check-links (рядків виводу; базова лінія 4)
+4
+== NN-4: sites/ змінено з 89b729e?
+(порожньо = без змін)
+NN-4: слова 5 пісень без змін від 89b729e: true
+== NN-1 ключі сховища в app.js
+storage.get('touch-days' storage.get('touch-theme' storage.set('touch-days' storage.set('touch-theme' 
+== опубліковано
+built 2371cdd
+/ <html lang="uk" hreflang="pl" 200
+/en/ <html lang="en" hreflang="pl" 200
+/pl/ <html lang="pl" hreflang="pl" 200
