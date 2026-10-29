@@ -1,0 +1,3 @@
+lang="uk" HEAD 2 now 6
+stripped equals HEAD: true | removed lang: 4
+diff lines changed: 11	11	index.html

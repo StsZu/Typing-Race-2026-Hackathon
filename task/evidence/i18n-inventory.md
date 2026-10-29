@@ -1,21 +1,21 @@
 # Інвентар рядків для перекладу (T04)
 
-Згенеровано скриптом `task/evidence/T04-inventory.mjs` з `index.html`, `app.js`, `catalog.json` станом на коміт після T21. Не редагувати вручну — перегенерувати.
+Згенеровано скриптом `task/evidence/T04-inventory.mjs` з `index.html`, `app.js`, `catalog.json` за поточним станом файлів. Не редагувати вручну — перегенерувати.
 
-Ключі — пропозиція за контрактом плану (`розділ.елемент`). Вони стають сталими, коли T06/T07 запише їх у розмітку й словник; до того їх можна перейменувати. Для вкладеної розмітки (`<br>`, `<em>`, `<b>`) одиницею перекладу є весь блок разом з тегами.
+Ключі за контрактом плану (`розділ.елемент`). Якщо ключ уже записано в розмітку (`data-i18n`, `data-i18n-attr`, T06), інвентар бере його звідти. Для вкладеної розмітки (`<br>`, `<em>`, `<b>`) одиницею перекладу є весь блок разом з тегами.
 
 ## Підсумок
 
 | Тип | Що це | Кількість | Перекладається |
 |---|---|---|---|
-| статичний | текст у HTML | 138 | так |
+| статичний | текст у HTML | 139 | так |
 | атрибут | `alt`, `aria-label`, `content` у HTML | 13 | так |
 | динамічний | рядки в `app.js` | 55 | так |
 | каталог | описи, переваги, `imageAlt` у `catalog.json` | 25 | так (T14) |
 | вправа | текст швидкісного тесту | 1 | ні — окремий текст для кожної мови (T15, T18) |
 | дані | символи розкладки `uk` | 3 | ні |
-| оригінал | назви пісень, назви тренажерів, імена авторів | 12 | ні |
-| **Разом** | | **247** | **231** |
+| оригінал | назви пісень, назви тренажерів, імена авторів | 14 | ні |
+| **Разом** | | **250** | **232** |
 
 Шаблони пісень (`<template class="song-data">`, 5 шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — у `app.js` (`songParts`).
 
@@ -23,15 +23,15 @@
 
 | Підрахунок | Грубий (регулярний вираз, як в `idea.md`) | Точний (розбір дерева) | Покрито інвентарем |
 |---|---|---|---|
-| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 140 одиницях; непокритих: 0 |
+| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 143 одиницях; непокритих: 0 |
 | Атрибути з кирилицею в HTML | 13 | 13 | 13 |
 | Літерали з кирилицею в `app.js` | — | 59 | 59 |
 
 Грубий підрахунок (як в `idea.md`) рахує фрагменти між `>` і `<`; для Done використано точний розбір дерева.
 
-Унікальних ключів для перекладу: 223. Спільні ключі (той самий рядок у кількох місцях — очікувано): `calculator.currentLabel` ×2, `calculator.targetLabel` ×2, `calculator.volumeLabel` ×2, `calculator.result` ×2, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2, `keyboard.homeLatin` ×2. Літералів `app.js` без ключа: 0.
+Унікальних ключів для перекладу: 218. Спільні ключі (той самий рядок у кількох місцях — очікувано): `calculator.currentLabelWpm` ×2, `calculator.targetLabelWpm` ×2, `calculator.volumeLabelWords` ×2, `calculator.minutes` ×2, `calculator.hoursMinutes` ×2, `calculator.result` ×2, `test.durationLabel` ×5, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2, `keyboard.homeLatin` ×2. Літералів `app.js` без ключа: 0.
 
-## Розбіжності, які треба вирішити до T06/T07
+## Розбіжності, які треба вирішити до T07
 
 | Що | Факт | Рекомендація |
 |---|---|---|
@@ -42,8 +42,8 @@
 Інші особливості:
 
 - **T07:** `keyboard.keyTip`, `calculator.*Label` і `trainers.tag` містять у шаблоні вкладені тернарні вирази — перед перекладом їх треба розкласти на окремі ключі з параметрами (див. примітки в таблиці `app.js`).
-- **T06:** 10 одиниць містять вкладені елементи з `id` або `<input>`; перекладний текст у них варто винести в окремий `<span data-i18n>`, щоб переклад не міг зачепити розмітку.
-- **T06, SC-02:** кириличні власні назви (імена авторів, назви пісень, назви тренажерів) на en/pl мають бути в елементах з `lang="uk"`, інакше перевірка витоків кирилиці їх зачепить.
+- **Заповнювачі:** 10 одиниць містять вкладені елементи з `id` або `<input>`. У тексті перекладу вони записані як `{$1}`, `{$2}`…; генератор (T08) підставляє на їхнє місце оригінальну розмітку. Тексти самих вкладених елементів — окремі ключі.
+- **SC-02:** кириличні власні назви на сторінці позначено `lang="uk"` (T06); у перекладах назви «Соло», «Гами» тощо треба брати в `<span lang="uk">`.
 - **Переклад:** 7 одиниць згадують клавіші Ф І В А · О Л Д Ж — для en/pl їх треба замінити на A S D F · J K L ;, а не перекладати дослівно.
 
 ## meta
@@ -152,17 +152,19 @@
 | `calculator.heading1` | `Маленька навичка.<br>Помітна різниця.` | `index.html <h2>` | статичний |  |
 | `calculator.text2` | `Скільки хвилин повернеться тобі, якщо той самий текст набирати швидше?` | `index.html <p.muted>` | статичний |  |
 | `calculator.legend1` | `Одиниці швидкості та обсягу` | `index.html <legend>` | статичний |  |
-| `calculator.label1` | `<input type="radio" name="calc-unit" value="wpm" checked> WPM — слова` | `index.html <label>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `calculator.label2` | `<input type="radio" name="calc-unit" value="spm"> SPM — символи` | `index.html <label>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `calculator.currentLabel` | `Поточна швидкість, слів/хв (WPM)` | `index.html <span#current-label>` | статичний | початкове значення = шаблон з одиницею WPM |
-| `calculator.targetLabel` | `Бажана швидкість, слів/хв (WPM)` | `index.html <span#target-label>` | статичний | початкове значення = шаблон з одиницею WPM |
-| `calculator.volumeLabel` | `Обсяг тексту за день, умовних слів` | `index.html <span#volume-label>` | статичний | початкове значення = шаблон з одиницею «умовних слів» |
+| `calculator.label1` | `{$1} WPM — слова` | `index.html <label>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `calculator.label2` | `{$1} SPM — символи` | `index.html <label>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `calculator.currentLabelWpm` | `Поточна швидкість, слів/хв (WPM)` | `index.html <span#current-label>` | статичний |  |
+| `calculator.targetLabelWpm` | `Бажана швидкість, слів/хв (WPM)` | `index.html <span#target-label>` | статичний |  |
+| `calculator.volumeLabelWords` | `Обсяг тексту за день, умовних слів` | `index.html <span#volume-label>` | статичний |  |
 | `calculator.text3` | `Для перерахунку 1 умовне слово = 5 символів із пробілами. Оцінка лише часу набору: обсяг ÷ поточна швидкість − обсяг ÷ бажана швидкість. Без часу на обдумування й редагування. 5 робочих днів на тиждень, 20 на місяць.` | `index.html <p.micro>` | статичний |  |
 | `calculator.text4` | `ТВІЙ ПОТЕНЦІАЛ ЗА ДЕНЬ` | `index.html <p>` | статичний |  |
 | `calculator.label3` | `хвилин` | `index.html <span>` | статичний |  |
-| `calculator.label4` | `<b id="saved-week">100 хв</b>за тиждень` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `calculator.label5` | `<b id="saved-month">6 год 40 хв</b>за місяць` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `calculator.result` | `Більше часу на те, що має значення.` | `index.html <p#calc-note>` | статичний | початкове значення = `calculator.result` |
+| `calculator.label4` | `{$1}за тиждень` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `calculator.minutes` | `100 хв` | `index.html <b#saved-week>` | статичний | параметри {"minutes":100}; українське джерело — шаблон у `locales/uk.json` (T07) |
+| `calculator.label5` | `{$1}за місяць` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `calculator.hoursMinutes` | `6 год 40 хв` | `index.html <b#saved-month>` | статичний | параметри {"hours":6,"minutes":40}; українське джерело — шаблон у `locales/uk.json` (T07) |
+| `calculator.result` | `Більше часу на те, що має значення.` | `index.html <p#calc-note>` | статичний |  |
 
 ## test
 
@@ -171,17 +173,18 @@
 | `test.text1` | `04 / СПРОБУЙ ПРОСТО ЗАРАЗ` | `index.html <p.eyebrow>` | статичний |  |
 | `test.heading1` | `Твоя перша маленька перемога.` | `index.html <h2>` | статичний |  |
 | `test.text2` | `Перевір свій стартовий темп. Під’єднай фізичну клавіатуру, обери українську розкладку й почни друкувати.` | `index.html <p>` | статичний |  |
-| `test.text3` | `Друкуй текст нижче протягом <strong id="duration-label">30 секунд</strong>. Відлік починається з першого символу. Коли час вийде, з’явиться результат.` | `index.html <p.test-instruction>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
+| `test.text3` | `Друкуй текст нижче протягом {$1}. Відлік починається з першого символу. Коли час вийде, з’явиться результат.` | `index.html <p.test-instruction>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `test.durationLabel` | `30 секунд` | `index.html <strong#duration-label>` | статичний | параметри {"seconds":30}; українське джерело — шаблон у `locales/uk.json` (T07) |
 | `test.ariaLabel1` | `Тривалість` | `index.html <div> @aria-label` | атрибут |  |
-| `test.button1` | `30 секунд` | `index.html <button>` | статичний |  |
-| `test.button2` | `60 секунд` | `index.html <button>` | статичний |  |
-| `test.label1` | `<b id="timer">30</b> сек` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `test.label2` | `<b id="wpm">0</b> WPM <small>слів/хв</small>` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `test.label3` | `<b id="spm">0</b> SPM <small>символів/хв</small>` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `test.label4` | `<b id="characters">0</b> символів <small>правильно / набрано</small>` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
-| `test.label5` | `<b id="accuracy">—</b> точність` | `index.html <span>` | статичний | вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти |
+| `test.durationLabel` | `30 секунд` | `index.html <button>` | статичний | параметри {"seconds":30}; українське джерело — шаблон у `locales/uk.json` (T07) |
+| `test.durationLabel` | `60 секунд` | `index.html <button>` | статичний | параметри {"seconds":60}; українське джерело — шаблон у `locales/uk.json` (T07) |
+| `test.label1` | `{$1} сек` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `test.label2` | `{$1} WPM <small>слів/хв</small>` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `test.label3` | `{$1} SPM <small>символів/хв</small>` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `test.label4` | `{$1} символів <small>правильно / набрано</small>` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
+| `test.label5` | `{$1} точність` | `index.html <span>` | статичний | 1 заповнювач(і) {$n}: вкладені елементи з `id` або `<input>` не перекладаються |
 | `test.label6` | `Залишок часу` | `index.html <label>` | статичний |  |
-| `test.testTime` | `30 секунд` | `index.html <progress#test-time>` | статичний |  |
+| `test.durationLabel` | `30 секунд` | `index.html <progress#test-time>` | статичний | параметри {"seconds":30}; українське джерело — шаблон у `locales/uk.json` (T07) |
 | `test.finishTitle` | `Час вийшов!` | `index.html <h3#finish-title>` | статичний |  |
 | `test.text4` | `Результат зафіксовано. Натисни «Спробувати ще раз», щоб розпочати новий тест.` | `index.html <p>` | статичний | цитує `test.restart` — переклад має збігатися з підписом кнопки |
 | `test.ariaLabel2` | `Текст для набору` | `index.html <div#sample> @aria-label` | атрибут |  |
@@ -200,8 +203,8 @@
 | `trainers.text2` | `П’ять різних підходів із Typing Race 2026. Обирай за своєю метою: послідовний курс, аналітика, гра чи перегони.` | `index.html <p>` | статичний |  |
 | `trainers.summary1` | `Результати хакатону 2026 <span>Відкрити ↗</span>` | `index.html <summary>` | статичний |  |
 | `trainers.text3` | `За оголошенням результатів аудиту 6 жовтня 2026. Це оцінка конкурсних робіт, а не рейтинг придатності для кожного учня.` | `index.html <p>` | статичний |  |
-| `trainers.text4` | `<b>01 / Соло</b>Гайдук Анна · 100/100` | `index.html <p>` | статичний | містить ім’я автора кирилицею: на en/pl позначити `lang="uk"` |
-| `trainers.text5` | `<b>03 / TypTap</b>Артем (artyd) · 73/100` | `index.html <p>` | статичний | містить ім’я автора кирилицею: на en/pl позначити `lang="uk"` |
+| `— (оригінал)` | `<b>01 / Соло</b>Гайдук Анна · 100/100` | `index.html <p>` | оригінал | оригінал (lang="uk") |
+| `— (оригінал)` | `<b>03 / TypTap</b>Артем (artyd) · 73/100` | `index.html <p>` | оригінал | оригінал (lang="uk") |
 | `trainers.text6` | `«Гами» подано після завершення оцінювання. Touch Type Race Academy — робота організатора поза конкурсом.` | `index.html <p>` | статичний |  |
 | `trainers.text7` | `Джерела: index.html, описи sites/ та ANNOUNCEMENT.md з матеріалів хакатону. Ілюстрації можливостей тренажерів.` | `index.html <p.micro>` | статичний |  |
 
@@ -225,7 +228,7 @@
 | `plan.heading5` | `Впевненість` | `index.html <h3>` | статичний |  |
 | `plan.text6` | `Листи, нотатки, реальні тексти. Порівняй результат із першим днем.` | `index.html <p>` | статичний |  |
 | `plan.heading6` | `Твій календар практики` | `index.html <h3>` | статичний |  |
-| `plan.progress` | `0 / 30 днів` | `index.html <span#progress-label>` | статичний | початкове значення = `plan.progress` з {done}=0 |
+| `plan.progress` | `0 / 30 днів` | `index.html <span#progress-label>` | статичний | параметри {"done":0}; українське джерело — шаблон у `locales/uk.json` (T07) |
 | `plan.storageNote` | `Позначай завершені дні. Прогрес зберігається лише в цьому браузері й не синхронізується між пристроями.` | `index.html <p#storage-note.micro>` | статичний |  |
 
 ## music
@@ -235,16 +238,16 @@
 | `music.text1` | `ПІСНІ ДЛЯ НАТХНЕННЯ` | `index.html <p.eyebrow>` | статичний |  |
 | `music.heading1` | `Знайди свій ритм.` | `index.html <h2>` | статичний |  |
 | `music.text2` | `П’ять пісень із колекції Touch Type Race. Обери настрій для наступного тренування.` | `index.html <p.lead>` | статичний |  |
-| `music.coverAlt` | `Обкладинка пісні Не гальмуй / Just Type` | `index.html <img#player-cover> @alt` | атрибут | початкове значення = `music.coverAlt` з {title} першої пісні |
-| `— (music.playerTitle)` | `Не гальмуй / Just Type` | `index.html <h3#player-title>` | оригінал | назва пісні |
-| `music.audioLabel` | `Пісня Не гальмуй / Just Type` | `index.html <audio#player-audio> @aria-label` | атрибут | початкове значення = `music.audioLabel` з {title} першої пісні |
+| `music.coverAlt` | `Обкладинка пісні Не гальмуй / Just Type` | `index.html <img#player-cover> @alt` | атрибут | параметри {"title":"Не гальмуй / Just Type"}; українське джерело — шаблон у `locales/uk.json` (T07) |
+| `— (оригінал)` | `Не гальмуй / Just Type` | `index.html <h3#player-title>` | оригінал | оригінал (lang="uk") |
+| `music.audioLabel` | `Пісня Не гальмуй / Just Type` | `index.html <audio#player-audio> @aria-label` | атрибут | параметри {"title":"Не гальмуй / Just Type"}; українське джерело — шаблон у `locales/uk.json` (T07) |
 | `music.playerPrev` | `← Попередня` | `index.html <button#player-prev.outline>` | статичний |  |
 | `music.playerNext` | `Наступна →` | `index.html <button#player-next.outline>` | статичний |  |
 | `music.playerDownload` | `Завантажити MP3` | `index.html <a#player-download>` | статичний |  |
 | `music.lyricsTitle` | `Слова` | `index.html <h3#lyrics-title.lyrics-title>` | статичний |  |
-| `music.ariaLabel2` | `Слова пісні` | `index.html <div#lyrics> @aria-label` | атрибут |  |
-| `music.ariaLabel3` | `Пісні` | `index.html <ol#tracks> @aria-label` | атрибут |  |
-| `— (music.label1)` | `Не гальмуй / Just Type` | `index.html <b>` | оригінал | назва пісні |
+| `music.ariaLabel1` | `Слова пісні` | `index.html <div#lyrics> @aria-label` | атрибут |  |
+| `music.ariaLabel2` | `Пісні` | `index.html <ol#tracks> @aria-label` | атрибут |  |
+| `— (оригінал)` | `Не гальмуй / Just Type` | `index.html <b>` | оригінал | оригінал (lang="uk") |
 | `music.text3` | `Пісні вмикаються лише після натискання Play. Одночасно звучить один запис; початок тесту призупиняє музику.` | `index.html <p.micro>` | статичний |  |
 
 ## about
@@ -324,9 +327,9 @@
 | `trainers.linkAlternative` | `Альтернативна версія ↗` | `app.js:26` | динамічний |  |
 | `trainers.linkGuide` | `Інструкція ↗` | `app.js:26` | динамічний |  |
 | `trainers.loadError` | `Не вдалося завантажити каталог. Онови сторінку.` | `app.js:26 → #catalog` | динамічний |  |
-| `calculator.currentLabel` | `Поточна швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #current-label` | динамічний | вкладені одиниці SPM/WPM — окремі ключі `calculator.unit.*` |
-| `calculator.targetLabel` | `Бажана швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #target-label` | динамічний | вкладені одиниці SPM/WPM — окремі ключі `calculator.unit.*` |
-| `calculator.volumeLabel` | `Обсяг тексту за день, {next==='spm'?'символів':'умовних слів'}` | `app.js:29 → #volume-label` | динамічний | вкладені одиниці — окремі ключі `calculator.unit.*` |
+| `calculator.currentLabelWpm` | `Поточна швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #current-label` | динамічний | і `calculator.currentLabelSpm`: T07 розбиває тернарний вираз на два повних речення |
+| `calculator.targetLabelWpm` | `Бажана швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #target-label` | динамічний | і `calculator.targetLabelSpm`: T07 розбиває тернарний вираз на два повних речення |
+| `calculator.volumeLabelWords` | `Обсяг тексту за день, {next==='spm'?'символів':'умовних слів'}` | `app.js:29 → #volume-label` | динамічний | і `calculator.volumeLabelChars`: T07 розбиває тернарний вираз на два повних речення |
 | `song.part.intro` | `Вступ` | `app.js:31` | динамічний |  |
 | `song.part.verse1` | `Куплет 1` | `app.js:31` | динамічний |  |
 | `song.part.verse2` | `Куплет 2` | `app.js:31` | динамічний |  |

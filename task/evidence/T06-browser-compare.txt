@@ -1,0 +1,15 @@
+marks before 0 after 152
+{
+  title: true,
+  text: true,
+  attrsWithoutI18n: true,
+  styleHash: true,
+  scrollHeight: true,
+  storageKeys: true
+}
+lang=uk added: [
+  'p:01 / СолоГайдук Анна · 100/100',
+  'p:03 / TypTapАртем (artyd) · 73/',
+  'h3#player-title:Не гальмуй / Just Type',
+  'b:Не гальмуй / Just Type'
+]

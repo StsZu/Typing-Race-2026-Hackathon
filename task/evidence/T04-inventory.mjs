@@ -58,37 +58,81 @@ function kindOf(tag) {
   return { p: "text", a: "link", button: "button", li: "item", span: "label", label: "label", small: "note", legend: "legend", option: "option", figcaption: "caption", b: "label", strong: "label", em: "label", title: "title" }[tag] || tag;
 }
 
+// Оригінальний контент: позначається lang="uk" у розмітці (T06); до T06 — за місцем.
 function isOriginal(n, isAttr) {
   if (isAttr) return "";
+  if (n.tag !== "html" && n.attrs?.lang === "uk") return "оригінал (lang=\"uk\")";
   if (n.attrs?.id === "player-title" || ancestors(n).some(a => a.attrs?.id === "tracks")) return "назва пісні";
+  if (n.parent?.attrs?.class === "podium") return "назва тренажера й ім’я автора";
   return "";
 }
+
+// Ключі, задані явно (T06): повідомлення з параметрами, які app.js формує так само.
+// Українське джерело таких ключів — locales/uk.json (T07), а не текст HTML.
+function override(n, attr) {
+  const id = n.attrs?.id, d = n.attrs?.["data-duration"];
+  if (!attr) {
+    if (n.tag === "button" && d) return { key: "test.durationLabel", params: { seconds: +d } };
+    if (id === "test-time" || id === "duration-label") return { key: "test.durationLabel", params: { seconds: 30 } };
+    if (id === "saved-week") return { key: "calculator.minutes", params: { minutes: 100 } };
+    if (id === "saved-month") return { key: "calculator.hoursMinutes", params: { hours: 6, minutes: 40 } };
+    if (id === "progress-label") return { key: "plan.progress", params: { done: 0 } };
+    if (id === "current-label") return { key: "calculator.currentLabelWpm" };
+    if (id === "target-label") return { key: "calculator.targetLabelWpm" };
+    if (id === "volume-label") return { key: "calculator.volumeLabelWords" };
+    if (id === "calc-note") return { key: "calculator.result" };
+  } else {
+    if (id === "player-audio" && attr === "aria-label") return { key: "music.audioLabel", params: { title: "Не гальмуй / Just Type" } };
+    if (id === "player-cover" && attr === "alt") return { key: "music.coverAlt", params: { title: "Не гальмуй / Just Type" } };
+  }
+  return null;
+}
+
+// Ключі, уже записані в розмітку, мають пріоритет над обчисленими.
+function markedKey(n, attr) {
+  if (!attr) return n.attrs?.["data-i18n"] ? { key: n.attrs["data-i18n"], params: n.attrs["data-i18n-params"] ? JSON.parse(n.attrs["data-i18n-params"]) : undefined } : null;
+  const map = Object.fromEntries((n.attrs?.["data-i18n-attr"] || "").split(";").filter(Boolean).map(p => p.split(":")));
+  return map[attr] ? { key: map[attr], params: n.attrs["data-i18n-params"] ? JSON.parse(n.attrs["data-i18n-params"]) : undefined } : null;
+}
+
+// Елементи з id і поля <input> усередині одиниці не перекладаються: у тексті перекладу це {$1}, {$2}…
+const isProtected = c => c.tag !== "#text" && (c.tag === "input" || c.attrs.id);
 
 const html = fs.readFileSync("index.html", "utf8");
 const tree = parse(html);
 const counters = {};
 const nextKey = (section, kind) => { const k = `${section}.${kind}`; counters[k] = (counters[k] || 0) + 1; return `${k}${counters[k]}`; };
 const rows = [];
+const loc = (n, attr) => `index.html <${n.tag}${n.attrs.id ? "#" + n.attrs.id : ""}${!attr && n.attrs.class ? "." + n.attrs.class.split(/\s+/)[0] : ""}>${attr ? " @" + attr : ""}`;
+
+function attrRows(n) {
+  for (const attr of ATTRS) {
+    const v = n.attrs[attr];
+    if (!v || !CYR.test(v)) continue;
+    const section = sectionOf(n);
+    const fixed = markedKey(n, attr) || override(n, attr);
+    let key = fixed?.key;
+    if (!key && n.tag === "meta") key = { description: "meta.description", "og:title": "meta.ogTitle", "og:description": "meta.ogDescription" }[n.attrs.name || n.attrs.property];
+    if (!key) key = nextKey(section, camel(attr));
+    rows.push({ section, key, params: fixed?.params, where: loc(n, attr), type: "атрибут", text: v, note: isOriginal(n, true), node: n, attr });
+  }
+}
 
 function walk(n) {
   if (n.tag === "#text" || n.tag === "template" || n.tag === "script" || n.tag === "style") return;
-  for (const attr of ATTRS) {
-    const v = n.attrs[attr];
-    if (v && CYR.test(v)) {
-      const section = sectionOf(n);
-      let key;
-      if (n.tag === "meta") key = { description: "meta.description", "og:title": "meta.ogTitle", "og:description": "meta.ogDescription" }[n.attrs.name || n.attrs.property] || nextKey("meta", "content");
-      else key = nextKey(section, attr.replace(/-(\w)/g, (_, c) => c.toUpperCase()));
-      rows.push({ section, key, where: `index.html <${n.tag}${n.attrs.id ? "#" + n.attrs.id : ""}> @${attr}`, type: "атрибут", text: v, note: isOriginal(n, true) });
-    }
-  }
+  attrRows(n);
   const direct = n.children.some(c => c.tag === "#text" && c.text.trim());
   if (direct && CYR.test(textOf(n))) {
     const section = n.tag === "title" ? "meta" : sectionOf(n);
-    const key = n.tag === "title" ? "meta.title" : n.attrs.id ? `${section}.${camel(n.attrs.id)}` : nextKey(section, kindOf(n.tag));
-    rows.push({ section, key, where: `index.html <${n.tag}${n.attrs.id ? "#" + n.attrs.id : ""}${n.attrs.class ? "." + n.attrs.class.split(/\s+/)[0] : ""}>`, type: "статичний", text: inner(n).trim(), note: isOriginal(n) });
-    markCovered(n);
-    for (const c of n.children) if (c.tag !== "#text") walkAttrsOnly(c);
+    const fixed = markedKey(n) || override(n);
+    const key = fixed?.key || (n.tag === "title" ? "meta.title" : n.attrs.id ? `${section}.${camel(n.attrs.id)}` : nextKey(section, kindOf(n.tag)));
+    let i = 0;
+    const text = n.children.map(c => isProtected(c) ? `{$${++i}}` : serialize(c)).join("").trim();
+    rows.push({ section, key, params: fixed?.params, where: loc(n), type: "статичний", text, note: isOriginal(n), node: n, protectedCount: i });
+    for (const c of n.children) {
+      if (isProtected(c)) walk(c);
+      else { markCovered(c); if (c.tag !== "#text") walkAttrsOnly(c); }
+    }
     return;
   }
   n.children.forEach(walk);
@@ -103,10 +147,7 @@ function cyrTextNodes(n, out = []) {
 }
 function walkAttrsOnly(n) {
   if (n.tag === "#text") return;
-  for (const attr of ATTRS) {
-    const v = n.attrs[attr];
-    if (v && CYR.test(v)) rows.push({ section: sectionOf(n), key: nextKey(sectionOf(n), attr.replace(/-(\w)/g, (_, c) => c.toUpperCase())), where: `index.html <${n.tag}> @${attr}`, type: "атрибут", text: v, note: isOriginal(n, true) });
-  }
+  attrRows(n);
   n.children.forEach(walkAttrsOnly);
 }
 walk(tree);
@@ -154,9 +195,9 @@ const JS_KEYS = [
   [/^Шар AltGr/, "keyboard.altgrTip"],
   [/^\{Math\.round\(d\*5\)\} хв$/, "calculator.minutes", "параметр {minutes}"], [/год .* хв$/, "calculator.hoursMinutes", "параметри {hours}, {minutes}"],
   [/^Введи коректні/, "calculator.errorInvalid"], [/^Щоб заощадити час/, "calculator.errorTarget"], [/^Більше часу на те/, "calculator.result"],
-  [/^Поточна швидкість/, "calculator.currentLabel", "вкладені одиниці SPM/WPM — окремі ключі `calculator.unit.*`"],
-  [/^Бажана швидкість/, "calculator.targetLabel", "вкладені одиниці SPM/WPM — окремі ключі `calculator.unit.*`"],
-  [/^Обсяг тексту за день/, "calculator.volumeLabel", "вкладені одиниці — окремі ключі `calculator.unit.*`"],
+  [/^Поточна швидкість/, "calculator.currentLabelWpm", "і `calculator.currentLabelSpm`: T07 розбиває тернарний вираз на два повних речення"],
+  [/^Бажана швидкість/, "calculator.targetLabelWpm", "і `calculator.targetLabelSpm`: T07 розбиває тернарний вираз на два повних речення"],
+  [/^Обсяг тексту за день/, "calculator.volumeLabelWords", "і `calculator.volumeLabelChars`: T07 розбиває тернарний вираз на два повних речення"],
   [/^Час вийшов/, "test.timeUp"], [/^Текст завершено/, "test.textDone"],
   [/SPM · .* WPM · точність/, "test.summary", "параметри {spm}, {wpm}, {accuracy}, {characters}"],
   [/^Результат зафіксовано/, "test.statusDone"], [/^\{duration\} секунд$/, "test.durationLabel", "множина: {seconds}"],
@@ -200,28 +241,16 @@ catalog.forEach((t, i) => {
   if (t.imageAlt) rows.push({ section: "catalog.json", key: `catalog.${id}.imageAlt`, where: `catalog.json[${i}].imageAlt`, type: "каталог", text: t.imageAlt, note: "" });
 });
 
-for (const r of rows) if (r.note === "назва пісні") { r.type = "оригінал"; r.key = `— (${r.key})`; }
+for (const r of rows) if (/^(назва пісні|оригінал|назва тренажера)/.test(r.note) && r.type !== "атрибут") { r.type = "оригінал"; r.key = "— (оригінал)"; }
 
-// Початкові тексти в HTML, які app.js потім замінює тим самим повідомленням: один ключ.
-const MERGE = [
-  ["<p#calc-note", "calculator.result", "початкове значення = `calculator.result`"],
-  ["<span#progress-label", "plan.progress", "початкове значення = `plan.progress` з {done}=0"],
-  ["<audio#player-audio> @aria-label", "music.audioLabel", "початкове значення = `music.audioLabel` з {title} першої пісні"],
-  ["<img#player-cover> @alt", "music.coverAlt", "початкове значення = `music.coverAlt` з {title} першої пісні"],
-  ["#current-label", "calculator.currentLabel", "початкове значення = шаблон з одиницею WPM"],
-  ["#target-label", "calculator.targetLabel", "початкове значення = шаблон з одиницею WPM"],
-  ["#volume-label", "calculator.volumeLabel", "початкове значення = шаблон з одиницею «умовних слів»"]
-];
-for (const r of rows) {
-  const m = r.where.startsWith("index.html") && MERGE.find(([w]) => r.where.includes(w));
-  if (m) { r.key = m[1]; r.note = m[2]; }
-}
+// Повідомлення з параметрами: у HTML — конкретне значення, шаблон — у locales/uk.json (T07).
+for (const r of rows) if (r.params) r.note = `параметри ${JSON.stringify(r.params)}; українське джерело — шаблон у \`locales/uk.json\` (T07)`;
 
 // Позначки для T06: що в одиниці не можна перекладати як звичайний текст.
 const addNote = (r, s) => { r.note = r.note ? `${r.note}; ${s}` : s; };
 for (const r of rows) {
   if (r.type === "оригінал" || r.type === "дані" || r.type === "вправа") continue;
-  if (/\sid="|<input/.test(r.text)) addNote(r, "вкладений елемент з `id` або `<input>`: перекладати лише текст, розмітку зберегти");
+  if (r.protectedCount) addNote(r, `${r.protectedCount} заповнювач(і) {$n}: вкладені елементи з \`id\` або \`<input>\` не перекладаються`);
   if (/Ф І В А|О Л Д Ж|ф і в а/.test(r.text)) addNote(r, "клавіші домашнього ряду UK: для en/pl — A S D F · J K L ;");
   if (/Гайдук Анна|Артем \(artyd\)/.test(r.text)) addNote(r, "містить ім’я автора кирилицею: на en/pl позначити `lang=\"uk\"`");
   if (/«Спробувати ще раз»/.test(r.text)) addNote(r, "цитує `test.restart` — переклад має збігатися з підписом кнопки");
@@ -246,9 +275,9 @@ const by = t => rows.filter(r => r.type === t).length;
 const out = [];
 out.push("# Інвентар рядків для перекладу (T04)");
 out.push("");
-out.push("Згенеровано скриптом `task/evidence/T04-inventory.mjs` з `index.html`, `app.js`, `catalog.json` станом на коміт після T21. Не редагувати вручну — перегенерувати.");
+out.push("Згенеровано скриптом `task/evidence/T04-inventory.mjs` з `index.html`, `app.js`, `catalog.json` за поточним станом файлів. Не редагувати вручну — перегенерувати.");
 out.push("");
-out.push("Ключі — пропозиція за контрактом плану (`розділ.елемент`). Вони стають сталими, коли T06/T07 запише їх у розмітку й словник; до того їх можна перейменувати. Для вкладеної розмітки (`<br>`, `<em>`, `<b>`) одиницею перекладу є весь блок разом з тегами.");
+out.push("Ключі за контрактом плану (`розділ.елемент`). Якщо ключ уже записано в розмітку (`data-i18n`, `data-i18n-attr`, T06), інвентар бере його звідти. Для вкладеної розмітки (`<br>`, `<em>`, `<b>`) одиницею перекладу є весь блок разом з тегами.");
 out.push("");
 out.push("## Підсумок");
 out.push("");
@@ -280,7 +309,7 @@ const uniqueKeys = new Set(rows.filter(r => !r.key.startsWith("—")).map(r => r
 out.push("");
 out.push(`Унікальних ключів для перекладу: ${uniqueKeys}. Спільні ключі (той самий рядок у кількох місцях — очікувано): ${dupKeys.length ? dupKeys.map(([k, n]) => "`" + k + "` ×" + n).join(", ") : "немає"}. Літералів \`app.js\` без ключа: ${unmapped.length}.`);
 out.push("");
-out.push("## Розбіжності, які треба вирішити до T06/T07");
+out.push("## Розбіжності, які треба вирішити до T07");
 out.push("");
 out.push("| Що | Факт | Рекомендація |");
 out.push("|---|---|---|");
@@ -289,8 +318,8 @@ out.push("");
 out.push("Інші особливості:");
 out.push("");
 out.push("- **T07:** `keyboard.keyTip`, `calculator.*Label` і `trainers.tag` містять у шаблоні вкладені тернарні вирази — перед перекладом їх треба розкласти на окремі ключі з параметрами (див. примітки в таблиці `app.js`).");
-out.push(`- **T06:** ${rows.filter(r => /вкладений елемент/.test(r.note)).length} одиниць містять вкладені елементи з \`id\` або \`<input>\`; перекладний текст у них варто винести в окремий \`<span data-i18n>\`, щоб переклад не міг зачепити розмітку.`);
-out.push(`- **T06, SC-02:** кириличні власні назви (імена авторів, назви пісень, назви тренажерів) на en/pl мають бути в елементах з \`lang="uk"\`, інакше перевірка витоків кирилиці їх зачепить.`);
+out.push(`- **Заповнювачі:** ${rows.filter(r => r.protectedCount).length} одиниць містять вкладені елементи з \`id\` або \`<input>\`. У тексті перекладу вони записані як \`{$1}\`, \`{$2}\`…; генератор (T08) підставляє на їхнє місце оригінальну розмітку. Тексти самих вкладених елементів — окремі ключі.`);
+out.push(`- **SC-02:** кириличні власні назви на сторінці позначено \`lang="uk"\` (T06); у перекладах назви «Соло», «Гами» тощо треба брати в \`<span lang="uk">\`.`);
 out.push(`- **Переклад:** ${rows.filter(r => /домашнього ряду UK/.test(r.note)).length} одиниць згадують клавіші Ф І В А · О Л Д Ж — для en/pl їх треба замінити на A S D F · J K L ;, а не перекладати дослівно.`);
 out.push("");
 const sections = [...new Set(rows.map(r => r.section))];
@@ -303,4 +332,5 @@ for (const s of sections) {
   for (const r of rows.filter(r => r.section === s)) out.push(`| \`${r.key}\` | ${code(r.text)} | ${code(r.where)} | ${r.type} | ${esc(r.note)} |`);
   out.push("");
 }
-process.stdout.write(out.join("\n"));
+if (import.meta.url === `file://${process.argv[1]}`) process.stdout.write(out.join("\n"));
+export { rows, html, ATTRS };
