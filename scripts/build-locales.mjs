@@ -5,10 +5,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { build, extractUk, getAttr, parse, render, setAttr } from "./i18n-html.mjs";
+import { build, catalogUk, extractUk, getAttr, parse, render, setAttr } from "./i18n-html.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
+const catalog = catalogUk(JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8")));
+const extraMessages = Object.keys(catalog);
 
 if (process.argv.includes("--verify-uk")) {
   const { statics, messages } = extractUk(source);
@@ -38,8 +40,8 @@ if (process.argv.includes("--pseudo")) {
     return "[" + parts.map((p, i) => i % 2 ? p : word(p)).join("") + " " + pad + "]";
   };
   const { statics, messages } = extractUk(source);
-  const dict = Object.fromEntries(Object.entries({ ...statics, ...messages }).map(([k, v]) => [k, pseudo(v)]));
-  const { html, missing } = build(source, { lang: "en-XA", dict, prefix: "../" });
+  const dict = Object.fromEntries(Object.entries({ ...statics, ...messages, ...catalog }).map(([k, v]) => [k, pseudo(v)]));
+  const { html, missing } = build(source, { lang: "en-XA", dict, prefix: "../", extraMessages });
   if (missing.length) throw new Error("Немає ключів: " + missing.join(", "));
   fs.mkdirSync(path.join(root, "qps"), { recursive: true });
   fs.writeFileSync(path.join(root, "qps", "index.html"), html);
@@ -85,7 +87,7 @@ let failed = false;
 for (const lang of langs) {
   const raw = JSON.parse(fs.readFileSync(path.join(dir, `${lang}.json`), "utf8"));
   const dict = Object.fromEntries(Object.entries(raw).map(([k, v]) => [k, v && typeof v === "object" && "text" in v ? v.text : v]));
-  const built = build(source, { lang, dict, prefix: "../" });
+  const built = build(source, { lang, dict, prefix: "../", extraMessages });
   const { missing } = built;
   const html = localizeHead(built.html, lang);
   if (missing.length) { console.error(`${lang}: немає перекладу для ${missing.length} ключів: ${missing.join(", ")}`); failed = true; continue; }

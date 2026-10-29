@@ -10,8 +10,8 @@ if (!out) throw new Error("Вкажи теку для копії сайту");
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(path.join(out, "scripts"), { recursive: true });
 fs.mkdirSync(path.join(out, "locales"));
-execFileSync("sh", ["-c", `git archive HEAD catalog.js images | tar -x -C "${out}"`]);
-for (const f of ["app.js", "style.css", "scripts/build-locales.mjs", "scripts/i18n-html.mjs", "locales/en.json"]) fs.copyFileSync(f, path.join(out, f));
+execFileSync("sh", ["-c", `git archive HEAD images | tar -x -C "${out}"`]);
+for (const f of ["app.js", "style.css", "catalog.js", "catalog.json", "scripts/build-locales.mjs", "scripts/i18n-html.mjs", "locales/en.json"]) fs.copyFileSync(f, path.join(out, f));
 
 const source = fs.readFileSync("index.html", "utf8");
 const B = source.match(/<link rel="canonical" href="([^"]+)">/)[1];

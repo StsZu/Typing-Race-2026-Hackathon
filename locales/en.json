@@ -812,5 +812,105 @@
   "test.leaveWarning": {
     "text": "The test is still running. Finish it, or press the language again to leave without a result.",
     "src": "443d9e3a"
+  },
+  "catalog.solo.description": {
+    "text": "A step-by-step touch typing course: from your first keys to confident typing.",
+    "src": "c610df40"
+  },
+  "catalog.solo.feature1": {
+    "text": "A final check without the on-screen keyboard or hints: you need 3 successful attempts in a row.",
+    "src": "39a6f752"
+  },
+  "catalog.solo.feature2": {
+    "text": "The accuracy threshold is visible before you start; the speed and accuracy formulas are shown in the interface.",
+    "src": "25da661e"
+  },
+  "catalog.solo.feature3": {
+    "text": "Progress is saved in your browser.",
+    "src": "afaacf3d"
+  },
+  "catalog.solo.imageAlt": {
+    "text": "Illustration: hands on the home row, with steps made of keys leading to a sheet of text and three marks for successful attempts.",
+    "src": "463e370c"
+  },
+  "catalog.typing-race.description": {
+    "text": "A learning system with finger hints, detailed analytics and races with friends.",
+    "src": "030d9467"
+  },
+  "catalog.typing-race.feature1": {
+    "text": "After each exercise: errors by character, your slowest transition, rhythm and advice on what to practice next.",
+    "src": "944364dd"
+  },
+  "catalog.typing-race.feature2": {
+    "text": "Races in a private room joined by code, with your opponent’s live progress and a leaderboard.",
+    "src": "51204af1"
+  },
+  "catalog.typing-race.feature3": {
+    "text": "Themes, text size up to 40 px and a reduced-motion mode.",
+    "src": "018f2585"
+  },
+  "catalog.typing-race.imageAlt": {
+    "text": "Illustration: three cars on a race track next to an analytics card with charts and a keyboard highlighting mistakes.",
+    "src": "a2c4f278"
+  },
+  "catalog.typtap.description": {
+    "text": "A trainer with mini-games and multiplayer: learning that easily turns into a game.",
+    "src": "59389850"
+  },
+  "catalog.typtap.feature1": {
+    "text": "16 mini-games and a single-text race for up to 8 players.",
+    "src": "d11eaa44"
+  },
+  "catalog.typtap.feature2": {
+    "text": "The “Weak keys” mode picks exercises based on your mistakes.",
+    "src": "387363c2"
+  },
+  "catalog.typtap.feature3": {
+    "text": "Your own text: paste it or upload a .txt or .md file.",
+    "src": "e6cdbfe2"
+  },
+  "catalog.typtap.imageAlt": {
+    "text": "Illustration: eight smiling player characters above four mini-games made of keys.",
+    "src": "4ca6ba8b"
+  },
+  "catalog.gamy.description": {
+    "text": "Exercises like piano scales: a short movement, one goal and new difficulty only once you have mastered the last step.",
+    "src": "ab3e56ba"
+  },
+  "catalog.gamy.feature1": {
+    "text": "A final check without the keyboard or hints, an accuracy threshold of 95–97%, 3 successful attempts in a row.",
+    "src": "b4aad4f3"
+  },
+  "catalog.gamy.feature2": {
+    "text": "Error breakdown, slowest transitions, a rhythm chart and a “Weak spots” exercise.",
+    "src": "7e3787ee"
+  },
+  "catalog.gamy.feature3": {
+    "text": "Works offline as an app (PWA) and sends nothing over the network.",
+    "src": "14c8ec7c"
+  },
+  "catalog.gamy.imageAlt": {
+    "text": "Illustration: a finger pressing keys that rise like a piano scale, with a musical staff above them.",
+    "src": "700aed7a"
+  },
+  "catalog.academy.description": {
+    "text": "A large trainer with races: solo, against a bot or online, in three languages.",
+    "src": "8aeeb07b"
+  },
+  "catalog.academy.feature1": {
+    "text": "“Solo”, “Against AI” (4 bot speeds) and “Online” modes, with rooms for 2, 4 or 6 players.",
+    "src": "cd02b848"
+  },
+  "catalog.academy.feature2": {
+    "text": "Ukrainian, English and Polish; up to six profiles on one computer.",
+    "src": "82b354b1"
+  },
+  "catalog.academy.feature3": {
+    "text": "Post-race analytics, a daily practice counter and achievements.",
+    "src": "65103b8c"
+  },
+  "catalog.academy.imageAlt": {
+    "text": "Illustration: three cars in flag colors racing down a road, with a robot holding a checkered flag and an online-game globe beside them.",
+    "src": "98440dbb"
   }
 }

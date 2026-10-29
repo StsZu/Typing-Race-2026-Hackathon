@@ -1,0 +1,7 @@
+EN count 5 leaks 0 []
+  01 / STEP-BY-STEP COURSE | Соло@uk | Гайдук Анна@uk | img true | A step-by-step touch typing course: from your first keys to  | f1: A final check without the on-screen keyb | links Open the trainer ↗, GitHub ↗
+  02 / ANALYTICS AND RACES | Typing-Race | prodelt · GitHub | img true | A learning system with finger hints, detailed analytics and  | f1: After each exercise: errors by character | links Open the trainer ↗, GitHub ↗
+  03 / LEARNING THROUGH PLAY | TypTap | Артем · artyd@uk | img true | A trainer with mini-games and multiplayer: learning that eas | f1: 16 mini-games and a single-text race for | links Open the trainer ↗, GitHub ↗, Alternative version ↗
+  04 / METHODICAL PRACTICE | Гами@uk | apteka95video-source · GitHub | img true | Exercises like piano scales: a short movement, one goal and  | f1: A final check without the keyboard or hi | links Open the trainer ↗, GitHub ↗
+  05 / THREE LANGUAGES | Touch Type Race Academy | Stanislav Zubar і Myroslav Zubar@uk | img true | A large trainer with races: solo, against a bot or online, i | f1: “Solo”, “Against AI” (4 bot speeds) and  | links Open the trainer ↗, Guide ↗, GitHub · private ↗
+UK count 5 texts = catalog.json: true | lang marks: Соло@uk / Гайдук Анна@uk; -; TypTap / Артем · artyd@uk; Гами@uk / apteka95video-source · GitHub; Touch Type Race Academy / Stanislav Zubar і Myroslav Zubar@uk | all images true

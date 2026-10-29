@@ -1,0 +1,130 @@
+diff --git a/app.js b/app.js
+index 279a39f..c70bba5 100644
+--- a/app.js
++++ b/app.js
+@@ -27,7 +27,8 @@ $('#typing').oninput=()=>{if(finished)return;const val=$('#typing').value;if(!st
+$('#restart').onclick=()=>{reset();$('#typing').focus()};$$('[data-duration]').forEach(b=>b.onclick=()=>{duration=Number(b.dataset.duration);$$('[data-duration]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));reset()});reset();
+let days=storage.get('touch-days',[]);if(!Array.isArray(days))days=[];days=days.filter(d=>Number.isInteger(d)&&d>=1&&d<=30);days=[...new Set(days)];function progress(){for(const b of $$('#days button')){const checked=days.includes(Number(b.dataset.day));b.setAttribute('aria-pressed',String(checked));b.textContent=checked?'✓':b.dataset.day}$('#progress').value=days.length;$('#progress-label').textContent=t('plan.progress',{done:days.length})}
+for(let i=1;i<=30;i++){const b=document.createElement('button');b.dataset.day=i;b.setAttribute('aria-label',t('plan.dayLabel',{day:i}));b.onclick=()=>{days=days.includes(i)?days.filter(d=>d!==i):[...days,i];if(!storage.set('touch-days',days))$('#storage-note').textContent=t('plan.storageError');progress()};$('#days').append(b)}progress();
+{+const cyrillic=/[\u0400-\u04FF]/,cat=(d,f,uk)=>messages['catalog.'+d.id+'.'+f]!==undefined?t('catalog.'+d.id+'.'+f):uk;+}
+Promise.resolve(window.TRAINERS).then(data=>{data.forEach((d,i)=>{const card=document.createElement('article');card.className='trainer-card';const picture=document.createElement('div');picture.className='app-image'+(d.imageKind==='icon'?' app-icon':'');if(d.image){const img=document.createElement('img');img.src=new [-URL(d.image,assetRoot).href;img.alt=d.imageKind==='icon'?t('trainers.iconAlt',{name:d.name}):(d.imageAlt||t('trainers.imageAltFallback',{name:d.name}));img.loading='lazy';img.decoding='async';img.width=1280;img.height=600;picture.append(img)}else{const-]{+URL(d.image,assetRoot).href;img.alt=d.imageKind==='icon'?t('trainers.iconAlt',{name:d.name}):(cat(d,'imageAlt',d.imageAlt)||t('trainers.imageAltFallback',{name:d.name}));img.loading='lazy';img.decoding='async';img.width=1280;img.height=600;picture.append(img)}else{const+} p=document.createElement('div');p.className='app-placeholder';p.textContent=t('trainers.placeholderKeys');picture.append(p)}card.append(picture);const body=document.createElement('div');body.className='card-body';const add=(tag,txt,cl)=>{const el=document.createElement(tag);el.textContent=txt;if(cl)el.className=cl;body.append(el);return el};add('span',`0${i+1} / [-${t('trainers.tag.'+['course','analytics','game','method','languages'][i])}`,'card-number');add('h3',d.name);add('p',d.author,'author');add('p',d.description);const ul=add('ul','');d.features.forEach(f=>{const li=document.createElement('li');li.textContent=f;ul.append(li)});const-]{+${t('trainers.tag.'+['course','analytics','game','method','languages'][i])}`,'card-number');const title=add('h3',d.name),author=add('p',d.author,'author');if(cyrillic.test(d.name))title.lang='uk';if(cyrillic.test(d.author))author.lang='uk';add('p',cat(d,'description',d.description));const ul=add('ul','');d.features.forEach((f,i)=>{const li=document.createElement('li');li.textContent=cat(d,'feature'+(i+1),f);ul.append(li)});const+} a=add('a',t('trainers.linkOpen'),'button');a.href=d.url;a.target='_blank';a.rel='noopener noreferrer';const links=add('div','','extra-links');d.links.forEach(url=>{const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=url.includes('github.com')?(url.includes('/StsZu/')?t('trainers.linkGithubPrivate'):'GitHub ↗'):url.includes('artyd.github')?t('trainers.linkAlternative'):t('trainers.linkGuide');links.append(a)});card.append(body);$('#catalog').append(card)})}).catch(()=>{$('#catalog').textContent=t('trainers.loadError')});
+
+let calcUnit='wpm';
+$$('[name="calc-unit"]').forEach(r=>r.onchange=()=>{const next=r.value;if(next===calcUnit)return;const factor=next==='spm'?5:0.2;['current','target','volume'].forEach(id=>{const e=$('#'+id);if(e.value!=='')e.value=Number((Number(e.value)*factor).toFixed(2));e.max=String((id==='volume'?100000:300)*(next==='spm'?5:1));e.step='any'});calcUnit=next;$('#current-label').textContent=t(next==='spm'?'calculator.currentLabelSpm':'calculator.currentLabelWpm');$('#target-label').textContent=t(next==='spm'?'calculator.targetLabelSpm':'calculator.targetLabelWpm');$('#volume-label').textContent=t(next==='spm'?'calculator.volumeLabelChars':'calculator.volumeLabelWords');calculate()});
+diff --git a/scripts/build-locales.mjs b/scripts/build-locales.mjs
+index c34a022..34594bd 100644
+--- a/scripts/build-locales.mjs
++++ b/scripts/build-locales.mjs
+@@ -5,10 +5,12 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { build, {+catalogUk,+} extractUk, getAttr, parse, render, setAttr } from "./i18n-html.mjs";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
+{+const catalog = catalogUk(JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8")));+}
+{+const extraMessages = Object.keys(catalog);+}
+
+if (process.argv.includes("--verify-uk")) {
+  const { statics, messages } = extractUk(source);
+@@ -38,8 +40,8 @@ if (process.argv.includes("--pseudo")) {
+    return "[" + parts.map((p, i) => i % 2 ? p : word(p)).join("") + " " + pad + "]";
+  };
+  const { statics, messages } = extractUk(source);
+  const dict = Object.fromEntries(Object.entries({ ...statics, [-...messages-]{+...messages, ...catalog+} }).map(([k, v]) => [k, pseudo(v)]));
+  const { html, missing } = build(source, { lang: "en-XA", dict, prefix: [-"../"-]{+"../", extraMessages+} });
+  if (missing.length) throw new Error("Немає ключів: " + missing.join(", "));
+  fs.mkdirSync(path.join(root, "qps"), { recursive: true });
+  fs.writeFileSync(path.join(root, "qps", "index.html"), html);
+@@ -85,7 +87,7 @@ let failed = false;
+for (const lang of langs) {
+  const raw = JSON.parse(fs.readFileSync(path.join(dir, `${lang}.json`), "utf8"));
+  const dict = Object.fromEntries(Object.entries(raw).map(([k, v]) => [k, v && typeof v === "object" && "text" in v ? v.text : v]));
+  const built = build(source, { lang, dict, prefix: [-"../"-]{+"../", extraMessages+} });
+  const { missing } = built;
+  const html = localizeHead(built.html, lang);
+  if (missing.length) { console.error(`${lang}: немає перекладу для ${missing.length} ключів: ${missing.join(", ")}`); failed = true; continue; }
+diff --git a/scripts/check-i18n.mjs b/scripts/check-i18n.mjs
+index d5c3c6d..53093b0 100644
+--- a/scripts/check-i18n.mjs
++++ b/scripts/check-i18n.mjs
+@@ -6,7 +6,7 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { build, {+catalogUk,+} extractUk, format, getAttr, parse, {+serializeCatalogJs,+} sourceHash } from "./i18n-html.mjs";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const args = process.argv.slice(2);
+@@ -16,7 +16,9 @@ const CYR = /[А-Яа-яЇїІіЄєҐґ]/;
+
+const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
+const uk = extractUk(source);
+const {+catalogJson = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));+}
+{+const catalog = catalogUk(catalogJson);+}
+{+const+} ukDict = { ...uk.statics, [-...uk.messages-]{+...uk.messages, ...catalog+} };
+const errors = [], warnings = [];
+const err = (lang, msg) => errors.push(`${lang}: ${msg}`);
+const warn = (lang, msg) => warnings.push(`${lang}: ${msg}`);
+@@ -96,10 +98,16 @@ function checkLocale(lang, raw) {
+  }
+  checkTerms(lang, dict);
+  checkPlurals(lang, dict);
+  const { html, missing } = build(source, { lang, dict, prefix: [-"../"-]{+"../", extraMessages: Object.keys(catalog)+} });
+  if (!missing.length) checkLeaks(lang, html);
+}
+
+{+// Каталог: catalog.js має бути тим самим, що й catalog.json; у кожного тренажера — унікальний id.+}
+{+const catalogJs = fs.readFileSync(path.join(root, "catalog.js"), "utf8");+}
+{+if (catalogJs.replace(/\n$/, "") !== serializeCatalogJs(catalogJson)) err("catalog", "catalog.js не збігається з catalog.json");+}
+{+const ids = catalogJson.map(t => t.id);+}
+{+if (ids.some(id => !/^[a-z][a-z0-9-]*$/.test(id || "")) || new Set(ids).size !== ids.length) err("catalog", "у кожного тренажера має бути унікальний id з малих латинських літер: " + ids.join(", "));+}
+
+// Українська основа: терміни, форми множини, статичний HTML = словник для спільних ключів.
+checkTerms("uk", ukDict);
+checkPlurals("uk", ukDict);
+diff --git a/scripts/i18n-html.mjs b/scripts/i18n-html.mjs
+index e111fe5..5d7b351 100644
+--- a/scripts/i18n-html.mjs
++++ b/scripts/i18n-html.mjs
+@@ -90,6 +90,22 @@ export function extractUk(html) {
+  return { statics, messages, uses, lang: getAttr([...elements(tree)][0].el, "lang") };
+}
+
+{+// Тексти каталогу тренажерів (catalog.json) як ключі catalog.<id>.*; назви й автори — оригінал, не перекладаються.+}
+{+export function catalogUk(catalog) {+}
+{+  const out = {};+}
+{+  for (const t of catalog) {+}
+{+    out[`catalog.${t.id}.description`] = t.description;+}
+{+    t.features.forEach((f, i) => { out[`catalog.${t.id}.feature${i + 1}`] = f; });+}
+{+    if (t.imageAlt) out[`catalog.${t.id}.imageAlt`] = t.imageAlt;+}
+{+  }+}
+{+  return out;+}
+{+}+}
+
+{+export const serializeCatalogJs = catalog => {+}
+{+  const ser = v => Array.isArray(v) ? "[" + v.map(ser).join(", ") + "]" : v && typeof v === "object" ? "{" + Object.entries(v).map(([k, x]) => JSON.stringify(k) + ": " + ser(x)).join(", ") + "}" : JSON.stringify(v);+}
+{+  return "window.TRAINERS = " + ser(catalog) + ";";+}
+{+};+}
+
+export function format(template, params = {}, lang = "uk") {
+  let m = template;
+  if (m && typeof m === "object") {
+@@ -103,7 +119,8 @@ export function format(template, params = {}, lang = "uk") {
+const isRelative = v => v && !/^(#|\/|[a-z][a-z0-9+.-]*:)/i.test(v);
+
+// dict: { key: "текст" | {one, few, many, other} } — повний словник мови (статичні й динамічні ключі).
+{+// extraMessages — ключі, що потрапляють у словник сторінки для app.js поверх українських (каталог тренажерів).+}
+export function build(html, { lang, dict, prefix = [-""-]{+"", extraMessages = []+} }) {
+  const tree = parse(html);
+  const missing = new Set();
+  const lookup = (key, params) => {
+@@ -132,7 +149,7 @@ export function build(html, { lang, dict, prefix = "" }) {
+  if (msgEl) {
+    const ukMessages = JSON.parse(renderChildren(msgEl));
+    const out = {};
+    for (const k of [-Object.keys(ukMessages))-]{+[...Object.keys(ukMessages), ...extraMessages])+} { if (k in dict) out[k] = dict[k]; else missing.add(k); }
+    msgEl.children = [{ type: "raw", raw: JSON.stringify(out) }];
+  }
+  for (const { el } of elements(tree)) {

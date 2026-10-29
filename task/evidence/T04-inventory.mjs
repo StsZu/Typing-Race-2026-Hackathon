@@ -248,7 +248,7 @@ export { messages, mismatches };
 // catalog.json: текстові поля тренажерів.
 const catalog = JSON.parse(fs.readFileSync("catalog.json", "utf8"));
 catalog.forEach((t, i) => {
-  const id = `trainer${i + 1}`;
+  const id = t.id || `trainer${i + 1}`;
   rows.push({ section: "catalog.json", key: `— (${id}.name)`, where: `catalog.json[${i}].name`, type: "оригінал", text: t.name, note: "власна назва" });
   rows.push({ section: "catalog.json", key: `— (${id}.author)`, where: `catalog.json[${i}].author`, type: "оригінал", text: t.author, note: "ім’я автора" });
   rows.push({ section: "catalog.json", key: `catalog.${id}.description`, where: `catalog.json[${i}].description`, type: "каталог", text: t.description, note: "" });

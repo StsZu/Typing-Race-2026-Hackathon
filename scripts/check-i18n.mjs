@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { build, extractUk, format, getAttr, parse, sourceHash } from "./i18n-html.mjs";
+import { build, catalogUk, extractUk, format, getAttr, parse, serializeCatalogJs, sourceHash } from "./i18n-html.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -16,7 +16,9 @@ const CYR = /[А-Яа-яЇїІіЄєҐґ]/;
 
 const source = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const uk = extractUk(source);
-const ukDict = { ...uk.statics, ...uk.messages };
+const catalogJson = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
+const catalog = catalogUk(catalogJson);
+const ukDict = { ...uk.statics, ...uk.messages, ...catalog };
 const errors = [], warnings = [];
 const err = (lang, msg) => errors.push(`${lang}: ${msg}`);
 const warn = (lang, msg) => warnings.push(`${lang}: ${msg}`);
@@ -96,9 +98,15 @@ function checkLocale(lang, raw) {
   }
   checkTerms(lang, dict);
   checkPlurals(lang, dict);
-  const { html, missing } = build(source, { lang, dict, prefix: "../" });
+  const { html, missing } = build(source, { lang, dict, prefix: "../", extraMessages: Object.keys(catalog) });
   if (!missing.length) checkLeaks(lang, html);
 }
+
+// Каталог: catalog.js має бути тим самим, що й catalog.json; у кожного тренажера — унікальний id.
+const catalogJs = fs.readFileSync(path.join(root, "catalog.js"), "utf8");
+if (catalogJs.replace(/\n$/, "") !== serializeCatalogJs(catalogJson)) err("catalog", "catalog.js не збігається з catalog.json");
+const ids = catalogJson.map(t => t.id);
+if (ids.some(id => !/^[a-z][a-z0-9-]*$/.test(id || "")) || new Set(ids).size !== ids.length) err("catalog", "у кожного тренажера має бути унікальний id з малих латинських літер: " + ids.join(", "));
 
 // Українська основа: терміни, форми множини, статичний HTML = словник для спільних ключів.
 checkTerms("uk", ukDict);

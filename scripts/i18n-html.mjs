@@ -90,6 +90,22 @@ export function extractUk(html) {
   return { statics, messages, uses, lang: getAttr([...elements(tree)][0].el, "lang") };
 }
 
+// Тексти каталогу тренажерів (catalog.json) як ключі catalog.<id>.*; назви й автори — оригінал, не перекладаються.
+export function catalogUk(catalog) {
+  const out = {};
+  for (const t of catalog) {
+    out[`catalog.${t.id}.description`] = t.description;
+    t.features.forEach((f, i) => { out[`catalog.${t.id}.feature${i + 1}`] = f; });
+    if (t.imageAlt) out[`catalog.${t.id}.imageAlt`] = t.imageAlt;
+  }
+  return out;
+}
+
+export const serializeCatalogJs = catalog => {
+  const ser = v => Array.isArray(v) ? "[" + v.map(ser).join(", ") + "]" : v && typeof v === "object" ? "{" + Object.entries(v).map(([k, x]) => JSON.stringify(k) + ": " + ser(x)).join(", ") + "}" : JSON.stringify(v);
+  return "window.TRAINERS = " + ser(catalog) + ";";
+};
+
 export function format(template, params = {}, lang = "uk") {
   let m = template;
   if (m && typeof m === "object") {
@@ -103,7 +119,8 @@ export function format(template, params = {}, lang = "uk") {
 const isRelative = v => v && !/^(#|\/|[a-z][a-z0-9+.-]*:)/i.test(v);
 
 // dict: { key: "текст" | {one, few, many, other} } — повний словник мови (статичні й динамічні ключі).
-export function build(html, { lang, dict, prefix = "" }) {
+// extraMessages — ключі, що потрапляють у словник сторінки для app.js поверх українських (каталог тренажерів).
+export function build(html, { lang, dict, prefix = "", extraMessages = [] }) {
   const tree = parse(html);
   const missing = new Set();
   const lookup = (key, params) => {
@@ -132,7 +149,7 @@ export function build(html, { lang, dict, prefix = "" }) {
   if (msgEl) {
     const ukMessages = JSON.parse(renderChildren(msgEl));
     const out = {};
-    for (const k of Object.keys(ukMessages)) { if (k in dict) out[k] = dict[k]; else missing.add(k); }
+    for (const k of [...Object.keys(ukMessages), ...extraMessages]) { if (k in dict) out[k] = dict[k]; else missing.add(k); }
     msgEl.children = [{ type: "raw", raw: JSON.stringify(out) }];
   }
   for (const { el } of elements(tree)) {

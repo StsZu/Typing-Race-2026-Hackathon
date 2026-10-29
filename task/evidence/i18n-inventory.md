@@ -9,13 +9,13 @@
 | Тип | Що це | Кількість | Перекладається |
 |---|---|---|---|
 | статичний | текст у HTML | 139 | так |
-| атрибут | `alt`, `aria-label`, `content` у HTML | 13 | так |
-| динамічний | словник `#i18n-messages` у `index.html` для `app.js` (T07) | 62 | так |
+| атрибут | `alt`, `aria-label`, `content` у HTML | 14 | так |
+| динамічний | словник `#i18n-messages` у `index.html` для `app.js` (T07) | 63 | так |
 | каталог | описи, переваги, `imageAlt` у `catalog.json` | 25 | так (T14) |
 | вправа | текст швидкісного тесту | 1 | ні — окремий текст для кожної мови (T15, T18) |
 | дані | символи розкладки `uk` | 3 | ні |
 | оригінал | назви пісень, назви тренажерів, імена авторів | 14 | ні |
-| **Разом** | | **257** | **239** |
+| **Разом** | | **259** | **241** |
 
 Шаблони пісень (`<template class="song-data">`, 5 шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — ключі `song.part.*` у словнику.
 
@@ -23,13 +23,13 @@
 
 | Підрахунок | Грубий (регулярний вираз, як в `idea.md`) | Точний (розбір дерева) | Покрито інвентарем |
 |---|---|---|---|
-| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 205 одиницях; непокритих: 0 |
-| Атрибути з кирилицею в HTML | 13 | 13 | 13 |
+| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 206 одиницях; непокритих: 0 |
+| Атрибути з кирилицею в HTML | 14 | 14 | 14 |
 | Літерали з кирилицею в `app.js` | — | 4 | 4 |
 
 Грубий підрахунок (як в `idea.md`) рахує фрагменти між `>` і `<`; для Done використано точний розбір дерева.
 
-Унікальних ключів для перекладу: 225. Спільні ключі (той самий рядок у кількох місцях — очікувано): `keyboard.noteUk` ×2, `calculator.currentLabelWpm` ×2, `calculator.targetLabelWpm` ×2, `calculator.volumeLabelWords` ×2, `calculator.minutes` ×2, `calculator.hoursMinutes` ×2, `calculator.result` ×2, `test.durationLabel` ×5, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2. Літералів `app.js` без ключа: 0.
+Унікальних ключів для перекладу: 227. Спільні ключі (той самий рядок у кількох місцях — очікувано): `keyboard.noteUk` ×2, `calculator.currentLabelWpm` ×2, `calculator.targetLabelWpm` ×2, `calculator.volumeLabelWords` ×2, `calculator.minutes` ×2, `calculator.hoursMinutes` ×2, `calculator.result` ×2, `test.durationLabel` ×5, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2. Літералів `app.js` без ключа: 0.
 
 ## Розбіжності між початковим текстом HTML і текстом app.js
 
@@ -60,6 +60,7 @@
 | Ключ | Текст | Де | Тип | Примітка |
 |---|---|---|---|---|
 | `page.link1` | `Перейти до змісту` | `index.html <a.skip>` | статичний |  |
+| `nav.languages` | `Мова сайту` | `index.html <nav#langs> @aria-label` | атрибут |  |
 
 ## nav
 
@@ -281,10 +282,10 @@
 
 | Ключ | Текст | Де | Тип | Примітка |
 |---|---|---|---|---|
-| `— (layouts)` | `йцукенгшщзхї` | `app.js:7` | дані | символи розкладки, не перекладаються |
-| `— (layouts)` | `фівапролджє` | `app.js:7` | дані | символи розкладки, не перекладаються |
-| `— (layouts)` | `ячсмитьбю.` | `app.js:7` | дані | символи розкладки, не перекладаються |
-| `— (passage)` | `Кожна нова навичка починається з маленького кроку. Поклади пальці на клавіатуру, розслаб плечі та дивись на текст. Друкуй уважно і спокійно. Нехай руки запам\'ятовують рух, а думки залишаються вільними. Точність важливіша за поспіх. Щоденна практика допомагає краще відчувати ритм. ` | `app.js:15` | вправа | текст тесту; окремий текст для кожної мови (FR-08) |
+| `— (layouts)` | `йцукенгшщзхї` | `app.js:9` | дані | символи розкладки, не перекладаються |
+| `— (layouts)` | `фівапролджє` | `app.js:9` | дані | символи розкладки, не перекладаються |
+| `— (layouts)` | `ячсмитьбю.` | `app.js:9` | дані | символи розкладки, не перекладаються |
+| `— (passage)` | `Кожна нова навичка починається з маленького кроку. Поклади пальці на клавіатуру, розслаб плечі та дивись на текст. Друкуй уважно і спокійно. Нехай руки запам\'ятовують рух, а думки залишаються вільними. Точність важливіша за поспіх. Щоденна практика допомагає краще відчувати ритм. ` | `app.js:17` | вправа | текст тесту; окремий текст для кожної мови (FR-08) |
 
 ## messages
 
@@ -352,43 +353,44 @@
 | `song.part.outro` | `Кінцівка` | `index.html <script#i18n-messages>` | динамічний |  |
 | `music.audioLabel` | `Пісня {title}` | `index.html <script#i18n-messages>` | динамічний |  |
 | `music.coverAlt` | `Обкладинка пісні {title}` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.leaveWarning` | `Тест ще триває. Заверши його або натисни мову ще раз, щоб перейти без результату.` | `index.html <script#i18n-messages>` | динамічний |  |
 
 ## catalog.json
 
 | Ключ | Текст | Де | Тип | Примітка |
 |---|---|---|---|---|
-| `— (trainer1.name)` | `Соло` | `catalog.json[0].name` | оригінал | власна назва |
-| `— (trainer1.author)` | `Гайдук Анна` | `catalog.json[0].author` | оригінал | ім’я автора |
-| `catalog.trainer1.description` | `Послідовний курс сенсорного друку: від перших клавіш до впевненого набору тексту.` | `catalog.json[0].description` | каталог |  |
-| `catalog.trainer1.feature1` | `Залік без екранної клавіатури й підказок: потрібні 3 успішні спроби поспіль.` | `catalog.json[0].features[0]` | каталог |  |
-| `catalog.trainer1.feature2` | `Поріг точності видно ще до старту; формули швидкості й точності показано в інтерфейсі.` | `catalog.json[0].features[1]` | каталог |  |
-| `catalog.trainer1.feature3` | `Прогрес зберігається в браузері.` | `catalog.json[0].features[2]` | каталог |  |
-| `catalog.trainer1.imageAlt` | `Ілюстрація: руки на домашньому ряді, сходинки з клавіш ведуть до аркуша з текстом і трьох позначок успішних спроб.` | `catalog.json[0].imageAlt` | каталог |  |
-| `— (trainer2.name)` | `Typing-Race` | `catalog.json[1].name` | оригінал | власна назва |
-| `— (trainer2.author)` | `prodelt · GitHub` | `catalog.json[1].author` | оригінал | ім’я автора |
-| `catalog.trainer2.description` | `Навчальна система з підказками пальців, детальною аналітикою та перегонами з друзями.` | `catalog.json[1].description` | каталог |  |
-| `catalog.trainer2.feature1` | `Після вправи — помилки за символами, найповільніший перехід, ритм і порада, що тренувати далі.` | `catalog.json[1].features[0]` | каталог |  |
-| `catalog.trainer2.feature2` | `Перегони в приватній кімнаті за кодом із живим прогресом суперника й рейтингом.` | `catalog.json[1].features[1]` | каталог |  |
-| `catalog.trainer2.feature3` | `Теми, розмір тексту до 40 px, режим зменшеного руху.` | `catalog.json[1].features[2]` | каталог |  |
-| `catalog.trainer2.imageAlt` | `Ілюстрація: три машини на гоночній трасі поруч із карткою аналітики — графіками й клавіатурою з підсвіченими помилками.` | `catalog.json[1].imageAlt` | каталог |  |
-| `— (trainer3.name)` | `TypTap` | `catalog.json[2].name` | оригінал | власна назва |
-| `— (trainer3.author)` | `Артем · artyd` | `catalog.json[2].author` | оригінал | ім’я автора |
-| `catalog.trainer3.description` | `Тренажер із мініграми та мультиплеєром: навчання, яке легко перетворити на гру.` | `catalog.json[2].description` | каталог |  |
-| `catalog.trainer3.feature1` | `16 мініігор і гонка одним текстом до 8 гравців.` | `catalog.json[2].features[0]` | каталог |  |
-| `catalog.trainer3.feature2` | `Режим «Слабкі клавіші» добирає вправи за вашими помилками.` | `catalog.json[2].features[1]` | каталог |  |
-| `catalog.trainer3.feature3` | `Свій текст: вставте його або завантажте файл .txt чи .md.` | `catalog.json[2].features[2]` | каталог |  |
-| `catalog.trainer3.imageAlt` | `Ілюстрація: вісім усміхнених персонажів-гравців над чотирма мініграми з клавіш.` | `catalog.json[2].imageAlt` | каталог |  |
-| `— (trainer4.name)` | `Гами` | `catalog.json[3].name` | оригінал | власна назва |
-| `— (trainer4.author)` | `apteka95video-source · GitHub` | `catalog.json[3].author` | оригінал | ім’я автора |
-| `catalog.trainer4.description` | `Вправи як гами на фортепіано: короткий рух, одна мета, нова складність лише після засвоєння.` | `catalog.json[3].description` | каталог |  |
-| `catalog.trainer4.feature1` | `Залік без клавіатури й підказок, поріг точності 95–97 %, 3 успішні спроби поспіль.` | `catalog.json[3].features[0]` | каталог |  |
-| `catalog.trainer4.feature2` | `Розбір помилок, найповільніші переходи, графік ритму, вправа «Слабкі місця».` | `catalog.json[3].features[1]` | каталог |  |
-| `catalog.trainer4.feature3` | `Працює офлайн, як застосунок (PWA), і нічого не надсилає в мережу.` | `catalog.json[3].features[2]` | каталог |  |
-| `catalog.trainer4.imageAlt` | `Ілюстрація: палець натискає клавіші, що піднімаються, як гама на фортепіано, над ними нотний стан.` | `catalog.json[3].imageAlt` | каталог |  |
-| `— (trainer5.name)` | `Touch Type Race Academy` | `catalog.json[4].name` | оригінал | власна назва |
-| `— (trainer5.author)` | `Stanislav Zubar і Myroslav Zubar` | `catalog.json[4].author` | оригінал | ім’я автора |
-| `catalog.trainer5.description` | `Великий тренажер із перегонами: соло, проти бота або онлайн, трьома мовами.` | `catalog.json[4].description` | каталог |  |
-| `catalog.trainer5.feature1` | `Режими «Соло», «Проти AI» (4 швидкості бота) і «Онлайн» у кімнатах на 2, 4 або 6 гравців.` | `catalog.json[4].features[0]` | каталог |  |
-| `catalog.trainer5.feature2` | `Українська, англійська й польська; до шести профілів на одному комп'ютері.` | `catalog.json[4].features[1]` | каталог |  |
-| `catalog.trainer5.feature3` | `Аналітика після заїзду, щоденний лічильник тренувань, досягнення.` | `catalog.json[4].features[2]` | каталог |  |
-| `catalog.trainer5.imageAlt` | `Ілюстрація: три машини в кольорах прапорів мчать дорогою, поруч робот із картатим прапорцем і глобус онлайн-гри.` | `catalog.json[4].imageAlt` | каталог |  |
+| `— (solo.name)` | `Соло` | `catalog.json[0].name` | оригінал | власна назва |
+| `— (solo.author)` | `Гайдук Анна` | `catalog.json[0].author` | оригінал | ім’я автора |
+| `catalog.solo.description` | `Послідовний курс сенсорного друку: від перших клавіш до впевненого набору тексту.` | `catalog.json[0].description` | каталог |  |
+| `catalog.solo.feature1` | `Залік без екранної клавіатури й підказок: потрібні 3 успішні спроби поспіль.` | `catalog.json[0].features[0]` | каталог |  |
+| `catalog.solo.feature2` | `Поріг точності видно ще до старту; формули швидкості й точності показано в інтерфейсі.` | `catalog.json[0].features[1]` | каталог |  |
+| `catalog.solo.feature3` | `Прогрес зберігається в браузері.` | `catalog.json[0].features[2]` | каталог |  |
+| `catalog.solo.imageAlt` | `Ілюстрація: руки на домашньому ряді, сходинки з клавіш ведуть до аркуша з текстом і трьох позначок успішних спроб.` | `catalog.json[0].imageAlt` | каталог |  |
+| `— (typing-race.name)` | `Typing-Race` | `catalog.json[1].name` | оригінал | власна назва |
+| `— (typing-race.author)` | `prodelt · GitHub` | `catalog.json[1].author` | оригінал | ім’я автора |
+| `catalog.typing-race.description` | `Навчальна система з підказками пальців, детальною аналітикою та перегонами з друзями.` | `catalog.json[1].description` | каталог |  |
+| `catalog.typing-race.feature1` | `Після вправи — помилки за символами, найповільніший перехід, ритм і порада, що тренувати далі.` | `catalog.json[1].features[0]` | каталог |  |
+| `catalog.typing-race.feature2` | `Перегони в приватній кімнаті за кодом із живим прогресом суперника й рейтингом.` | `catalog.json[1].features[1]` | каталог |  |
+| `catalog.typing-race.feature3` | `Теми, розмір тексту до 40 px, режим зменшеного руху.` | `catalog.json[1].features[2]` | каталог |  |
+| `catalog.typing-race.imageAlt` | `Ілюстрація: три машини на гоночній трасі поруч із карткою аналітики — графіками й клавіатурою з підсвіченими помилками.` | `catalog.json[1].imageAlt` | каталог |  |
+| `— (typtap.name)` | `TypTap` | `catalog.json[2].name` | оригінал | власна назва |
+| `— (typtap.author)` | `Артем · artyd` | `catalog.json[2].author` | оригінал | ім’я автора |
+| `catalog.typtap.description` | `Тренажер із мініграми та мультиплеєром: навчання, яке легко перетворити на гру.` | `catalog.json[2].description` | каталог |  |
+| `catalog.typtap.feature1` | `16 мініігор і гонка одним текстом до 8 гравців.` | `catalog.json[2].features[0]` | каталог |  |
+| `catalog.typtap.feature2` | `Режим «Слабкі клавіші» добирає вправи за вашими помилками.` | `catalog.json[2].features[1]` | каталог |  |
+| `catalog.typtap.feature3` | `Свій текст: вставте його або завантажте файл .txt чи .md.` | `catalog.json[2].features[2]` | каталог |  |
+| `catalog.typtap.imageAlt` | `Ілюстрація: вісім усміхнених персонажів-гравців над чотирма мініграми з клавіш.` | `catalog.json[2].imageAlt` | каталог |  |
+| `— (gamy.name)` | `Гами` | `catalog.json[3].name` | оригінал | власна назва |
+| `— (gamy.author)` | `apteka95video-source · GitHub` | `catalog.json[3].author` | оригінал | ім’я автора |
+| `catalog.gamy.description` | `Вправи як гами на фортепіано: короткий рух, одна мета, нова складність лише після засвоєння.` | `catalog.json[3].description` | каталог |  |
+| `catalog.gamy.feature1` | `Залік без клавіатури й підказок, поріг точності 95–97 %, 3 успішні спроби поспіль.` | `catalog.json[3].features[0]` | каталог |  |
+| `catalog.gamy.feature2` | `Розбір помилок, найповільніші переходи, графік ритму, вправа «Слабкі місця».` | `catalog.json[3].features[1]` | каталог |  |
+| `catalog.gamy.feature3` | `Працює офлайн, як застосунок (PWA), і нічого не надсилає в мережу.` | `catalog.json[3].features[2]` | каталог |  |
+| `catalog.gamy.imageAlt` | `Ілюстрація: палець натискає клавіші, що піднімаються, як гама на фортепіано, над ними нотний стан.` | `catalog.json[3].imageAlt` | каталог |  |
+| `— (academy.name)` | `Touch Type Race Academy` | `catalog.json[4].name` | оригінал | власна назва |
+| `— (academy.author)` | `Stanislav Zubar і Myroslav Zubar` | `catalog.json[4].author` | оригінал | ім’я автора |
+| `catalog.academy.description` | `Великий тренажер із перегонами: соло, проти бота або онлайн, трьома мовами.` | `catalog.json[4].description` | каталог |  |
+| `catalog.academy.feature1` | `Режими «Соло», «Проти AI» (4 швидкості бота) і «Онлайн» у кімнатах на 2, 4 або 6 гравців.` | `catalog.json[4].features[0]` | каталог |  |
+| `catalog.academy.feature2` | `Українська, англійська й польська; до шести профілів на одному комп'ютері.` | `catalog.json[4].features[1]` | каталог |  |
+| `catalog.academy.feature3` | `Аналітика після заїзду, щоденний лічильник тренувань, досягнення.` | `catalog.json[4].features[2]` | каталог |  |
+| `catalog.academy.imageAlt` | `Ілюстрація: три машини в кольорах прапорів мчать дорогою, поруч робот із картатим прапорцем і глобус онлайн-гри.` | `catalog.json[4].imageAlt` | каталог |  |
