@@ -1,0 +1,39 @@
+{
+ "1. en опубліковано, pl — чернетка (стан репозиторію)": {
+  "code": 0,
+  "out": [
+   "pl: словник є, але мову не опубліковано (немає hreflang) — сторінку не збирано. Щоб опублікувати, вставте післ",
+   "<link rel=\"alternate\" hreflang=\"uk\" href=\"https://stszu.github.io/Typing-Race-2026-Hackathon/\"><link rel=\"alte",
+   "en: en/index.html"
+  ],
+  "built": [
+   "en"
+  ]
+ },
+ "2. pl оголошено, словника pl немає": {
+  "code": 1,
+  "out": [
+   "index.html оголошує мови без словника в locales/: pl"
+  ],
+  "built": []
+ },
+ "3. блок hreflang неповний (без x-default)": {
+  "code": 1,
+  "out": [
+   "index.html: блок hreflang / og:locale:alternate неповний або в іншому порядку для мов: en. Очікується після <l",
+   "<link rel=\"alternate\" hreflang=\"uk\" href=\"https://stszu.github.io/Typing-Race-2026-Hackathon/\"><link rel=\"alte"
+  ],
+  "built": []
+ },
+ "4. pl оголошено й словник є (попередній перегляд)": {
+  "code": 0,
+  "out": [
+   "en: en/index.html",
+   "pl: pl/index.html"
+  ],
+  "built": [
+   "en",
+   "pl"
+  ]
+ }
+}

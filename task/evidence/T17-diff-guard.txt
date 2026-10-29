@@ -1,0 +1,27 @@
+diff --git a/scripts/build-locales.mjs b/scripts/build-locales.mjs
+index e1b0d16..a22ba23 100644
+--- a/scripts/build-locales.mjs
++++ b/scripts/build-locales.mjs
+@@ -73,16 +73,21 @@ function headTags(langs) {
+const presentTags = () => [...source.matchAll(/<link rel="alternate" hreflang="[^"]*" href="[^"]*">|<meta property="og:locale:alternate" content="[^"]*">/g)].map(m => m[0]);
+
+const dir = path.join(root, "locales");
+const [-langs-]{+dictLangs+} = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => /^[a-z]{2}\.json$/.test(f)).map(f => f.slice(0, 2)).filter(l => l !== "uk") : [];
+if (!base) { console.error("index.html: немає <link rel=\"canonical\" href=\"…\">"); process.exit(1); }
+{+// Опубліковані мови — ті, що оголошені в hreflang в index.html. Словник без оголошення — чернетка: не збирається.+}
+const [-expected-]{+published+} = [-langs.length ? headTags(langs) : [];-]{+[...source.matchAll(/<link rel="alternate" hreflang="([a-z]{2})"/g)].map(m => m[1]).filter(l => l !== "uk");+}
+const present = presentTags();
+{+const expected = published.length ? headTags(published) : [];+}
+if (expected.join("\n") !== present.join("\n")) {
+  console.error("index.html: [-посилання між мовними версіями не відповідають зібраним мовам ("-]{+блок hreflang / og:locale:alternate неповний або в іншому порядку для мов: "+} + [-(langs.join(",-]{+(published.join(",+} ") || "лише uk") + [-").");-]
+[-  console.error(expected.length ? "Вставте-]{+". Очікується+} після <link [-rel=\"canonical\">, замінивши наявні:\n"-]{+rel=\"canonical\">:\n"+} + [-expected.join("") : "Приберіть усі <link rel=\"alternate\" hreflang> і og:locale:alternate.");-]{+expected.join(""));+}
+  process.exit(1);
+}
+{+const noDict = published.filter(l => !dictLangs.includes(l));+}
+{+if (noDict.length) { console.error("index.html оголошує мови без словника в locales/: " + noDict.join(", ")); process.exit(1); }+}
+{+for (const l of dictLangs.filter(l => !published.includes(l))) console.log(`${l}: словник є, але мову не опубліковано (немає hreflang) — сторінку не збирано. Щоб опублікувати, вставте після <link rel="canonical">, замінивши наявні:\n${headTags([...published, l]).join("")}`);+}
+{+const langs = published;+}
+if (!langs.length) { [-console.log("У locales/-]{+console.log("Опублікованих мов, крім uk,+} немає[-словників en/pl-] — нічого збирати."); process.exit(0); }
+
+let failed = false;
+for (const lang of langs) {

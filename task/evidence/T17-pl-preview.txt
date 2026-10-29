@@ -1,0 +1,16 @@
+leaks 66
+  64× div.keyboard-panel > div#keyboard > div.key-row → Й | Ц | У
+  1× div.wrap > div#player > div.player-now > img#player-cover @alt → Okładka piosenki Не гальмуй / Just Type
+  1× div.wrap > div#player > div.player-now > audio#player-audio @aria-label → Piosenka Не гальмуй / Just Type
+initial.keyTip         "F i J: palce wskazujące. Wyczuj wypustki na tych klawiszach."
+click ф.keyTip         "Ф – lewy mały palec. Po naciśnięciu wróć palcem do pozycji wyjściowej."
+altgr on.keyTip        "Warstwa AltGr: polską literę pisze ten sam palec co literę podstawową, z wciśniętym AltGr (w macOS – Option)."
+click ą.keyTip         "Ą – AltGr + A, lewy mały palec. Po naciśnięciu wróć palcem do pozycji wyjściowej."
+calc 40/60/1000.month  "2 godz. 47 min"
+calc spm.labels        ["Obecna szybkość, znaków/min (SPM)","Docelowa szybkość, znaków/min (SPM)","Dzienna objętość tekstu, znaków"]
+test 60s.status        "Pisz przez 60 sekund. Stoper ruszy od pierwszego znaku."
+test 60s.duration      "60 sekund"
+test finish.summary    "# SPM · # WPM · dokładność #% · znaki: # / #."
+plan initial.day1      "Dzień 1: oznacz ćwiczenia"
+song 1.parts           "Wstęp@pl, Zwrotka 1@pl, Przedrefren@pl, Refren@pl, Zwrotka 2@pl, Refren@pl, Bridge@pl, Refren końcowy@pl, Zakończenie@pl"
+catalog.cards          ["01 / KURS KROK PO KROKU | Ilustracja: dłonie na rzędzie podstawowym, schodki z klawiszy prowadzą do kartki z tekstem i trzech znaczników udanych pró

@@ -1,0 +1,924 @@
+{
+  "meta.title": {
+    "text": "Pisanie bezwzrokowe – umiejętność ery cyfrowej",
+    "src": "8e87b7ea"
+  },
+  "meta.description": {
+    "text": "Opanuj pisanie bezwzrokowe: interaktywna klawiatura, test szybkości, plan na 30 dni i pięć aplikacji Typing Race 2026.",
+    "src": "c7a5c89c"
+  },
+  "meta.ogTitle": {
+    "text": "Myśl o treści. Palce same znajdą klawisze.",
+    "src": "4ea902b6"
+  },
+  "meta.ogDescription": {
+    "text": "Twój start w pisaniu bezwzrokowym. 5 aplikacji, 3 układy, 30 dni ćwiczeń.",
+    "src": "5dd31ea9"
+  },
+  "page.link1": {
+    "text": "Przejdź do treści",
+    "src": "1557b9eb"
+  },
+  "nav.languages": {
+    "text": "Język strony",
+    "src": "2973b503"
+  },
+  "nav.link1": {
+    "text": "<span class=\"logo\">t<span>_</span></span>pisanie bezwzrokowe<span class=\"edition\">/ 2026</span>",
+    "src": "f77a6add"
+  },
+  "nav.ariaLabel1": {
+    "text": "Nawigacja główna",
+    "src": "80aa001d"
+  },
+  "nav.link2": {
+    "text": "Jak to działa",
+    "src": "aefdc0e5"
+  },
+  "nav.link3": {
+    "text": "Szybki test",
+    "src": "a846391a"
+  },
+  "nav.link4": {
+    "text": "Aplikacje",
+    "src": "b708644d"
+  },
+  "nav.link5": {
+    "text": "Plan nauki",
+    "src": "a96eb4ea"
+  },
+  "nav.link6": {
+    "text": "Muzyka",
+    "src": "fea5101d"
+  },
+  "nav.ariaLabel2": {
+    "text": "Przełącz jasny i ciemny motyw",
+    "src": "a63fca7a"
+  },
+  "nav.link7": {
+    "text": "Do aplikacji ↗",
+    "src": "db8b6e12"
+  },
+  "hero.text1": {
+    "text": "<span class=\"dot\"></span> UMIEJĘTNOŚĆ ERY CYFROWEJ",
+    "src": "d8a8505a"
+  },
+  "hero.heading1": {
+    "text": "Opanuj<br><em>pisanie bezwzrokowe.</em>",
+    "src": "ddfcabab"
+  },
+  "hero.text2": {
+    "text": "Myśl szybciej –<br>pracuj skuteczniej!",
+    "src": "b3f796a5"
+  },
+  "hero.text3": {
+    "text": "Pisanie bezwzrokowe to ważna cyfrowa umiejętność w nauce, pracy i twórczości. Opanuj metodę dziesięciopalcową i wejdź na nowy poziom pracy z komputerem.",
+    "src": "ee05621e"
+  },
+  "hero.link1": {
+    "text": "Zacznij ćwiczyć <span>↗</span>",
+    "src": "c9cd9878"
+  },
+  "hero.link2": {
+    "text": "Dlaczego to ważne? ↓",
+    "src": "f8a6e3d5"
+  },
+  "hero.text4": {
+    "text": "Bez rejestracji <span>·</span> We własnym tempie <span>·</span> 10–15 min dziennie",
+    "src": "98cb357e"
+  },
+  "hero.label1": {
+    "text": "MNIEJ SZUKANIA. WIĘCEJ PŁYNNOŚCI.",
+    "src": "5f8c2574"
+  },
+  "hero.div1": {
+    "text": "myśl o <span>treści</span><i></i>",
+    "src": "6bf8fa2e"
+  },
+  "hero.label2": {
+    "text": "<b>A S D F</b> lewa ręka",
+    "src": "093311ca"
+  },
+  "hero.label3": {
+    "text": "<b>J K L ;</b> prawa ręka",
+    "src": "af2b88cb"
+  },
+  "hero.div2": {
+    "text": "✦ Najpierw dokładność. Szybkość przyjdzie później.",
+    "src": "2a2f89aa"
+  },
+  "ribbon.label1": {
+    "text": "<b>10</b> palców w jednej drużynie",
+    "src": "c3179dc8"
+  },
+  "ribbon.label2": {
+    "text": "<b>3</b> układy do ćwiczeń",
+    "src": "d4925109"
+  },
+  "ribbon.label3": {
+    "text": "<b>5</b> aplikacji z hackathonu",
+    "src": "b7e022a9"
+  },
+  "ribbon.label4": {
+    "text": "<b>30</b> dni do nowego nawyku",
+    "src": "174f23ee"
+  },
+  "learn.text1": {
+    "text": "01 / PODSTAWY",
+    "src": "80ea7aa9"
+  },
+  "learn.heading1": {
+    "text": "Oczy na tekście.<br>Palce znają drogę.",
+    "src": "e11d74f4"
+  },
+  "learn.text2": {
+    "text": "Pisanie bezwzrokowe to pisanie wszystkimi dziesięcioma palcami bez patrzenia na klawiaturę. Zamiast szukać każdej litery, stopniowo zapamiętujesz ruch.",
+    "src": "dd1eb4fe"
+  },
+  "learn.heading2": {
+    "text": "Znajdź swoją pozycję wyjściową",
+    "src": "a1358699"
+  },
+  "learn.ariaLabel1": {
+    "text": "Układ",
+    "src": "783cd052"
+  },
+  "learn.text3": {
+    "text": "Naciśnij klawisz na schemacie, aby sprawdzić, który palec go obsługuje.",
+    "src": "954a35ad"
+  },
+  "learn.altgr": {
+    "text": "Warstwa AltGr: ą ć ę ł ń ó ś ź ż",
+    "src": "112fddf9"
+  },
+  "learn.keyTip": {
+    "text": "F i J: palce wskazujące. Wyczuj wypustki na tych klawiszach.",
+    "src": "f3dc4472"
+  },
+  "learn.label1": {
+    "text": "① Mały palec",
+    "src": "a7db605a"
+  },
+  "learn.label2": {
+    "text": "② Serdeczny",
+    "src": "084fcc92"
+  },
+  "learn.label3": {
+    "text": "③ Środkowy",
+    "src": "283c39a8"
+  },
+  "learn.label4": {
+    "text": "④ Wskazujący",
+    "src": "f25a4812"
+  },
+  "keyboard.noteUk": {
+    "text": "Ukraiński <span lang=\"uk\">ЙЦУКЕН</span>. Rząd podstawowy: <span lang=\"uk\">Ф І В А · О Л Д Ж</span>. Litera <span lang=\"uk\">Ґ</span> może wymagać osobnego klawisza lub kombinacji w zależności od systemu.",
+    "src": "f9d5f0d7"
+  },
+  "learn.heading3": {
+    "text": "Wróć palcami do bazy",
+    "src": "df453d07"
+  },
+  "learn.text4": {
+    "text": "Lewa ręka na A S D F, prawa na J K L ;. Kciuki obsługują spację.",
+    "src": "2ef0683c"
+  },
+  "learn.heading4": {
+    "text": "Daj dłoniom swobodę",
+    "src": "e471617d"
+  },
+  "learn.text5": {
+    "text": "Rozluźnij ramiona, trzymaj nadgarstki prosto i nie opieraj ich o krawędź biurka. Schemat pokazuje strefy palców, a nie kształt konkretnej klawiatury.",
+    "src": "50f313dd"
+  },
+  "learn.heading5": {
+    "text": "Nie spiesz się",
+    "src": "6fad826b"
+  },
+  "learn.text6": {
+    "text": "Najpierw właściwy palec i dokładność. Jeśli robisz dużo błędów, zwolnij. Zamiast spoglądać w dół, wracaj uwagą do tekstu.",
+    "src": "1c40c470"
+  },
+  "benefits.text1": {
+    "text": "02 / CO CI TO DA",
+    "src": "bf0a7f6c"
+  },
+  "benefits.heading1": {
+    "text": "Mniej ruchów między myślą a tekstem.",
+    "src": "0ce39c19"
+  },
+  "benefits.heading2": {
+    "text": "Oszczędność czasu",
+    "src": "78588383"
+  },
+  "benefits.text2": {
+    "text": "Mniej przerw na szukanie klawiszy, gdy piszesz e-mail lub wypełniasz dokument.",
+    "src": "07e8011c"
+  },
+  "benefits.heading3": {
+    "text": "Koncentracja",
+    "src": "6b662f51"
+  },
+  "benefits.text3": {
+    "text": "Śledź zdanie na ekranie i formułuj myśl, nie szukając każdej litery.",
+    "src": "97d45b68"
+  },
+  "benefits.heading4": {
+    "text": "Produktywność",
+    "src": "fd704285"
+  },
+  "benefits.text4": {
+    "text": "Dokumenty, kod, wiadomości i polecenia dla AI – ta umiejętność przydaje się codziennie.",
+    "src": "c071da95"
+  },
+  "benefits.heading5": {
+    "text": "Nauka",
+    "src": "eeaf82b4"
+  },
+  "benefits.text5": {
+    "text": "Łatwiej zapisywać własne pomysły i notatki oraz wykonywać zadania pisemne.",
+    "src": "c4de00f6"
+  },
+  "benefits.heading6": {
+    "text": "Kompetencje cyfrowe",
+    "src": "1fb267b0"
+  },
+  "benefits.text6": {
+    "text": "Oswojenie z klawiaturą dodaje pewności siebie dzieciom i dorosłym.",
+    "src": "4fd951c2"
+  },
+  "benefits.heading7": {
+    "text": "Rozwój zawodowy",
+    "src": "d1aef3fa"
+  },
+  "benefits.text7": {
+    "text": "Praktyczna podstawa pracy menedżera, analityka, programisty i zespołu biurowego.",
+    "src": "4d5d512b"
+  },
+  "calculator.text1": {
+    "text": "03 / TWOJA OSZCZĘDNOŚĆ CZASU",
+    "src": "5d886e70"
+  },
+  "calculator.heading1": {
+    "text": "Mała umiejętność.<br>Wyraźna różnica.",
+    "src": "911de55c"
+  },
+  "calculator.text2": {
+    "text": "Ile minut odzyskasz, jeśli ten sam tekst napiszesz szybciej?",
+    "src": "8335b3fe"
+  },
+  "calculator.legend1": {
+    "text": "Jednostki szybkości i objętości",
+    "src": "4cbfc233"
+  },
+  "calculator.label1": {
+    "text": "{$1} WPM – słowa",
+    "src": "9b3d4a73"
+  },
+  "calculator.label2": {
+    "text": "{$1} SPM – znaki",
+    "src": "75c3d0d7"
+  },
+  "calculator.currentLabelWpm": {
+    "text": "Obecna szybkość, słów/min (WPM)",
+    "src": "3cfa4e57"
+  },
+  "calculator.targetLabelWpm": {
+    "text": "Docelowa szybkość, słów/min (WPM)",
+    "src": "bf9841e5"
+  },
+  "calculator.volumeLabelWords": {
+    "text": "Dzienna objętość tekstu, umownych słów",
+    "src": "a1a390ee"
+  },
+  "calculator.text3": {
+    "text": "Do przeliczenia przyjmujemy 1 umowne słowo = 5 znaków ze spacjami. Szacowany jest tylko czas pisania: objętość ÷ obecna szybkość − objętość ÷ docelowa szybkość. Bez czasu na zastanowienie i redakcję. 5 dni roboczych w tygodniu, 20 w miesiącu.",
+    "src": "2ab45e57"
+  },
+  "calculator.text4": {
+    "text": "TWÓJ POTENCJAŁ NA DZIEŃ",
+    "src": "1a621eae"
+  },
+  "calculator.label3": {
+    "text": "minut",
+    "src": "da8ef43c"
+  },
+  "calculator.label4": {
+    "text": "{$1}w tygodniu",
+    "src": "a371dbf0"
+  },
+  "calculator.label5": {
+    "text": "{$1}w miesiącu",
+    "src": "cbeb0d8e"
+  },
+  "calculator.result": {
+    "text": "Więcej czasu na to, co ważne.",
+    "src": "b153c069"
+  },
+  "test.text1": {
+    "text": "04 / SPRÓBUJ JUŻ TERAZ",
+    "src": "9f9ddb65"
+  },
+  "test.heading1": {
+    "text": "Twoje pierwsze małe zwycięstwo.",
+    "src": "16944820"
+  },
+  "test.text2": {
+    "text": "Sprawdź swoje tempo na start. Podłącz fizyczną klawiaturę, wybierz język tekstu i odpowiedni układ, a potem zacznij pisać.",
+    "src": "fea844fa"
+  },
+  "test.text3": {
+    "text": "Przepisuj tekst poniżej przez {$1}. Odliczanie zaczyna się od pierwszego znaku. Gdy czas się skończy, pojawi się wynik.",
+    "src": "c94058bb"
+  },
+  "test.ariaLabel1": {
+    "text": "Czas trwania",
+    "src": "643d50da"
+  },
+  "test.textLanguage": {
+    "text": "Język tekstu",
+    "src": "1bbaa6c2"
+  },
+  "test.label1": {
+    "text": "{$1} s",
+    "src": "b31d0ee9"
+  },
+  "test.label2": {
+    "text": "{$1} WPM <small>słów/min</small>",
+    "src": "d6cf5a06"
+  },
+  "test.label3": {
+    "text": "{$1} SPM <small>znaków/min</small>",
+    "src": "38799183"
+  },
+  "test.label4": {
+    "text": "{$1} znaków <small>poprawnie / wpisano</small>",
+    "src": "f01c0ac3"
+  },
+  "test.label5": {
+    "text": "{$1} dokładność",
+    "src": "7c89e03e"
+  },
+  "test.label6": {
+    "text": "Pozostały czas",
+    "src": "555995f4"
+  },
+  "test.finishTitle": {
+    "text": "Czas minął!",
+    "src": "aae70a6e"
+  },
+  "test.text4": {
+    "text": "Wynik został zapisany. Naciśnij „Spróbuj ponownie”, aby rozpocząć nowy test.",
+    "src": "f3131111"
+  },
+  "test.ariaLabel2": {
+    "text": "Tekst do przepisania",
+    "src": "28118102"
+  },
+  "test.label7": {
+    "text": "Wpisz tekst z przykładu",
+    "src": "10c3edb1"
+  },
+  "test.placeholder1": {
+    "text": "Kliknij tutaj i zacznij pisać…",
+    "src": "e702fd4e"
+  },
+  "test.testStatus": {
+    "text": "Stoper ruszy od pierwszego znaku.",
+    "src": "f063649a"
+  },
+  "test.restart": {
+    "text": "↻ Spróbuj ponownie",
+    "src": "a3c3e85f"
+  },
+  "test.text5": {
+    "text": "SPM = poprawne znaki ÷ minuty. WPM = SPM ÷ 5. Umowne słowo to 5 znaków; spacje i interpunkcja się liczą. Licznik pokazuje poprawne i wszystkie znaki we wpisanym tekście. Dokładność uwzględnia wszystkie wpisane znaki, łącznie z poprawionymi błędami. Apostrofy ' / ’ / ʼ i cudzysłowy \" “ ” „ « » są traktowane jednakowo. Wklejanie tekstu jest wyłączone. Niczego nie wysyłamy ani nie zapisujemy.",
+    "src": "dad71174"
+  },
+  "trainers.text1": {
+    "text": "05 / STWORZONE, BY UCZYĆ",
+    "src": "b96fe589"
+  },
+  "trainers.heading1": {
+    "text": "Znajdź swoją aplikację.",
+    "src": "ab90bd42"
+  },
+  "trainers.text2": {
+    "text": "Pięć różnych podejść z Typing Race 2026. Wybierz według celu: kurs krok po kroku, analityka, gra lub wyścigi.",
+    "src": "1ada604d"
+  },
+  "trainers.summary1": {
+    "text": "Wyniki hackathonu 2026 <span>Otwórz ↗</span>",
+    "src": "fcf95767"
+  },
+  "trainers.text3": {
+    "text": "Według wyników audytu ogłoszonych 6 października 2026. To ocena prac konkursowych, a nie ranking przydatności dla każdego ucznia.",
+    "src": "48b1f8fd"
+  },
+  "trainers.text6": {
+    "text": "„<span lang=\"uk\">Гами</span>” zgłoszono po zakończeniu oceniania. Touch Type Race Academy to praca organizatora poza konkursem.",
+    "src": "f38389ef"
+  },
+  "trainers.text7": {
+    "text": "Źródła: index.html, opisy sites/ i ANNOUNCEMENT.md z materiałów hackathonu. Ilustracje możliwości aplikacji.",
+    "src": "be8c0048"
+  },
+  "plan.text1": {
+    "text": "06 / OD PRÓBY DO NAWYKU",
+    "src": "0ae40cf6"
+  },
+  "plan.heading1": {
+    "text": "30 dni. W twoim rytmie.",
+    "src": "8f69f21d"
+  },
+  "plan.text2": {
+    "text": "Poświęcaj 10–15 minut dziennie. Rób przerwy i wracaj do trudnych klawiszy. Konkretna szybkość po 30 dniach nie jest gwarantowana.",
+    "src": "bce4e62e"
+  },
+  "plan.note1": {
+    "text": "DNI 01–07",
+    "src": "19beb338"
+  },
+  "plan.heading2": {
+    "text": "Pierwsze kroki",
+    "src": "bda13fb9"
+  },
+  "plan.text3": {
+    "text": "Ułożenie palców, rząd podstawowy. Powolne ćwiczenia bez patrzenia w dół.",
+    "src": "793dff7d"
+  },
+  "plan.note2": {
+    "text": "DNI 08–14",
+    "src": "66d8e4a8"
+  },
+  "plan.heading3": {
+    "text": "Dokładność",
+    "src": "a811b254"
+  },
+  "plan.text4": {
+    "text": "Górny i dolny rząd, cyfry, Shift. Dodawaj klawisze stopniowo.",
+    "src": "f28c32e4"
+  },
+  "plan.note3": {
+    "text": "DNI 15–21",
+    "src": "732e11c5"
+  },
+  "plan.heading4": {
+    "text": "Rytm",
+    "src": "76f04145"
+  },
+  "plan.text5": {
+    "text": "Krótkie słowa i częste połączenia liter. Równe tempo i praca nad błędami.",
+    "src": "c0d3d8b6"
+  },
+  "plan.note4": {
+    "text": "DNI 22–30",
+    "src": "c0704b75"
+  },
+  "plan.heading5": {
+    "text": "Pewność",
+    "src": "96cb8493"
+  },
+  "plan.text6": {
+    "text": "Listy, notatki, prawdziwe teksty. Porównaj wynik z pierwszym dniem.",
+    "src": "fb48d6a7"
+  },
+  "plan.heading6": {
+    "text": "Twój kalendarz ćwiczeń",
+    "src": "c55ebd11"
+  },
+  "plan.storageNote": {
+    "text": "Zaznaczaj ukończone dni. Postęp zapisuje się tylko w tej przeglądarce i nie synchronizuje się między urządzeniami.",
+    "src": "2d6b33dd"
+  },
+  "music.text1": {
+    "text": "PIOSENKI DLA INSPIRACJI",
+    "src": "2f065645"
+  },
+  "music.heading1": {
+    "text": "Znajdź swój rytm.",
+    "src": "4d0ba25b"
+  },
+  "music.text2": {
+    "text": "Pięć piosenek z kolekcji Touch Type Race. Wybierz nastrój na następny trening.",
+    "src": "0a641734"
+  },
+  "music.playerPrev": {
+    "text": "← Poprzednia",
+    "src": "2f11048b"
+  },
+  "music.playerNext": {
+    "text": "Następna →",
+    "src": "87e71208"
+  },
+  "music.playerDownload": {
+    "text": "Pobierz MP3",
+    "src": "613a5ed5"
+  },
+  "music.lyricsTitle": {
+    "text": "Tekst",
+    "src": "1152a028"
+  },
+  "music.ariaLabel1": {
+    "text": "Tekst piosenki",
+    "src": "fc439686"
+  },
+  "music.ariaLabel2": {
+    "text": "Piosenki",
+    "src": "addaa039"
+  },
+  "music.text3": {
+    "text": "Piosenki włączają się dopiero po naciśnięciu Play. Jednocześnie gra jedno nagranie; rozpoczęcie testu wstrzymuje muzykę.",
+    "src": "9c51e74d"
+  },
+  "about.text1": {
+    "text": "07 / LUDZIE + TECHNOLOGIE",
+    "src": "a9d18caa"
+  },
+  "about.heading1": {
+    "text": "Od pomysłu –<br>do przydatnej aplikacji.",
+    "src": "8cb3c630"
+  },
+  "about.text2": {
+    "text": "Typing Race 2026 to hackathon edukacyjnych aplikacji do nauki pisania. Jego cel: stworzyć spójną ścieżkę nauki, w której dokładność i prawidłowe ruchy wyprzedzają szybkość.",
+    "src": "3627afd0"
+  },
+  "about.text3": {
+    "text": "AI może pomagać w projektowaniu interfejsów, pisaniu kodu, testach i dokumentacji. Człowiek formułuje zadanie, sprawdza wynik i odpowiada za jakość nauki. Nie zakładamy tutaj, z jakich modeli korzystali poszczególni autorzy.",
+    "src": "3b6f9fae"
+  },
+  "about.link1": {
+    "text": "Wypróbuj efekty tej pracy ↗",
+    "src": "71ff4983"
+  },
+  "finalCta.text1": {
+    "text": "TWÓJ NASTĘPNY KROK",
+    "src": "ee3790cb"
+  },
+  "finalCta.heading1": {
+    "text": "Połóż palce na A S D F.<br>I zacznij.",
+    "src": "7c18b64a"
+  },
+  "finalCta.link1": {
+    "text": "Wybierz aplikację ↗",
+    "src": "9b8cf2ab"
+  },
+  "finalCta.text2": {
+    "text": "Dziesięć palców. Jeden nowy nawyk.",
+    "src": "52223611"
+  },
+  "footer.link1": {
+    "text": "pisanie bezwzrokowe<span class=\"edition\">/ 2026</span>",
+    "src": "03ac34c3"
+  },
+  "footer.text1": {
+    "text": "Umiejętność, która zostaje z tobą.",
+    "src": "0643cc20"
+  },
+  "footer.link2": {
+    "text": "Na górę ↑",
+    "src": "d1cdfee7"
+  },
+  "keyboard.finger.leftPinky": {
+    "text": "lewy mały palec",
+    "src": "28826d6c"
+  },
+  "keyboard.finger.leftRing": {
+    "text": "lewy palec serdeczny",
+    "src": "29dc40f7"
+  },
+  "keyboard.finger.leftMiddle": {
+    "text": "lewy palec środkowy",
+    "src": "eb01cc05"
+  },
+  "keyboard.finger.leftIndex": {
+    "text": "lewy palec wskazujący",
+    "src": "5825f6fe"
+  },
+  "keyboard.finger.rightIndex": {
+    "text": "prawy palec wskazujący",
+    "src": "63e33cab"
+  },
+  "keyboard.finger.rightMiddle": {
+    "text": "prawy palec środkowy",
+    "src": "d5b09976"
+  },
+  "keyboard.finger.rightRing": {
+    "text": "prawy palec serdeczny",
+    "src": "f4d78892"
+  },
+  "keyboard.finger.rightPinky": {
+    "text": "prawy mały palec",
+    "src": "3fa66958"
+  },
+  "keyboard.keyTip": {
+    "text": "{key} – {finger}. Po naciśnięciu wróć palcem do pozycji wyjściowej.",
+    "src": "03a9d979"
+  },
+  "keyboard.keyTipAltGr": {
+    "text": "{key} – AltGr + {base}, {finger}. Po naciśnięciu wróć palcem do pozycji wyjściowej.",
+    "src": "47b45e2d"
+  },
+  "keyboard.space": {
+    "text": "spacja",
+    "src": "ed243c4b"
+  },
+  "keyboard.spaceTip": {
+    "text": "Spacja – kciuk. Wybierz ten, który jest dla ciebie wygodniejszy.",
+    "src": "2b233939"
+  },
+  "keyboard.homeUk": {
+    "text": "Pozycja wyjściowa: <span lang=\"uk\">Ф І В А · О Л Д Ж</span>.",
+    "src": "2124eb3c"
+  },
+  "keyboard.homeLatin": {
+    "text": "Pozycja wyjściowa: A S D F · J K L ;",
+    "src": "bba330e0"
+  },
+  "keyboard.noteEn": {
+    "text": "Angielski QWERTY. Wypustki na F i J pomagają znaleźć rząd podstawowy dotykiem.",
+    "src": "c2074891"
+  },
+  "keyboard.notePl": {
+    "text": "Polski (programisty), QWERTY: ą ć ę ł ń ó ś ź ż wpisuje się prawym Altem (AltGr) + a c e l n o s x z w Windows lub Option + tymi samymi klawiszami w układzie „Polish Pro” w macOS. Układ „Polish” w macOS działa inaczej. Schemat nie przełącza układu w systemie.",
+    "src": "247e6325"
+  },
+  "keyboard.altgrTip": {
+    "text": "Warstwa AltGr: polską literę pisze ten sam palec co literę podstawową, z wciśniętym AltGr (w macOS – Option).",
+    "src": "6e8008e2"
+  },
+  "calculator.minutes": {
+    "text": "{minutes} min",
+    "src": "4fdc4ee6"
+  },
+  "calculator.hoursMinutes": {
+    "text": "{hours} godz. {minutes} min",
+    "src": "1e926abe"
+  },
+  "calculator.errorInvalid": {
+    "text": "Wpisz poprawne dodatnie szybkości i nieujemną objętość tekstu.",
+    "src": "f171de0e"
+  },
+  "calculator.errorTarget": {
+    "text": "Aby zaoszczędzić czas, docelowa szybkość musi być wyższa.",
+    "src": "925867f6"
+  },
+  "calculator.currentLabelSpm": {
+    "text": "Obecna szybkość, znaków/min (SPM)",
+    "src": "f805f27c"
+  },
+  "calculator.targetLabelSpm": {
+    "text": "Docelowa szybkość, znaków/min (SPM)",
+    "src": "28888721"
+  },
+  "calculator.volumeLabelChars": {
+    "text": "Dzienna objętość tekstu, znaków",
+    "src": "17eed548"
+  },
+  "test.timeUp": {
+    "text": "Czas minął! Test zakończony.",
+    "src": "bba5f570"
+  },
+  "test.textDone": {
+    "text": "Tekst ukończony!",
+    "src": "b7b4229f"
+  },
+  "test.summary": {
+    "text": "{spm} SPM · {wpm} WPM · dokładność {accuracy} · znaki: {characters}.",
+    "src": "06432438"
+  },
+  "test.statusDone": {
+    "text": "Wynik zapisany. Rozpocznij nowy test, gdy będziesz gotowy.",
+    "src": "754fffd4"
+  },
+  "test.durationLabel": {
+    "text": {
+      "one": "{seconds} sekunda",
+      "few": "{seconds} sekundy",
+      "many": "{seconds} sekund",
+      "other": "{seconds} sekundy"
+    },
+    "src": "5ad4104f"
+  },
+  "test.statusReady": {
+    "text": {
+      "one": "Pisz przez {seconds} sekundę. Stoper ruszy od pierwszego znaku.",
+      "few": "Pisz przez {seconds} sekundy. Stoper ruszy od pierwszego znaku.",
+      "many": "Pisz przez {seconds} sekund. Stoper ruszy od pierwszego znaku.",
+      "other": "Pisz przez {seconds} sekundy. Stoper ruszy od pierwszego znaku."
+    },
+    "src": "c4300e41"
+  },
+  "test.statusRunning": {
+    "text": "Test trwa. Nie spiesz się – utrzymuj równy rytm.",
+    "src": "f70c4027"
+  },
+  "plan.progress": {
+    "text": "{done} / 30 dni",
+    "src": "b25d21f2"
+  },
+  "plan.dayLabel": {
+    "text": "Dzień {day}: oznacz ćwiczenia",
+    "src": "ef7a7f75"
+  },
+  "plan.storageError": {
+    "text": "Przeglądarka nie pozwala na zapis. Postęp będzie dostępny tylko do zamknięcia strony.",
+    "src": "e6696a5a"
+  },
+  "trainers.iconAlt": {
+    "text": "Ikona {name}",
+    "src": "36e99ed4"
+  },
+  "trainers.imageAltFallback": {
+    "text": "{name}: ilustracja możliwości aplikacji",
+    "src": "f9459251"
+  },
+  "trainers.placeholderKeys": {
+    "text": "a s d f",
+    "src": "c6be4a0a"
+  },
+  "trainers.tag.course": {
+    "text": "KURS KROK PO KROKU",
+    "src": "38eb5cfa"
+  },
+  "trainers.tag.analytics": {
+    "text": "ANALITYKA I WYŚCIGI",
+    "src": "6b09357c"
+  },
+  "trainers.tag.game": {
+    "text": "NAUKA PRZEZ ZABAWĘ",
+    "src": "c2e8f064"
+  },
+  "trainers.tag.method": {
+    "text": "PRAKTYKA METODYCZNA",
+    "src": "deaa6c69"
+  },
+  "trainers.tag.languages": {
+    "text": "TRZY JĘZYKI",
+    "src": "b13dc0f6"
+  },
+  "trainers.linkOpen": {
+    "text": "Otwórz aplikację ↗",
+    "src": "0ac88361"
+  },
+  "trainers.linkGithubPrivate": {
+    "text": "GitHub · prywatny ↗",
+    "src": "a6a1217e"
+  },
+  "trainers.linkAlternative": {
+    "text": "Wersja alternatywna ↗",
+    "src": "92a828f9"
+  },
+  "trainers.linkGuide": {
+    "text": "Instrukcja ↗",
+    "src": "931a3792"
+  },
+  "trainers.loadError": {
+    "text": "Nie udało się wczytać katalogu. Odśwież stronę.",
+    "src": "f4be9a96"
+  },
+  "song.part.intro": {
+    "text": "Wstęp",
+    "src": "66953956"
+  },
+  "song.part.verse1": {
+    "text": "Zwrotka 1",
+    "src": "923f5d88"
+  },
+  "song.part.verse2": {
+    "text": "Zwrotka 2",
+    "src": "b8e6184e"
+  },
+  "song.part.preChorus": {
+    "text": "Przedrefren",
+    "src": "a790f472"
+  },
+  "song.part.chorus": {
+    "text": "Refren",
+    "src": "1c3095ec"
+  },
+  "song.part.bridge": {
+    "text": "Bridge",
+    "src": "495c00cb"
+  },
+  "song.part.finalChorus": {
+    "text": "Refren końcowy",
+    "src": "b20f625f"
+  },
+  "song.part.outro": {
+    "text": "Zakończenie",
+    "src": "40a918a4"
+  },
+  "music.audioLabel": {
+    "text": "Piosenka {title}",
+    "src": "97a5ee7b"
+  },
+  "music.coverAlt": {
+    "text": "Okładka piosenki {title}",
+    "src": "5c6efecc"
+  },
+  "test.leaveWarning": {
+    "text": "Test jeszcze trwa. Dokończ go albo kliknij język ponownie, aby przejść bez wyniku.",
+    "src": "443d9e3a"
+  },
+  "catalog.solo.description": {
+    "text": "Kurs pisania bezwzrokowego krok po kroku: od pierwszych klawiszy do pewnego pisania.",
+    "src": "c610df40"
+  },
+  "catalog.solo.feature1": {
+    "text": "Zaliczenie bez klawiatury ekranowej i podpowiedzi: potrzebne są 3 udane próby z rzędu.",
+    "src": "39a6f752"
+  },
+  "catalog.solo.feature2": {
+    "text": "Próg dokładności widać jeszcze przed startem; wzory szybkości i dokładności są pokazane w interfejsie.",
+    "src": "25da661e"
+  },
+  "catalog.solo.feature3": {
+    "text": "Postęp zapisuje się w przeglądarce.",
+    "src": "afaacf3d"
+  },
+  "catalog.solo.imageAlt": {
+    "text": "Ilustracja: dłonie na rzędzie podstawowym, schodki z klawiszy prowadzą do kartki z tekstem i trzech znaczników udanych prób.",
+    "src": "463e370c"
+  },
+  "catalog.typing-race.description": {
+    "text": "System nauki z podpowiedziami palców, szczegółową analityką i wyścigami z przyjaciółmi.",
+    "src": "030d9467"
+  },
+  "catalog.typing-race.feature1": {
+    "text": "Po ćwiczeniu: błędy według znaków, najwolniejsze przejście, rytm i wskazówka, co ćwiczyć dalej.",
+    "src": "944364dd"
+  },
+  "catalog.typing-race.feature2": {
+    "text": "Wyścigi w prywatnym pokoju na kod, z postępem rywala na żywo i rankingiem.",
+    "src": "51204af1"
+  },
+  "catalog.typing-race.feature3": {
+    "text": "Motywy, rozmiar tekstu do 40 px, tryb ograniczonego ruchu.",
+    "src": "018f2585"
+  },
+  "catalog.typing-race.imageAlt": {
+    "text": "Ilustracja: trzy samochody na torze wyścigowym obok karty analityki z wykresami i klawiaturą z podświetlonymi błędami.",
+    "src": "a2c4f278"
+  },
+  "catalog.typtap.description": {
+    "text": "Aplikacja z minigrami i trybem wieloosobowym: nauka, którą łatwo zamienić w grę.",
+    "src": "59389850"
+  },
+  "catalog.typtap.feature1": {
+    "text": "16 minigier i wyścig na jednym tekście dla maksymalnie 8 graczy.",
+    "src": "d11eaa44"
+  },
+  "catalog.typtap.feature2": {
+    "text": "Tryb „Słabe klawisze” dobiera ćwiczenia na podstawie twoich błędów.",
+    "src": "387363c2"
+  },
+  "catalog.typtap.feature3": {
+    "text": "Własny tekst: wklej go albo wczytaj plik .txt lub .md.",
+    "src": "e6cdbfe2"
+  },
+  "catalog.typtap.imageAlt": {
+    "text": "Ilustracja: ośmiu uśmiechniętych bohaterów-graczy nad czterema minigrami z klawiszy.",
+    "src": "4ca6ba8b"
+  },
+  "catalog.gamy.description": {
+    "text": "Ćwiczenia jak gamy na fortepianie: krótki ruch, jeden cel, nowy poziom trudności dopiero po opanowaniu poprzedniego.",
+    "src": "ab3e56ba"
+  },
+  "catalog.gamy.feature1": {
+    "text": "Zaliczenie bez klawiatury i podpowiedzi, próg dokładności 95–97%, 3 udane próby z rzędu.",
+    "src": "b4aad4f3"
+  },
+  "catalog.gamy.feature2": {
+    "text": "Analiza błędów, najwolniejsze przejścia, wykres rytmu, ćwiczenie „Słabe miejsca”.",
+    "src": "7e3787ee"
+  },
+  "catalog.gamy.feature3": {
+    "text": "Działa offline jak aplikacja (PWA) i niczego nie wysyła do sieci.",
+    "src": "14c8ec7c"
+  },
+  "catalog.gamy.imageAlt": {
+    "text": "Ilustracja: palec naciska klawisze, które wznoszą się jak gama na fortepianie, nad nimi pięciolinia.",
+    "src": "700aed7a"
+  },
+  "catalog.academy.description": {
+    "text": "Duża aplikacja z wyścigami: solo, przeciw botowi lub online, w trzech językach.",
+    "src": "8aeeb07b"
+  },
+  "catalog.academy.feature1": {
+    "text": "Tryby „Solo”, „Przeciw AI” (4 prędkości bota) i „Online” w pokojach dla 2, 4 lub 6 graczy.",
+    "src": "cd02b848"
+  },
+  "catalog.academy.feature2": {
+    "text": "Ukraiński, angielski i polski; do sześciu profili na jednym komputerze.",
+    "src": "82b354b1"
+  },
+  "catalog.academy.feature3": {
+    "text": "Analityka po wyścigu, dzienny licznik treningów, osiągnięcia.",
+    "src": "65103b8c"
+  },
+  "catalog.academy.imageAlt": {
+    "text": "Ilustracja: trzy samochody w barwach flag pędzą drogą, obok robot z flagą w szachownicę i globus gry online.",
+    "src": "98440dbb"
+  }
+}
