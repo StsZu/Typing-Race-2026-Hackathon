@@ -5,7 +5,7 @@
   const overlap = () => {
     let count = 0, worst = 0;
     for (const k of document.querySelectorAll('#keyboard .key:not(.space)')) {
-      const t = [...k.childNodes].find(n => n.nodeType === 3), s = k.querySelector('small');
+      const t = k.querySelector('span[lang]') || [...k.childNodes].find(n => n.nodeType === 3), s = k.querySelector('small');
       const rg = document.createRange(); rg.selectNodeContents(t);
       const a = rg.getBoundingClientRect(), b = s.getBoundingClientRect();
       const ox = Math.min(a.right, b.right) - Math.max(a.left, b.left), oy = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);

@@ -1,0 +1,14 @@
+keylang-1440.json  uk        sw 1440 cw 1440 keyW [ 48, 48 ] keyH [ 48, 48 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-1440.json: false
+keylang-1440.json  en        sw 1440 cw 1440 keyW [ 48, 48 ] keyH [ 48, 48 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-1440.json: false
+keylang-1440.json  pl        sw 1440 cw 1440 keyW [ 48, 48 ] keyH [ 48, 48 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-1440.json: false
+keylang-1440.json  pl+altgr  sw 1440 cw 1440 keyW [ 48, 48 ] keyH [ 48, 48 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-1440.json: false
+keylang-360.json   uk        sw 360 cw 360 keyW [ 22.1, 27.1 ] keyH [ 26, 27.1 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-360.json: false
+keylang-360.json   en        sw 360 cw 360 keyW [ 22.1, 27.1 ] keyH [ 26, 27.1 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-360.json: false
+keylang-360.json   pl        sw 360 cw 360 keyW [ 22.1, 27.1 ] keyH [ 26, 27.1 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-360.json: false
+keylang-360.json   pl+altgr  sw 360 cw 360 keyW [ 22.1, 27.1 ] keyH [ 26, 27.1 ] overlap {"count":0,"worstPx":0} | розміри = T21-after-360.json: false
+en leaks after scenario: 2 img#player-cover @alt: Cover of the song Не гальмуй / Just Type | audio#player-audio @aria-label: Song Не гальмуй / Just Type
+uk scenario vs T19: equal 165 differing 4
+   initial.keyLabels: ["Й1 | Й: лівий мізинець","Ц2 | Ц: лівий безіменний","У3 | У: лівий се → ["Й— лівий мізинець1 | ","Ц— лівий безіменний2 | ","У— лівий середній3
+   layout en.keyLabels: ["Q1 | Q: лівий мізинець","W2 | W: лівий безіменний","E3 | E: лівий се → ["Q— лівий мізинець1 | ","W— лівий безіменний2 | ","E— лівий середній3
+   altgr on.keyLabels: ["Ę: AltGr + E, лівий середній","Ó: AltGr + O, правий безіменний","Ą:  → [null,null,null,null,null,null,null,null,null]
+   layout uk again.keyLabels: ["Й1 | Й: лівий мізинець","Ц2 | Ц: лівий безіменний","У3 | У: лівий се → ["Й— лівий мізинець1 | ","Ц— лівий безіменний2 | ","У— лівий середній3
