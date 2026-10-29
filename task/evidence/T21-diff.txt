@@ -1,0 +1,18 @@
+diff --git a/style.css b/style.css
+index a6b251a..4b7b80c 100644
+--- a/style.css
++++ b/style.css
+@@ -7,3 +7,6 @@ .hero>*{min-width:0}@media(max-width:760px){h1{font-size:clamp(36px,11vw,44px);l
+ 
+ .app-icon{display:grid;place-items:center;background:#edf3fc}.app-icon img{width:148px;height:148px;object-fit:contain;object-position:center}
+ .player{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;padding:24px;background:var(--card);border:1px solid var(--line);border-radius:16px}.player-cover{display:block;width:100%;max-width:360px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px;background:var(--surface)}.player-lang{font:650 14px/1.6 monospace;letter-spacing:1.4px;color:var(--muted);margin:18px 0 4px}.player h3{font-size:21px;margin:0}.player audio{display:block;width:100%;margin:16px 0}.player-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}.player-controls a{color:var(--blue);text-decoration:underline;font-size:16px}.lyrics{display:flex;flex-direction:column;contain:size;min-height:320px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}.player .lyrics-title{margin:0;font:650 14px/1.6 monospace;letter-spacing:1.7px;text-transform:uppercase;color:var(--muted);padding:16px 22px;border-bottom:1px solid var(--line)}.lyrics-text{flex:1;min-height:0;overflow:auto;padding:4px 22px 22px;font-size:17px;line-height:1.7;overscroll-behavior:contain}.lyrics-text h4{font:650 14px/1.6 monospace;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue);margin:18px 0 4px}.lyrics-text p{margin:0}.lyrics-text:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}.tracks{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.track{display:flex;align-items:center;gap:12px;height:100%;box-sizing:border-box;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--ink);text-decoration:none}.track:hover{border-color:var(--blue)}.track[aria-current="true"]{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}.track img{flex:none;width:56px;height:56px;border-radius:8px;object-fit:cover}.track b{display:block;font-size:16px;line-height:1.3;font-weight:650}.track small{font:14px monospace;color:var(--muted)}@media(max-width:1050px){.tracks{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.player{grid-template-columns:1fr;padding:18px}.player-cover{max-width:280px}.lyrics{contain:none;min-height:0}.lyrics-text{max-height:380px}.tracks{grid-template-columns:1fr}}
++.layer-toggle{margin-top:12px}.layer-toggle[hidden]{display:none}.layer-toggle[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}.key.alt{box-shadow:0 0 0 2px var(--blue);font-weight:700}
++@media(max-width:760px){.learning-grid{grid-template-columns:minmax(0,1fr)}}
++@media(max-width:460px){#keyboard .key{font-size:12px;padding:0 6px 0 0}#keyboard .key small{font-size:8px;right:1px}}
+-20261029-songparts1"
++20261029-overflow2"
+-20261029-songparts1"
++20261029-overflow2"
+-20261029-songparts1"
++20261029-overflow2"
++button class="outline layer-toggle" id="altgr" type="button" aria-pressed="false" hidden>Шар AltGr: ą ć ę ł ń ó ś ź ż</button><

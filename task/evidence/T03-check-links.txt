@@ -1,0 +1,4 @@
+Не знайдено локальні посилання:
+rules_for_hacathon/old/ТЗ-єдині-правила-змагання.md -> ../docs/TECHNICAL_SPECIFICATION.md
+rules_for_hacathon/old/ТЗ-єдині-правила-змагання.md -> ../docs/TECHNICAL_SPECIFICATION.md
+rules_for_hacathon/old/ТЗ-єдині-правила-змагання.md -> ../docs/PARTICIPATION.md
