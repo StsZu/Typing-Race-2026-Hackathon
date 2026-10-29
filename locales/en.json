@@ -1,0 +1,808 @@
+{
+  "meta.title": {
+    "text": "Touch Typing — A Skill for the Digital Age",
+    "src": "8e87b7ea"
+  },
+  "meta.description": {
+    "text": "Master touch typing: an interactive keyboard, a speed test, a 30-day plan and five Typing Race 2026 trainers.",
+    "src": "c7a5c89c"
+  },
+  "meta.ogTitle": {
+    "text": "Think about the content. Your fingers will find the keys.",
+    "src": "4ea902b6"
+  },
+  "meta.ogDescription": {
+    "text": "Your start in touch typing. 5 trainers, 3 layouts, 30 days of practice.",
+    "src": "5dd31ea9"
+  },
+  "page.link1": {
+    "text": "Skip to content",
+    "src": "1557b9eb"
+  },
+  "nav.link1": {
+    "text": "<span class=\"logo\">t<span>_</span></span>touch typing<span class=\"edition\">/ 2026</span>",
+    "src": "f77a6add"
+  },
+  "nav.ariaLabel1": {
+    "text": "Main navigation",
+    "src": "80aa001d"
+  },
+  "nav.link2": {
+    "text": "How it works",
+    "src": "aefdc0e5"
+  },
+  "nav.link3": {
+    "text": "Quick test",
+    "src": "a846391a"
+  },
+  "nav.link4": {
+    "text": "Trainers",
+    "src": "b708644d"
+  },
+  "nav.link5": {
+    "text": "Study plan",
+    "src": "a96eb4ea"
+  },
+  "nav.link6": {
+    "text": "Music",
+    "src": "fea5101d"
+  },
+  "nav.ariaLabel2": {
+    "text": "Switch between light and dark theme",
+    "src": "a63fca7a"
+  },
+  "nav.link7": {
+    "text": "To the trainers ↗",
+    "src": "db8b6e12"
+  },
+  "hero.text1": {
+    "text": "<span class=\"dot\"></span> A SKILL FOR THE DIGITAL AGE",
+    "src": "d8a8505a"
+  },
+  "hero.heading1": {
+    "text": "Master<br><em>touch typing.</em>",
+    "src": "ddfcabab"
+  },
+  "hero.text2": {
+    "text": "Think faster.<br>Work smarter!",
+    "src": "b3f796a5"
+  },
+  "hero.text3": {
+    "text": "Touch typing is an essential digital skill for study, work and creativity. Learn the ten-finger method and reach a new level of working with your computer.",
+    "src": "ee05621e"
+  },
+  "hero.link1": {
+    "text": "Start practicing <span>↗</span>",
+    "src": "c9cd9878"
+  },
+  "hero.link2": {
+    "text": "Why does it matter? ↓",
+    "src": "f8a6e3d5"
+  },
+  "hero.text4": {
+    "text": "No sign-up <span>·</span> At your own pace <span>·</span> 10–15 min a day",
+    "src": "98cb357e"
+  },
+  "hero.label1": {
+    "text": "LESS SEARCHING. MORE FLOW.",
+    "src": "5f8c2574"
+  },
+  "hero.div1": {
+    "text": "think about the <span>content</span><i></i>",
+    "src": "6bf8fa2e"
+  },
+  "hero.label2": {
+    "text": "<b>A S D F</b> left hand",
+    "src": "093311ca"
+  },
+  "hero.label3": {
+    "text": "<b>J K L ;</b> right hand",
+    "src": "af2b88cb"
+  },
+  "hero.div2": {
+    "text": "✦ Accuracy first. Speed later.",
+    "src": "2a2f89aa"
+  },
+  "ribbon.label1": {
+    "text": "<b>10</b> fingers on one team",
+    "src": "c3179dc8"
+  },
+  "ribbon.label2": {
+    "text": "<b>3</b> layouts to practice",
+    "src": "d4925109"
+  },
+  "ribbon.label3": {
+    "text": "<b>5</b> hackathon trainers",
+    "src": "b7e022a9"
+  },
+  "ribbon.label4": {
+    "text": "<b>30</b> days to a new habit",
+    "src": "174f23ee"
+  },
+  "learn.text1": {
+    "text": "01 / THE BASICS",
+    "src": "80ea7aa9"
+  },
+  "learn.heading1": {
+    "text": "Eyes on the text.<br>Fingers know the way.",
+    "src": "e11d74f4"
+  },
+  "learn.text2": {
+    "text": "Touch typing means typing with all ten fingers without looking at the keyboard. Instead of hunting for each letter, you gradually memorize the movement.",
+    "src": "dd1eb4fe"
+  },
+  "learn.heading2": {
+    "text": "Find your home position",
+    "src": "a1358699"
+  },
+  "learn.ariaLabel1": {
+    "text": "Layout",
+    "src": "783cd052"
+  },
+  "learn.text3": {
+    "text": "Press a key on the diagram to see which finger types it.",
+    "src": "954a35ad"
+  },
+  "learn.altgr": {
+    "text": "AltGr layer: ą ć ę ł ń ó ś ź ż",
+    "src": "112fddf9"
+  },
+  "learn.keyTip": {
+    "text": "F and J: your index fingers. Feel for the bumps on these keys.",
+    "src": "f3dc4472"
+  },
+  "learn.label1": {
+    "text": "① Little finger",
+    "src": "a7db605a"
+  },
+  "learn.label2": {
+    "text": "② Ring finger",
+    "src": "084fcc92"
+  },
+  "learn.label3": {
+    "text": "③ Middle finger",
+    "src": "283c39a8"
+  },
+  "learn.label4": {
+    "text": "④ Index finger",
+    "src": "f25a4812"
+  },
+  "keyboard.noteUk": {
+    "text": "Ukrainian <span lang=\"uk\">ЙЦУКЕН</span>. Home row: <span lang=\"uk\">Ф І В А · О Л Д Ж</span>. <span lang=\"uk\">Ґ</span> may need a separate key or a key combination, depending on your OS.",
+    "src": "f9d5f0d7"
+  },
+  "learn.heading3": {
+    "text": "Bring your fingers home",
+    "src": "df453d07"
+  },
+  "learn.text4": {
+    "text": "Left hand on A S D F, right hand on J K L ;. Your thumbs take care of the space bar.",
+    "src": "2ef0683c"
+  },
+  "learn.heading4": {
+    "text": "Keep your hands relaxed",
+    "src": "e471617d"
+  },
+  "learn.text5": {
+    "text": "Relax your shoulders, keep your wrists straight and don’t rest them on the edge of the desk. The diagram shows finger zones, not the shape of a particular keyboard.",
+    "src": "50f313dd"
+  },
+  "learn.heading5": {
+    "text": "Don’t rush",
+    "src": "6fad826b"
+  },
+  "learn.text6": {
+    "text": "The right finger and accuracy come first. If you make many mistakes, slow down. Instead of glancing down, bring your attention back to the text.",
+    "src": "1c40c470"
+  },
+  "benefits.text1": {
+    "text": "02 / WHAT’S IN IT FOR YOU",
+    "src": "bf0a7f6c"
+  },
+  "benefits.heading1": {
+    "text": "Fewer movements between thought and text.",
+    "src": "0ce39c19"
+  },
+  "benefits.heading2": {
+    "text": "Time savings",
+    "src": "78588383"
+  },
+  "benefits.text2": {
+    "text": "Fewer pauses to find keys when you write an email or fill in a document.",
+    "src": "07e8011c"
+  },
+  "benefits.heading3": {
+    "text": "Focus",
+    "src": "6b662f51"
+  },
+  "benefits.text3": {
+    "text": "Follow the sentence on the screen and shape your thought without searching for every letter.",
+    "src": "97d45b68"
+  },
+  "benefits.heading4": {
+    "text": "Productivity",
+    "src": "fd704285"
+  },
+  "benefits.text4": {
+    "text": "Documents, code, messages and AI prompts—the skill pays off every day.",
+    "src": "c071da95"
+  },
+  "benefits.heading5": {
+    "text": "Learning",
+    "src": "eeaf82b4"
+  },
+  "benefits.text5": {
+    "text": "It’s easier to write down your own ideas and notes and to complete written assignments.",
+    "src": "c4de00f6"
+  },
+  "benefits.heading6": {
+    "text": "Digital literacy",
+    "src": "1fb267b0"
+  },
+  "benefits.text6": {
+    "text": "Getting to know the keyboard builds confidence in children and adults.",
+    "src": "4fd951c2"
+  },
+  "benefits.heading7": {
+    "text": "Professional growth",
+    "src": "d1aef3fa"
+  },
+  "benefits.text7": {
+    "text": "A practical foundation for managers, analysts, programmers and office teams.",
+    "src": "4d5d512b"
+  },
+  "calculator.text1": {
+    "text": "03 / YOUR TIME SAVINGS",
+    "src": "5d886e70"
+  },
+  "calculator.heading1": {
+    "text": "A small skill.<br>A noticeable difference.",
+    "src": "911de55c"
+  },
+  "calculator.text2": {
+    "text": "How many minutes would you get back if you typed the same text faster?",
+    "src": "8335b3fe"
+  },
+  "calculator.legend1": {
+    "text": "Speed and volume units",
+    "src": "4cbfc233"
+  },
+  "calculator.label1": {
+    "text": "{$1} WPM — words",
+    "src": "9b3d4a73"
+  },
+  "calculator.label2": {
+    "text": "{$1} SPM — characters",
+    "src": "75c3d0d7"
+  },
+  "calculator.currentLabelWpm": {
+    "text": "Current speed, words/min (WPM)",
+    "src": "3cfa4e57"
+  },
+  "calculator.targetLabelWpm": {
+    "text": "Target speed, words/min (WPM)",
+    "src": "bf9841e5"
+  },
+  "calculator.volumeLabelWords": {
+    "text": "Daily text volume, standard words",
+    "src": "a1a390ee"
+  },
+  "calculator.text3": {
+    "text": "For conversion, 1 standard word = 5 characters including spaces. Typing time only: volume ÷ current speed − volume ÷ target speed. Time for thinking and editing is not included. 5 working days a week, 20 a month.",
+    "src": "2ab45e57"
+  },
+  "calculator.text4": {
+    "text": "YOUR DAILY POTENTIAL",
+    "src": "1a621eae"
+  },
+  "calculator.label3": {
+    "text": "minutes",
+    "src": "da8ef43c"
+  },
+  "calculator.label4": {
+    "text": "{$1}per week",
+    "src": "a371dbf0"
+  },
+  "calculator.label5": {
+    "text": "{$1}per month",
+    "src": "cbeb0d8e"
+  },
+  "calculator.result": {
+    "text": "More time for what matters.",
+    "src": "b153c069"
+  },
+  "test.text1": {
+    "text": "04 / TRY IT RIGHT NOW",
+    "src": "9f9ddb65"
+  },
+  "test.heading1": {
+    "text": "Your first small win.",
+    "src": "16944820"
+  },
+  "test.text2": {
+    "text": "Check your starting pace. Connect a physical keyboard, choose the English layout and start typing.",
+    "src": "8886d5c5"
+  },
+  "test.text3": {
+    "text": "Type the text below for {$1}. The countdown starts with the first character. When time is up, your result will appear.",
+    "src": "c94058bb"
+  },
+  "test.ariaLabel1": {
+    "text": "Duration",
+    "src": "643d50da"
+  },
+  "test.label1": {
+    "text": "{$1} s",
+    "src": "b31d0ee9"
+  },
+  "test.label2": {
+    "text": "{$1} WPM <small>words/min</small>",
+    "src": "d6cf5a06"
+  },
+  "test.label3": {
+    "text": "{$1} SPM <small>characters/min</small>",
+    "src": "38799183"
+  },
+  "test.label4": {
+    "text": "{$1} characters <small>correct / typed</small>",
+    "src": "f01c0ac3"
+  },
+  "test.label5": {
+    "text": "{$1} accuracy",
+    "src": "7c89e03e"
+  },
+  "test.label6": {
+    "text": "Time left",
+    "src": "555995f4"
+  },
+  "test.finishTitle": {
+    "text": "Time’s up!",
+    "src": "aae70a6e"
+  },
+  "test.text4": {
+    "text": "Your result has been recorded. Press “Try again” to start a new test.",
+    "src": "f3131111"
+  },
+  "test.ariaLabel2": {
+    "text": "Text to type",
+    "src": "28118102"
+  },
+  "test.label7": {
+    "text": "Type the text from the sample",
+    "src": "10c3edb1"
+  },
+  "test.placeholder1": {
+    "text": "Click here and start typing…",
+    "src": "e702fd4e"
+  },
+  "test.testStatus": {
+    "text": "The timer starts with the first character.",
+    "src": "f063649a"
+  },
+  "test.restart": {
+    "text": "↻ Try again",
+    "src": "a3c3e85f"
+  },
+  "test.text5": {
+    "text": "SPM = correct characters ÷ minutes. WPM = SPM ÷ 5. A standard word is 5 characters; spaces and punctuation count. The counter shows correct and total characters in the typed text. Accuracy counts every character you type, including corrected mistakes. Apostrophes ' / ’ / ʼ are treated the same. Pasting is disabled. Nothing is sent or stored.",
+    "src": "4d4199b5"
+  },
+  "trainers.text1": {
+    "text": "05 / BUILT TO TEACH",
+    "src": "b96fe589"
+  },
+  "trainers.heading1": {
+    "text": "Find your trainer.",
+    "src": "ab90bd42"
+  },
+  "trainers.text2": {
+    "text": "Five different approaches from Typing Race 2026. Choose by your goal: a step-by-step course, analytics, a game or races.",
+    "src": "1ada604d"
+  },
+  "trainers.summary1": {
+    "text": "Hackathon 2026 results <span>Open ↗</span>",
+    "src": "fcf95767"
+  },
+  "trainers.text3": {
+    "text": "Based on the audit results announced on October 6, 2026. This is an assessment of competition entries, not a ranking of how well each trainer suits every learner.",
+    "src": "48b1f8fd"
+  },
+  "trainers.text6": {
+    "text": "“<span lang=\"uk\">Гами</span>” was submitted after the evaluation ended. Touch Type Race Academy is the organizer’s own entry, outside the competition.",
+    "src": "f38389ef"
+  },
+  "trainers.text7": {
+    "text": "Sources: index.html, the sites/ descriptions and ANNOUNCEMENT.md from the hackathon materials. Illustrations of trainer features.",
+    "src": "be8c0048"
+  },
+  "plan.text1": {
+    "text": "06 / FROM FIRST TRY TO HABIT",
+    "src": "0ae40cf6"
+  },
+  "plan.heading1": {
+    "text": "30 days. At your own pace.",
+    "src": "8f69f21d"
+  },
+  "plan.text2": {
+    "text": "Set aside 10–15 minutes a day. Take breaks and come back to the difficult keys. A specific speed after 30 days is not guaranteed.",
+    "src": "bce4e62e"
+  },
+  "plan.note1": {
+    "text": "DAYS 01–07",
+    "src": "19beb338"
+  },
+  "plan.heading2": {
+    "text": "Getting started",
+    "src": "bda13fb9"
+  },
+  "plan.text3": {
+    "text": "Finger placement and the home row. Slow drills without looking down.",
+    "src": "793dff7d"
+  },
+  "plan.note2": {
+    "text": "DAYS 08–14",
+    "src": "66d8e4a8"
+  },
+  "plan.heading3": {
+    "text": "Accuracy",
+    "src": "a811b254"
+  },
+  "plan.text4": {
+    "text": "Top and bottom rows, numbers, Shift. Add keys gradually.",
+    "src": "f28c32e4"
+  },
+  "plan.note3": {
+    "text": "DAYS 15–21",
+    "src": "732e11c5"
+  },
+  "plan.heading4": {
+    "text": "Rhythm",
+    "src": "76f04145"
+  },
+  "plan.text5": {
+    "text": "Short words and common letter pairs. A steady pace and working on mistakes.",
+    "src": "c0d3d8b6"
+  },
+  "plan.note4": {
+    "text": "DAYS 22–30",
+    "src": "c0704b75"
+  },
+  "plan.heading5": {
+    "text": "Confidence",
+    "src": "96cb8493"
+  },
+  "plan.text6": {
+    "text": "Emails, notes, real texts. Compare your result with day one.",
+    "src": "fb48d6a7"
+  },
+  "plan.heading6": {
+    "text": "Your practice calendar",
+    "src": "c55ebd11"
+  },
+  "plan.storageNote": {
+    "text": "Mark the days you complete. Progress is saved only in this browser and does not sync between devices.",
+    "src": "2d6b33dd"
+  },
+  "music.text1": {
+    "text": "SONGS FOR INSPIRATION",
+    "src": "2f065645"
+  },
+  "music.heading1": {
+    "text": "Find your rhythm.",
+    "src": "4d0ba25b"
+  },
+  "music.text2": {
+    "text": "Five songs from the Touch Type Race collection. Pick a mood for your next practice session.",
+    "src": "0a641734"
+  },
+  "music.playerPrev": {
+    "text": "← Previous",
+    "src": "2f11048b"
+  },
+  "music.playerNext": {
+    "text": "Next →",
+    "src": "87e71208"
+  },
+  "music.playerDownload": {
+    "text": "Download MP3",
+    "src": "613a5ed5"
+  },
+  "music.lyricsTitle": {
+    "text": "Lyrics",
+    "src": "1152a028"
+  },
+  "music.ariaLabel1": {
+    "text": "Song lyrics",
+    "src": "fc439686"
+  },
+  "music.ariaLabel2": {
+    "text": "Songs",
+    "src": "addaa039"
+  },
+  "music.text3": {
+    "text": "Songs play only after you press Play. One track plays at a time; starting the test pauses the music.",
+    "src": "9c51e74d"
+  },
+  "about.text1": {
+    "text": "07 / PEOPLE + TECHNOLOGY",
+    "src": "a9d18caa"
+  },
+  "about.heading1": {
+    "text": "From an idea<br>to a useful app.",
+    "src": "8cb3c630"
+  },
+  "about.text2": {
+    "text": "Typing Race 2026 is a hackathon for educational typing trainers. Its goal is a step-by-step learning path in which accuracy and correct movements come before speed.",
+    "src": "3627afd0"
+  },
+  "about.text3": {
+    "text": "AI can help with interface design, coding, tests and documentation. A person defines the task, checks the result and is responsible for the quality of learning. This page makes no assumptions about which models individual authors used.",
+    "src": "3b6f9fae"
+  },
+  "about.link1": {
+    "text": "Try the results of this work ↗",
+    "src": "71ff4983"
+  },
+  "finalCta.text1": {
+    "text": "YOUR NEXT STEP",
+    "src": "ee3790cb"
+  },
+  "finalCta.heading1": {
+    "text": "Put your fingers on A S D F.<br>And begin.",
+    "src": "7c18b64a"
+  },
+  "finalCta.link1": {
+    "text": "Choose a trainer ↗",
+    "src": "9b8cf2ab"
+  },
+  "finalCta.text2": {
+    "text": "Ten fingers. One new habit.",
+    "src": "52223611"
+  },
+  "footer.link1": {
+    "text": "touch typing<span class=\"edition\">/ 2026</span>",
+    "src": "03ac34c3"
+  },
+  "footer.text1": {
+    "text": "A skill that stays with you.",
+    "src": "0643cc20"
+  },
+  "footer.link2": {
+    "text": "Back to top ↑",
+    "src": "d1cdfee7"
+  },
+  "keyboard.finger.leftPinky": {
+    "text": "left little finger",
+    "src": "28826d6c"
+  },
+  "keyboard.finger.leftRing": {
+    "text": "left ring finger",
+    "src": "29dc40f7"
+  },
+  "keyboard.finger.leftMiddle": {
+    "text": "left middle finger",
+    "src": "eb01cc05"
+  },
+  "keyboard.finger.leftIndex": {
+    "text": "left index finger",
+    "src": "5825f6fe"
+  },
+  "keyboard.finger.rightIndex": {
+    "text": "right index finger",
+    "src": "63e33cab"
+  },
+  "keyboard.finger.rightMiddle": {
+    "text": "right middle finger",
+    "src": "d5b09976"
+  },
+  "keyboard.finger.rightRing": {
+    "text": "right ring finger",
+    "src": "f4d78892"
+  },
+  "keyboard.finger.rightPinky": {
+    "text": "right little finger",
+    "src": "3fa66958"
+  },
+  "keyboard.keyTip": {
+    "text": "{key}: {finger}. After the keypress, return your finger to the home position.",
+    "src": "03a9d979"
+  },
+  "keyboard.keyTipAltGr": {
+    "text": "{key}: AltGr + {base}, {finger}. After the keypress, return your finger to the home position.",
+    "src": "47b45e2d"
+  },
+  "keyboard.space": {
+    "text": "space",
+    "src": "ed243c4b"
+  },
+  "keyboard.spaceTip": {
+    "text": "Space: either thumb. Use whichever feels comfortable.",
+    "src": "2b233939"
+  },
+  "keyboard.homeUk": {
+    "text": "Home position: <span lang=\"uk\">Ф І В А · О Л Д Ж</span>.",
+    "src": "2124eb3c"
+  },
+  "keyboard.homeLatin": {
+    "text": "Home position: A S D F · J K L ;",
+    "src": "bba330e0"
+  },
+  "keyboard.noteEn": {
+    "text": "English QWERTY. The bumps on F and J help you find the home row by touch.",
+    "src": "c2074891"
+  },
+  "keyboard.notePl": {
+    "text": "Polish (Programmers) QWERTY: ą ć ę ł ń ó ś ź ż are typed with right Alt (AltGr) + a c e l n o s x z on Windows, or with Option + the same keys in the “Polish Pro” layout on macOS. The macOS “Polish” layout works differently. The diagram does not switch your OS layout.",
+    "src": "247e6325"
+  },
+  "keyboard.altgrTip": {
+    "text": "AltGr layer: each Polish letter is typed by the same finger as its base letter while you hold AltGr (Option on macOS).",
+    "src": "6e8008e2"
+  },
+  "calculator.minutes": {
+    "text": "{minutes} min",
+    "src": "4fdc4ee6"
+  },
+  "calculator.hoursMinutes": {
+    "text": "{hours} h {minutes} min",
+    "src": "1e926abe"
+  },
+  "calculator.errorInvalid": {
+    "text": "Enter valid positive speeds and a non-negative text volume.",
+    "src": "f171de0e"
+  },
+  "calculator.errorTarget": {
+    "text": "To save time, the target speed has to be higher.",
+    "src": "925867f6"
+  },
+  "calculator.currentLabelSpm": {
+    "text": "Current speed, characters/min (SPM)",
+    "src": "f805f27c"
+  },
+  "calculator.targetLabelSpm": {
+    "text": "Target speed, characters/min (SPM)",
+    "src": "28888721"
+  },
+  "calculator.volumeLabelChars": {
+    "text": "Daily text volume, characters",
+    "src": "17eed548"
+  },
+  "test.timeUp": {
+    "text": "Time’s up! The test is over.",
+    "src": "bba5f570"
+  },
+  "test.textDone": {
+    "text": "Text complete!",
+    "src": "b7b4229f"
+  },
+  "test.summary": {
+    "text": "{spm} SPM · {wpm} WPM · accuracy {accuracy} · characters: {characters}.",
+    "src": "06432438"
+  },
+  "test.statusDone": {
+    "text": "Result recorded. Start a new test whenever you’re ready.",
+    "src": "754fffd4"
+  },
+  "test.durationLabel": {
+    "text": {
+      "one": "{seconds} second",
+      "other": "{seconds} seconds"
+    },
+    "src": "5ad4104f"
+  },
+  "test.statusReady": {
+    "text": {
+      "one": "Type for {seconds} second. The timer starts with the first character.",
+      "other": "Type for {seconds} seconds. The timer starts with the first character."
+    },
+    "src": "c4300e41"
+  },
+  "test.statusRunning": {
+    "text": "Test in progress. Don’t rush—keep a steady rhythm.",
+    "src": "f70c4027"
+  },
+  "plan.progress": {
+    "text": "{done} / 30 days",
+    "src": "b25d21f2"
+  },
+  "plan.dayLabel": {
+    "text": "Day {day}: mark as practiced",
+    "src": "ef7a7f75"
+  },
+  "plan.storageError": {
+    "text": "Your browser does not allow saving. Progress is kept only until you close the page.",
+    "src": "e6696a5a"
+  },
+  "trainers.iconAlt": {
+    "text": "{name} icon",
+    "src": "36e99ed4"
+  },
+  "trainers.imageAltFallback": {
+    "text": "{name}: illustration of the trainer’s features",
+    "src": "f9459251"
+  },
+  "trainers.placeholderKeys": {
+    "text": "a s d f",
+    "src": "c6be4a0a"
+  },
+  "trainers.tag.course": {
+    "text": "STEP-BY-STEP COURSE",
+    "src": "38eb5cfa"
+  },
+  "trainers.tag.analytics": {
+    "text": "ANALYTICS AND RACES",
+    "src": "6b09357c"
+  },
+  "trainers.tag.game": {
+    "text": "LEARNING THROUGH PLAY",
+    "src": "c2e8f064"
+  },
+  "trainers.tag.method": {
+    "text": "METHODICAL PRACTICE",
+    "src": "deaa6c69"
+  },
+  "trainers.tag.languages": {
+    "text": "THREE LANGUAGES",
+    "src": "b13dc0f6"
+  },
+  "trainers.linkOpen": {
+    "text": "Open the trainer ↗",
+    "src": "0ac88361"
+  },
+  "trainers.linkGithubPrivate": {
+    "text": "GitHub · private ↗",
+    "src": "a6a1217e"
+  },
+  "trainers.linkAlternative": {
+    "text": "Alternative version ↗",
+    "src": "92a828f9"
+  },
+  "trainers.linkGuide": {
+    "text": "Guide ↗",
+    "src": "931a3792"
+  },
+  "trainers.loadError": {
+    "text": "Couldn’t load the catalog. Please reload the page.",
+    "src": "f4be9a96"
+  },
+  "song.part.intro": {
+    "text": "Intro",
+    "src": "66953956"
+  },
+  "song.part.verse1": {
+    "text": "Verse 1",
+    "src": "923f5d88"
+  },
+  "song.part.verse2": {
+    "text": "Verse 2",
+    "src": "b8e6184e"
+  },
+  "song.part.preChorus": {
+    "text": "Pre-chorus",
+    "src": "a790f472"
+  },
+  "song.part.chorus": {
+    "text": "Chorus",
+    "src": "1c3095ec"
+  },
+  "song.part.bridge": {
+    "text": "Bridge",
+    "src": "495c00cb"
+  },
+  "song.part.finalChorus": {
+    "text": "Final chorus",
+    "src": "b20f625f"
+  },
+  "song.part.outro": {
+    "text": "Outro",
+    "src": "40a918a4"
+  },
+  "music.audioLabel": {
+    "text": "Song {title}",
+    "src": "97a5ee7b"
+  },
+  "music.coverAlt": {
+    "text": "Cover of the song {title}",
+    "src": "5c6efecc"
+  }
+}
