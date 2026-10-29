@@ -1,0 +1,2 @@
++"pl" href="https://stszu.github.io/Typing-Race-2026-Hackathon/pl/"><link rel="alternate" hreflang=
++meta property="og:locale:alternate" content="pl_PL"><

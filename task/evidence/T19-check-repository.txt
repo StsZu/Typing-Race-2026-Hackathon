@@ -1,0 +1,2 @@
+Error: Знайдено застаріле позначення у:
+sites/site-5-typing-race-2026.md

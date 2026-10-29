@@ -1,0 +1,20 @@
+== pl-root /pl/ lang pl | Pisanie bezwzrokowe – umiejętność ery cyfrowej
+  canonical B/pl/ | og:url B/pl/ | og:locale pl_PL alt en_US,uk_UA
+  hreflang uk=B/ en=B/en/ pl=B/pl/ x-default=B/
+  switcher Українська→/ English→/en/ Polski*→/pl/
+  images 11 broken 0 | failed [] | cards 5
+== pl-subdir /Typing-race-2026-hackathon/pl/ lang pl | Pisanie bezwzrokowe – umiejętność ery cyfrowej
+  canonical B/pl/ | og:url B/pl/ | og:locale pl_PL alt en_US,uk_UA
+  hreflang uk=B/ en=B/en/ pl=B/pl/ x-default=B/
+  switcher Українська→/Typing-race-2026-hackathon/ English→/Typing-race-2026-hackathon/en/ Polski*→/Typing-race-2026-hackathon/pl/
+  images 11 broken 0 | failed [] | cards 5
+== en-subdir /Typing-race-2026-hackathon/en/ lang en | Touch Typing — A Skill for the Digital Age
+  canonical B/en/ | og:url B/en/ | og:locale en_US alt uk_UA,pl_PL
+  hreflang uk=B/ en=B/en/ pl=B/pl/ x-default=B/
+  switcher Українська→/Typing-race-2026-hackathon/ English*→/Typing-race-2026-hackathon/en/ Polski→/Typing-race-2026-hackathon/pl/
+  images 11 broken 0 | failed [] | cards 5
+== uk-subdir /Typing-race-2026-hackathon/ lang uk | Сенсорний друк — навичка цифрової епохи
+  canonical B/ | og:url B/ | og:locale uk_UA alt en_US,pl_PL
+  hreflang uk=B/ en=B/en/ pl=B/pl/ x-default=B/
+  switcher Українська*→/Typing-race-2026-hackathon/ English→/Typing-race-2026-hackathon/en/ Polski→/Typing-race-2026-hackathon/pl/
+  images 11 broken 0 | failed [] | cards 5

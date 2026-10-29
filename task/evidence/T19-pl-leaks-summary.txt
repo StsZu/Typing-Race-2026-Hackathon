@@ -1,0 +1,4 @@
+leaks 66
+  64× div.keyboard-panel > div#keyboard > div.key-row → Й | Ц | У
+  1× div.wrap > div#player > div.player-now > img#player-cover @alt → Okładka piosenki Не гальмуй / Just Type
+  1× div.wrap > div#player > div.player-now > audio#player-audio @aria-label → Piosenka Не гальмуй / Just Type

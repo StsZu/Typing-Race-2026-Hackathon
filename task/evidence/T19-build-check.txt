@@ -1,0 +1,2 @@
+en: en/index.html актуальний
+pl: pl/index.html актуальний
