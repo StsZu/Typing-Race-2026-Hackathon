@@ -320,8 +320,8 @@
     "src": "16944820"
   },
   "test.text2": {
-    "text": "Check your starting pace. Connect a physical keyboard, choose the English layout and start typing.",
-    "src": "8886d5c5"
+    "text": "Check your starting pace. Connect a physical keyboard, choose the text language and the matching layout, then start typing.",
+    "src": "fea844fa"
   },
   "test.text3": {
     "text": "Type the text below for {$1}. The countdown starts with the first character. When time is up, your result will appear.",
@@ -384,8 +384,8 @@
     "src": "a3c3e85f"
   },
   "test.text5": {
-    "text": "SPM = correct characters ÷ minutes. WPM = SPM ÷ 5. A standard word is 5 characters; spaces and punctuation count. The counter shows correct and total characters in the typed text. Accuracy counts every character you type, including corrected mistakes. Apostrophes ' / ’ / ʼ are treated the same. Pasting is disabled. Nothing is sent or stored.",
-    "src": "4d4199b5"
+    "text": "SPM = correct characters ÷ minutes. WPM = SPM ÷ 5. A standard word is 5 characters; spaces and punctuation count. The counter shows correct and total characters in the typed text. Accuracy counts every character you type, including corrected mistakes. Apostrophes ' / ’ / ʼ and quotation marks \" “ ” „ « » are treated the same. Pasting is disabled. Nothing is sent or stored.",
+    "src": "dad71174"
   },
   "trainers.text1": {
     "text": "05 / BUILT TO TEACH",
@@ -912,5 +912,9 @@
   "catalog.academy.imageAlt": {
     "text": "Illustration: three cars in flag colors racing down a road, with a robot holding a checkered flag and an online-game globe beside them.",
     "src": "98440dbb"
+  },
+  "test.textLanguage": {
+    "text": "Text language",
+    "src": "1bbaa6c2"
   }
 }

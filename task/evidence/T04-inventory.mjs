@@ -221,7 +221,7 @@ for (const l of lits) {
   const text = l.body.replace(/\$\{([^}]*)\}/g, (_, e) => `{${e.trim()}}`);
   let type = "динамічний", note = "", key;
   if (ctx.decl === "layouts") { type = "дані"; key = "— (layouts)"; note = "символи розкладки, не перекладаються"; }
-  else if (ctx.decl === "passage") { type = "вправа"; key = "— (passage)"; note = "текст тесту; окремий текст для кожної мови (FR-08)"; }
+  else if (ctx.decl === "passage" || ctx.decl === "passages") { type = "вправа"; key = "— (passages)"; note = "текст тесту; окремий текст для кожної мови (FR-08)"; }
   else {
     const hit = JS_KEYS.find(([re]) => re.test(text));
     if (hit) { key = hit[1]; note = hit[2] || ""; } else { key = nextKey("app", "string"); unmapped.push(text); }
