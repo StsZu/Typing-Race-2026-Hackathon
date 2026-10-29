@@ -1,0 +1,6 @@
+uk-1440   vw 1440 sw 1440 | header 83 sticky bar 34 | switcher true 100,0,1240,33 | Українська*[uk] English[en] Polski[pl] | label Мова сайту | scheme uk ЙЦУК
+en-1440   vw 1440 sw 1440 | header 83 sticky bar 34 | switcher true 100,0,1240,33 | Українська[uk] English*[en] Polski[pl] | label Site language | scheme en QWER
+pl-1440   vw 1440 sw 1440 | header 83 sticky bar 34 | switcher true 100,0,1240,33 | Українська[uk] English[en] Polski*[pl] | label Site language | scheme pl QWER
+uk-360    vw 360 sw 360 | header 128 sticky bar 34 | switcher true 0,0,360,33 | Українська*[uk] English[en] Polski[pl] | label Мова сайту | scheme uk ЙЦУК
+en-360    vw 360 sw 360 | header 128 sticky bar 34 | switcher true 0,0,360,33 | Українська[uk] English*[en] Polski[pl] | label Site language | scheme en QWER
+pl-360    vw 360 sw 360 | header 128 sticky bar 34 | switcher true 0,0,360,33 | Українська[uk] English[en] Polski*[pl] | label Site language | scheme pl QWER

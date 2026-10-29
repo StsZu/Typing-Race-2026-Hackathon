@@ -804,5 +804,13 @@
   "music.coverAlt": {
     "text": "Cover of the song {title}",
     "src": "5c6efecc"
+  },
+  "nav.languages": {
+    "text": "Site language",
+    "src": "2973b503"
+  },
+  "test.leaveWarning": {
+    "text": "The test is still running. Finish it, or press the language again to leave without a result.",
+    "src": "443d9e3a"
   }
 }

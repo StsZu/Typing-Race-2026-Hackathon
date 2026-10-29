@@ -10,3 +10,4 @@ body{font-size:18px}.lead{font-size:18px}.muted,.section-head>p,.learn-notes p,.
 .layer-toggle{margin-top:12px}.layer-toggle[hidden]{display:none}.layer-toggle[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}.key.alt{box-shadow:0 0 0 2px var(--blue);font-weight:700}
 @media(max-width:760px){.learning-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:460px){#keyboard .key{font-size:12px;padding:0 6px 0 0}#keyboard .key small{font-size:8px;right:1px}}
+.langs-bar{background:var(--surface);border-bottom:1px solid var(--line)}.langs-bar[hidden]{display:none}.langs-bar .langs{margin:0 auto;justify-content:flex-end;gap:4px;padding-top:4px;padding-bottom:4px;font-size:13px;font-weight:500}.langs a{padding:2px 8px;border-radius:6px;color:var(--muted)}.langs a[aria-current="page"]{color:var(--ink);font-weight:700;background:var(--bg)}
