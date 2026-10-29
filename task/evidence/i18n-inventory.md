@@ -10,41 +10,41 @@
 |---|---|---|---|
 | статичний | текст у HTML | 139 | так |
 | атрибут | `alt`, `aria-label`, `content` у HTML | 13 | так |
-| динамічний | рядки в `app.js` | 55 | так |
+| динамічний | словник `#i18n-messages` у `index.html` для `app.js` (T07) | 62 | так |
 | каталог | описи, переваги, `imageAlt` у `catalog.json` | 25 | так (T14) |
 | вправа | текст швидкісного тесту | 1 | ні — окремий текст для кожної мови (T15, T18) |
 | дані | символи розкладки `uk` | 3 | ні |
 | оригінал | назви пісень, назви тренажерів, імена авторів | 14 | ні |
-| **Разом** | | **250** | **232** |
+| **Разом** | | **257** | **239** |
 
-Шаблони пісень (`<template class="song-data">`, 5 шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — у `app.js` (`songParts`).
+Шаблони пісень (`<template class="song-data">`, 5 шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — ключі `song.part.*` у словнику.
 
 ### Звірка з умовою Done
 
 | Підрахунок | Грубий (регулярний вираз, як в `idea.md`) | Точний (розбір дерева) | Покрито інвентарем |
 |---|---|---|---|
-| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 143 одиницях; непокритих: 0 |
+| Текстові вузли з кирилицею в HTML (без шаблонів) | 158 | 158 | 158 у 205 одиницях; непокритих: 0 |
 | Атрибути з кирилицею в HTML | 13 | 13 | 13 |
-| Літерали з кирилицею в `app.js` | — | 59 | 59 |
+| Літерали з кирилицею в `app.js` | — | 4 | 4 |
 
 Грубий підрахунок (як в `idea.md`) рахує фрагменти між `>` і `<`; для Done використано точний розбір дерева.
 
-Унікальних ключів для перекладу: 218. Спільні ключі (той самий рядок у кількох місцях — очікувано): `calculator.currentLabelWpm` ×2, `calculator.targetLabelWpm` ×2, `calculator.volumeLabelWords` ×2, `calculator.minutes` ×2, `calculator.hoursMinutes` ×2, `calculator.result` ×2, `test.durationLabel` ×5, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2, `keyboard.homeLatin` ×2. Літералів `app.js` без ключа: 0.
+Унікальних ключів для перекладу: 225. Спільні ключі (той самий рядок у кількох місцях — очікувано): `keyboard.noteUk` ×2, `calculator.currentLabelWpm` ×2, `calculator.targetLabelWpm` ×2, `calculator.volumeLabelWords` ×2, `calculator.minutes` ×2, `calculator.hoursMinutes` ×2, `calculator.result` ×2, `test.durationLabel` ×5, `plan.progress` ×2, `music.coverAlt` ×2, `music.audioLabel` ×2. Літералів `app.js` без ключа: 0.
 
-## Розбіжності, які треба вирішити до T07
+## Розбіжності між початковим текстом HTML і текстом app.js
 
 | Що | Факт | Рекомендація |
 |---|---|---|
-| `learn.layoutNote` ≠ `keyboard.noteUk` | Примітка до схеми UK при першому відкритті: «…Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС.»; після повернення на UK — «…Ґ та апостроф залежать від варіанта розкладки ОС. Схема показує літерні зони.» | Вибрати один текст до T07; тоді `learn.layoutNote` зливається з `keyboard.noteUk` |
+| `learn.layoutNote` ≠ `keyboard.noteUk` | Примітка до схеми UK мала два тексти: при першому відкритті й після повернення на UK | Вирішено (C8, T07): один ключ `keyboard.noteUk` з текстом першого відкриття |
 | `learn.keyTip` ≠ `keyboard.homeUk` | Підказка при першому відкритті — «А та О: вказівні пальці. Знайди виступи на клавішах F і J.»; після повернення на UK — «Домашня позиція: Ф І В А · О Л Д Ж.» | Прийнятно як два різні повідомлення; лишити обидва ключі |
 | `test.testStatus` ≠ `test.statusReady` | До першого тесту — «Таймер почнеться з першого символу.»; після скидання — «Друкуй протягом {seconds} секунд. Таймер почнеться з першого символу.» | Прийнятно; лишити обидва ключі |
 
 Інші особливості:
 
-- **T07:** `keyboard.keyTip`, `calculator.*Label` і `trainers.tag` містять у шаблоні вкладені тернарні вирази — перед перекладом їх треба розкласти на окремі ключі з параметрами (див. примітки в таблиці `app.js`).
+- **Перевірка словника:** статичних одиниць HTML із ключем словника — 14, розбіжностей зі словником — 0.
 - **Заповнювачі:** 10 одиниць містять вкладені елементи з `id` або `<input>`. У тексті перекладу вони записані як `{$1}`, `{$2}`…; генератор (T08) підставляє на їхнє місце оригінальну розмітку. Тексти самих вкладених елементів — окремі ключі.
 - **SC-02:** кириличні власні назви на сторінці позначено `lang="uk"` (T06); у перекладах назви «Соло», «Гами» тощо треба брати в `<span lang="uk">`.
-- **Переклад:** 7 одиниць згадують клавіші Ф І В А · О Л Д Ж — для en/pl їх треба замінити на A S D F · J K L ;, а не перекладати дослівно.
+- **Переклад:** 8 одиниць згадують клавіші Ф І В А · О Л Д Ж — для en/pl їх треба замінити на A S D F · J K L ;, а не перекладати дослівно.
 
 ## meta
 
@@ -117,7 +117,7 @@
 | `learn.label2` | `② Безіменний` | `index.html <span>` | статичний |  |
 | `learn.label3` | `③ Середній` | `index.html <span>` | статичний |  |
 | `learn.label4` | `④ Вказівний` | `index.html <span>` | статичний |  |
-| `learn.layoutNote` | `Українська ЙЦУКЕН. Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС.` | `index.html <p#layout-note.micro>` | статичний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
+| `keyboard.noteUk` | `Українська ЙЦУКЕН. Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС.` | `index.html <p#layout-note.micro>` | статичний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
 | `learn.heading3` | `Поверни пальці додому` | `index.html <h3>` | статичний |  |
 | `learn.text4` | `Ліва рука — Ф І В А, права — О Л Д Ж. Великі пальці відповідають за пробіл.` | `index.html <p>` | статичний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
 | `learn.heading4` | `Дай рукам свободу` | `index.html <h3>` | статичний |  |
@@ -281,65 +281,77 @@
 
 | Ключ | Текст | Де | Тип | Примітка |
 |---|---|---|---|---|
-| `— (layouts)` | `йцукенгшщзхї` | `app.js:5` | дані | символи розкладки, не перекладаються |
-| `— (layouts)` | `фівапролджє` | `app.js:5` | дані | символи розкладки, не перекладаються |
-| `— (layouts)` | `ячсмитьбю.` | `app.js:5` | дані | символи розкладки, не перекладаються |
-| `keyboard.finger.leftPinky` | `лівий мізинець` | `app.js:6` | динамічний |  |
-| `keyboard.finger.leftRing` | `лівий безіменний` | `app.js:6` | динамічний |  |
-| `keyboard.finger.leftMiddle` | `лівий середній` | `app.js:6` | динамічний |  |
-| `keyboard.finger.leftIndex` | `лівий вказівний` | `app.js:6` | динамічний |  |
-| `keyboard.finger.rightIndex` | `правий вказівний` | `app.js:6` | динамічний |  |
-| `keyboard.finger.rightMiddle` | `правий середній` | `app.js:6` | динамічний |  |
-| `keyboard.finger.rightRing` | `правий безіменний` | `app.js:6` | динамічний |  |
-| `keyboard.finger.rightPinky` | `правий мізинець` | `app.js:6` | динамічний |  |
-| `keyboard.keyTip` | `{alt?alt.toUpperCase()+' — AltGr + '+ch.toUpperCase()+', ':ch.toUpperCase()+' — '}{names[fingers[i]]}. Після натискання поверни палець у домашню позицію.` | `app.js:7 → #key-tip` | динамічний | розбити на `keyboard.keyTip` і `keyboard.keyTipAltGr` з параметрами {key}, {base}, {finger} |
-| `keyboard.space` | `пробіл` | `app.js:7` | динамічний |  |
-| `keyboard.spaceTip` | `Пробіл — великий палець. Обери зручний для себе.` | `app.js:7 → #key-tip` | динамічний |  |
-| `keyboard.homeUk` | `Домашня позиція: Ф І В А · О Л Д Ж.` | `app.js:9 → #key-tip` | динамічний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
-| `keyboard.homeLatin` | `Домашня позиція: A S D F · J K L ;` | `app.js:9 → #key-tip` | динамічний | той самий рядок двічі — один ключ |
-| `keyboard.notePl` | `Польська програміста (QWERTY): ą ć ę ł ń ó ś ź ż — правий Alt (AltGr) + a c e l n o s x z у Windows, Option + ті самі клавіші в розкладці «Polish Pro» на macOS. Розкладка «Polish» на macOS влаштована інакше. Схема не перемикає розкладку ОС.` | `app.js:9 → #layout-note` | динамічний |  |
-| `keyboard.noteUk` | `Українська ЙЦУКЕН. Ґ та апостроф залежать від варіанта розкладки ОС. Схема показує літерні зони.` | `app.js:9` | динамічний |  |
-| `keyboard.noteEn` | `Англійська QWERTY. Виступи на F та J допомагають знайти домашній ряд навпомацки.` | `app.js:9` | динамічний |  |
-| `keyboard.altgrTip` | `Шар AltGr: польську літеру набирає той самий палець, що й базову, з затиснутим AltGr (на macOS — Option).` | `app.js:10 → #key-tip` | динамічний |  |
-| `keyboard.homeLatin` | `Домашня позиція: A S D F · J K L ;` | `app.js:10` | динамічний | той самий рядок двічі — один ключ |
-| `calculator.minutes` | `{Math.round(d*5)} хв` | `app.js:12 → #saved-week` | динамічний | параметр {minutes} |
-| `calculator.hoursMinutes` | `{Math.floor(m/60)} год {m%60} хв` | `app.js:12 → #saved-month` | динамічний | параметри {hours}, {minutes} |
-| `calculator.errorInvalid` | `Введи коректні додатні швидкості та невід’ємний обсяг тексту.` | `app.js:12 → #calc-note` | динамічний |  |
-| `calculator.errorTarget` | `Щоб заощадити час, бажана швидкість має бути вищою.` | `app.js:12 → #calc-note` | динамічний |  |
-| `calculator.result` | `Більше часу на те, що має значення.` | `app.js:12` | динамічний |  |
-| `— (passage)` | `Кожна нова навичка починається з маленького кроку. Поклади пальці на клавіатуру, розслаб плечі та дивись на текст. Друкуй уважно і спокійно. Нехай руки запам\'ятовують рух, а думки залишаються вільними. Точність важливіша за поспіх. Щоденна практика допомагає краще відчувати ритм. ` | `app.js:13` | вправа | текст тесту; окремий текст для кожної мови (FR-08) |
-| `test.timeUp` | `Час вийшов! Тест завершено.` | `app.js:19 → #finish-title` | динамічний |  |
-| `test.textDone` | `Текст завершено!` | `app.js:19 → #finish-title` | динамічний |  |
-| `test.summary` | `{$('#spm').textContent} SPM · {$('#wpm').textContent} WPM · точність {$('#accuracy').textContent} · символи: {$('#characters').textContent}.` | `app.js:19 → #finish-summary` | динамічний | параметри {spm}, {wpm}, {accuracy}, {characters} |
-| `test.statusDone` | `Результат зафіксовано. Розпочни новий тест, коли будеш готовий.` | `app.js:19 → #test-status` | динамічний |  |
-| `test.durationLabel` | `{duration} секунд` | `app.js:20 → #duration-label` | динамічний | множина: {seconds} |
-| `test.statusReady` | `Друкуй протягом {duration} секунд. Таймер почнеться з першого символу.` | `app.js:20 → #test-status` | динамічний | множина: {seconds} |
-| `test.statusRunning` | `Тест триває. Не поспішай — тримай рівний ритм.` | `app.js:22 → #test-status` | динамічний |  |
-| `plan.progress` | `{days.length} / 30 днів` | `app.js:24 → #progress-label` | динамічний | множина: {done} |
-| `plan.dayLabel` | `День {i}: позначити практику` | `app.js:25` | динамічний | параметр {day} |
-| `plan.storageError` | `Браузер не дозволяє збереження. Прогрес доступний лише до закриття сторінки.` | `app.js:25 → #storage-note` | динамічний |  |
-| `trainers.iconAlt` | `Піктограма {d.name}` | `app.js:26` | динамічний | параметр {name} |
-| `trainers.imageAltFallback` | `{d.name}: ілюстрація можливостей тренажера` | `app.js:26` | динамічний | параметр {name} |
-| `trainers.placeholderKeys` | `ф і в а` | `app.js:26` | динамічний | домашні клавіші мови сторінки: «a s d f» для en і pl; клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
-| `trainers.tag` | `0{i+1} / {i===2?'НАВЧАННЯ ЧЕРЕЗ ГРУ':i===4?'ТРИ МОВИ':i===3?'МЕТОДИЧНА ПРАКТИКА':i===1?'АНАЛІТИКА ТА ПЕРЕГОНИ':'ПОСЛІДОВНИЙ КУРС'}` | `app.js:26` | динамічний | 5 міток у тернарному виразі за індексом тренажера; перенести в `catalog.json` (T14) |
-| `trainers.linkOpen` | `Відкрити тренажер ↗` | `app.js:26` | динамічний |  |
-| `trainers.linkGithubPrivate` | `GitHub · приватний ↗` | `app.js:26` | динамічний |  |
-| `trainers.linkAlternative` | `Альтернативна версія ↗` | `app.js:26` | динамічний |  |
-| `trainers.linkGuide` | `Інструкція ↗` | `app.js:26` | динамічний |  |
-| `trainers.loadError` | `Не вдалося завантажити каталог. Онови сторінку.` | `app.js:26 → #catalog` | динамічний |  |
-| `calculator.currentLabelWpm` | `Поточна швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #current-label` | динамічний | і `calculator.currentLabelSpm`: T07 розбиває тернарний вираз на два повних речення |
-| `calculator.targetLabelWpm` | `Бажана швидкість, {next==='spm'?'символів/хв (SPM)':'слів/хв (WPM)'}` | `app.js:29 → #target-label` | динамічний | і `calculator.targetLabelSpm`: T07 розбиває тернарний вираз на два повних речення |
-| `calculator.volumeLabelWords` | `Обсяг тексту за день, {next==='spm'?'символів':'умовних слів'}` | `app.js:29 → #volume-label` | динамічний | і `calculator.volumeLabelChars`: T07 розбиває тернарний вираз на два повних речення |
-| `song.part.intro` | `Вступ` | `app.js:31` | динамічний |  |
-| `song.part.verse1` | `Куплет 1` | `app.js:31` | динамічний |  |
-| `song.part.verse2` | `Куплет 2` | `app.js:31` | динамічний |  |
-| `song.part.preChorus` | `Передприспів` | `app.js:31` | динамічний |  |
-| `song.part.chorus` | `Приспів` | `app.js:31` | динамічний |  |
-| `song.part.bridge` | `Бридж` | `app.js:31` | динамічний |  |
-| `song.part.finalChorus` | `Фінальний приспів` | `app.js:31` | динамічний |  |
-| `song.part.outro` | `Кінцівка` | `app.js:31` | динамічний |  |
-| `music.audioLabel` | `Пісня {d.title}` | `app.js:31` | динамічний | параметр {title} |
-| `music.coverAlt` | `Обкладинка пісні {d.title}` | `app.js:31` | динамічний | параметр {title} |
+| `— (layouts)` | `йцукенгшщзхї` | `app.js:7` | дані | символи розкладки, не перекладаються |
+| `— (layouts)` | `фівапролджє` | `app.js:7` | дані | символи розкладки, не перекладаються |
+| `— (layouts)` | `ячсмитьбю.` | `app.js:7` | дані | символи розкладки, не перекладаються |
+| `— (passage)` | `Кожна нова навичка починається з маленького кроку. Поклади пальці на клавіатуру, розслаб плечі та дивись на текст. Друкуй уважно і спокійно. Нехай руки запам\'ятовують рух, а думки залишаються вільними. Точність важливіша за поспіх. Щоденна практика допомагає краще відчувати ритм. ` | `app.js:15` | вправа | текст тесту; окремий текст для кожної мови (FR-08) |
+
+## messages
+
+| Ключ | Текст | Де | Тип | Примітка |
+|---|---|---|---|---|
+| `keyboard.finger.leftPinky` | `лівий мізинець` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.leftRing` | `лівий безіменний` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.leftMiddle` | `лівий середній` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.leftIndex` | `лівий вказівний` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.rightIndex` | `правий вказівний` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.rightMiddle` | `правий середній` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.rightRing` | `правий безіменний` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.finger.rightPinky` | `правий мізинець` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.keyTip` | `{key} — {finger}. Після натискання поверни палець у домашню позицію.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.keyTipAltGr` | `{key} — AltGr + {base}, {finger}. Після натискання поверни палець у домашню позицію.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.space` | `пробіл` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.spaceTip` | `Пробіл — великий палець. Обери зручний для себе.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.homeUk` | `Домашня позиція: Ф І В А · О Л Д Ж.` | `index.html <script#i18n-messages>` | динамічний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
+| `keyboard.homeLatin` | `Домашня позиція: A S D F · J K L ;` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.noteUk` | `Українська ЙЦУКЕН. Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС.` | `index.html <script#i18n-messages>` | динамічний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
+| `keyboard.noteEn` | `Англійська QWERTY. Виступи на F та J допомагають знайти домашній ряд навпомацки.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.notePl` | `Польська програміста (QWERTY): ą ć ę ł ń ó ś ź ż — правий Alt (AltGr) + a c e l n o s x z у Windows, Option + ті самі клавіші в розкладці «Polish Pro» на macOS. Розкладка «Polish» на macOS влаштована інакше. Схема не перемикає розкладку ОС.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `keyboard.altgrTip` | `Шар AltGr: польську літеру набирає той самий палець, що й базову, з затиснутим AltGr (на macOS — Option).` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.minutes` | `{minutes} хв` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.hoursMinutes` | `{hours} год {minutes} хв` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.errorInvalid` | `Введи коректні додатні швидкості та невід’ємний обсяг тексту.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.errorTarget` | `Щоб заощадити час, бажана швидкість має бути вищою.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.result` | `Більше часу на те, що має значення.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.currentLabelWpm` | `Поточна швидкість, слів/хв (WPM)` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.currentLabelSpm` | `Поточна швидкість, символів/хв (SPM)` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.targetLabelWpm` | `Бажана швидкість, слів/хв (WPM)` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.targetLabelSpm` | `Бажана швидкість, символів/хв (SPM)` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.volumeLabelWords` | `Обсяг тексту за день, умовних слів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `calculator.volumeLabelChars` | `Обсяг тексту за день, символів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.timeUp` | `Час вийшов! Тест завершено.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.textDone` | `Текст завершено!` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.summary` | `{spm} SPM · {wpm} WPM · точність {accuracy} · символи: {characters}.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.statusDone` | `Результат зафіксовано. Розпочни новий тест, коли будеш готовий.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `test.durationLabel` | `one: {seconds} секунда / few: {seconds} секунди / many: {seconds} секунд / other: {seconds} секунди` | `index.html <script#i18n-messages>` | динамічний | форми множини |
+| `test.statusReady` | `one: Друкуй протягом {seconds} секунди. Таймер почнеться з першого символу. / few: Друкуй протягом {seconds} секунд. Таймер почнеться з першого символу. / many: Друкуй протягом {seconds} секунд. Таймер почнеться з першого символу. / other: Друкуй протягом {seconds} секунди. Таймер почнеться з першого символу.` | `index.html <script#i18n-messages>` | динамічний | форми множини |
+| `test.statusRunning` | `Тест триває. Не поспішай — тримай рівний ритм.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `plan.progress` | `{done} / 30 днів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `plan.dayLabel` | `День {day}: позначити практику` | `index.html <script#i18n-messages>` | динамічний |  |
+| `plan.storageError` | `Браузер не дозволяє збереження. Прогрес доступний лише до закриття сторінки.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.iconAlt` | `Піктограма {name}` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.imageAltFallback` | `{name}: ілюстрація можливостей тренажера` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.placeholderKeys` | `ф і в а` | `index.html <script#i18n-messages>` | динамічний | клавіші домашнього ряду UK: для en/pl — A S D F · J K L ; |
+| `trainers.tag.course` | `ПОСЛІДОВНИЙ КУРС` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.tag.analytics` | `АНАЛІТИКА ТА ПЕРЕГОНИ` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.tag.game` | `НАВЧАННЯ ЧЕРЕЗ ГРУ` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.tag.method` | `МЕТОДИЧНА ПРАКТИКА` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.tag.languages` | `ТРИ МОВИ` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.linkOpen` | `Відкрити тренажер ↗` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.linkGithubPrivate` | `GitHub · приватний ↗` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.linkAlternative` | `Альтернативна версія ↗` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.linkGuide` | `Інструкція ↗` | `index.html <script#i18n-messages>` | динамічний |  |
+| `trainers.loadError` | `Не вдалося завантажити каталог. Онови сторінку.` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.intro` | `Вступ` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.verse1` | `Куплет 1` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.verse2` | `Куплет 2` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.preChorus` | `Передприспів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.chorus` | `Приспів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.bridge` | `Бридж` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.finalChorus` | `Фінальний приспів` | `index.html <script#i18n-messages>` | динамічний |  |
+| `song.part.outro` | `Кінцівка` | `index.html <script#i18n-messages>` | динамічний |  |
+| `music.audioLabel` | `Пісня {title}` | `index.html <script#i18n-messages>` | динамічний |  |
+| `music.coverAlt` | `Обкладинка пісні {title}` | `index.html <script#i18n-messages>` | динамічний |  |
 
 ## catalog.json
 

@@ -230,6 +230,21 @@ for (const l of lits) {
 }
 if (unmapped.length) process.stderr.write("Без ключа: " + unmapped.join(" | ") + "\n");
 
+// Вбудований український словник динамічних рядків (T07): <script type="application/json" id="i18n-messages">.
+const messagesRaw = (html.match(/<script type="application\/json" id="i18n-messages">([\s\S]*?)<\/script>/) || [])[1];
+const messages = messagesRaw ? JSON.parse(messagesRaw) : {};
+for (const [key, value] of Object.entries(messages)) {
+  rows.push({ section: "messages", key, where: "index.html <script#i18n-messages>", type: "динамічний", text: typeof value === "string" ? value : Object.entries(value).map(([k, v]) => `${k}: ${v}`).join(" / "), note: typeof value === "string" ? "" : "форми множини" });
+}
+// Статичний текст у HTML із ключем словника має збігатися зі значенням словника.
+const plurals = new Intl.PluralRules("uk");
+const format = (m, params = {}) => {
+  if (typeof m === "object") { const n = Object.values(params).find(v => typeof v === "number"); m = m[plurals.select(n ?? 0)] ?? m.other; }
+  return m.replace(/\{(\w+)\}/g, (s, p) => p in params ? String(params[p]) : s);
+};
+const mismatches = rows.filter(r => r.node && messages[r.key] !== undefined && format(messages[r.key], r.params) !== r.text).map(r => `${r.key}: HTML «${r.text}» ≠ словник «${format(messages[r.key], r.params)}»`);
+export { messages, mismatches };
+
 // catalog.json: текстові поля тренажерів.
 const catalog = JSON.parse(fs.readFileSync("catalog.json", "utf8"));
 catalog.forEach((t, i) => {
@@ -258,7 +273,7 @@ for (const r of rows) {
 
 // Розбіжності між початковим текстом у HTML і текстом, який app.js показує для того самого стану.
 const FINDINGS = [
-  ["`learn.layoutNote` ≠ `keyboard.noteUk`", "Примітка до схеми UK при першому відкритті: «…Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС.»; після повернення на UK — «…Ґ та апостроф залежать від варіанта розкладки ОС. Схема показує літерні зони.»", "Вибрати один текст до T07; тоді `learn.layoutNote` зливається з `keyboard.noteUk`"],
+  ["`learn.layoutNote` ≠ `keyboard.noteUk`", "Примітка до схеми UK мала два тексти: при першому відкритті й після повернення на UK", "Вирішено (C8, T07): один ключ `keyboard.noteUk` з текстом першого відкриття"],
   ["`learn.keyTip` ≠ `keyboard.homeUk`", "Підказка при першому відкритті — «А та О: вказівні пальці. Знайди виступи на клавішах F і J.»; після повернення на UK — «Домашня позиція: Ф І В А · О Л Д Ж.»", "Прийнятно як два різні повідомлення; лишити обидва ключі"],
   ["`test.testStatus` ≠ `test.statusReady`", "До першого тесту — «Таймер почнеться з першого символу.»; після скидання — «Друкуй протягом {seconds} секунд. Таймер почнеться з першого символу.»", "Прийнятно; лишити обидва ключі"]
 ];
@@ -285,14 +300,14 @@ out.push("| Тип | Що це | Кількість | Перекладаєтьс
 out.push("|---|---|---|---|");
 out.push(`| статичний | текст у HTML | ${by("статичний")} | так |`);
 out.push(`| атрибут | \`alt\`, \`aria-label\`, \`content\` у HTML | ${by("атрибут")} | так |`);
-out.push(`| динамічний | рядки в \`app.js\` | ${by("динамічний")} | так |`);
+out.push(`| динамічний | словник \`#i18n-messages\` у \`index.html\` для \`app.js\` (T07) | ${by("динамічний")} | так |`);
 out.push(`| каталог | описи, переваги, \`imageAlt\` у \`catalog.json\` | ${by("каталог")} | так (T14) |`);
 out.push(`| вправа | текст швидкісного тесту | ${by("вправа")} | ні — окремий текст для кожної мови (T15, T18) |`);
 out.push(`| дані | символи розкладки \`uk\` | ${by("дані")} | ні |`);
 out.push(`| оригінал | назви пісень, назви тренажерів, імена авторів | ${by("оригінал")} | ні |`);
 out.push(`| **Разом** | | **${rows.length}** | **${by("статичний") + by("атрибут") + by("динамічний") + by("каталог")}** |`);
 out.push("");
-out.push(`Шаблони пісень (\`<template class="song-data">\`, ${templates} шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — у \`app.js\` (\`songParts\`).`);
+out.push(`Шаблони пісень (\`<template class="song-data">\`, ${templates} шт.) — оригінальний контент, до інвентаря не входять; їхні підписи частин — ключі \`song.part.*\` у словнику.`);
 out.push("");
 out.push("### Звірка з умовою Done");
 out.push("");
@@ -309,7 +324,7 @@ const uniqueKeys = new Set(rows.filter(r => !r.key.startsWith("—")).map(r => r
 out.push("");
 out.push(`Унікальних ключів для перекладу: ${uniqueKeys}. Спільні ключі (той самий рядок у кількох місцях — очікувано): ${dupKeys.length ? dupKeys.map(([k, n]) => "`" + k + "` ×" + n).join(", ") : "немає"}. Літералів \`app.js\` без ключа: ${unmapped.length}.`);
 out.push("");
-out.push("## Розбіжності, які треба вирішити до T07");
+out.push("## Розбіжності між початковим текстом HTML і текстом app.js");
 out.push("");
 out.push("| Що | Факт | Рекомендація |");
 out.push("|---|---|---|");
@@ -317,7 +332,7 @@ for (const f of FINDINGS) out.push(`| ${f[0]} | ${esc(f[1])} | ${esc(f[2])} |`);
 out.push("");
 out.push("Інші особливості:");
 out.push("");
-out.push("- **T07:** `keyboard.keyTip`, `calculator.*Label` і `trainers.tag` містять у шаблоні вкладені тернарні вирази — перед перекладом їх треба розкласти на окремі ключі з параметрами (див. примітки в таблиці `app.js`).");
+out.push(`- **Перевірка словника:** статичних одиниць HTML із ключем словника — ${rows.filter(r => r.node && messages[r.key] !== undefined).length}, розбіжностей зі словником — ${mismatches.length}${mismatches.length ? ": " + mismatches.join("; ") : ""}.`);
 out.push(`- **Заповнювачі:** ${rows.filter(r => r.protectedCount).length} одиниць містять вкладені елементи з \`id\` або \`<input>\`. У тексті перекладу вони записані як \`{$1}\`, \`{$2}\`…; генератор (T08) підставляє на їхнє місце оригінальну розмітку. Тексти самих вкладених елементів — окремі ключі.`);
 out.push(`- **SC-02:** кириличні власні назви на сторінці позначено \`lang="uk"\` (T06); у перекладах назви «Соло», «Гами» тощо треба брати в \`<span lang="uk">\`.`);
 out.push(`- **Переклад:** ${rows.filter(r => /домашнього ряду UK/.test(r.note)).length} одиниць згадують клавіші Ф І В А · О Л Д Ж — для en/pl їх треба замінити на A S D F · J K L ;, а не перекладати дослівно.`);

@@ -1,0 +1,7 @@
+steps 28 28 | equal fields 148 | differing 21
+- 19× layoutNote: "Українська ЙЦУКЕН. Ґ та апостроф залежать від варіанта розкладки ОС. Схема показує літерні зони." → "Українська ЙЦУКЕН. Домашній ряд: Ф І В А · О Л Д Ж. Ґ може потребувати окремої клавіші або комбінації залежно від ОС." 
+   steps: layout uk again, calc initial, calc 40/60/1000, calc target lower, calc invalid, calc spm, calc wpm, test initial, test 60s, test typing, test finish, test restart, test 30s, plan initial, plan day 1, song 0, song 1, song 2, catalog
+- 1× titleLang: "uk" → "pl" 
+   steps: song 1
+- 1× titleLang: "uk" → "en" 
+   steps: song 2
