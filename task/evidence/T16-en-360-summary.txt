@@ -1,0 +1,8 @@
+light initial              vw 360 sw 360 dark false | clipped 0 beyond 0 leaks 0
+light pl + AltGr + ą       vw 360 sw 360 dark false | clipped 0 beyond 0 leaks 0
+light calc spm + invalid   vw 360 sw 360 dark false | clipped 0 beyond 0 leaks 0
+light test finished        vw 360 sw 360 dark false | clipped 0 beyond 0 leaks 0
+dark initial              vw 360 sw 360 dark true | clipped 0 beyond 0 leaks 0
+dark pl + AltGr + ą       vw 360 sw 360 dark true | clipped 0 beyond 0 leaks 0
+dark calc spm + invalid   vw 360 sw 360 dark true | clipped 0 beyond 0 leaks 0
+dark test finished        vw 360 sw 360 dark true | clipped 0 beyond 0 leaks 0

@@ -8,6 +8,7 @@
   const keyByChar = c => $$('#keyboard .key').find(k => k.dataset.char === c);
 
   snap('initial', { keyLabels: keyLabels() });
+  if (!keyByChar('ф')) $('[data-layout="uk"]').click(); // en/pl-сторінки починають з QWERTY (T13); на uk нічого не змінює
   keyByChar('ф').click(); snap('click ф');
   $('#keyboard .key.space').click(); snap('click space');
   $('[data-layout="en"]').click(); snap('layout en', { keyLabels: keyLabels() });

@@ -1,0 +1,1 @@
++="alternate" hreflang="uk" href="https://stszu.github.io/Typing-Race-2026-Hackathon/"><link rel="alternate" hreflang="en" href="https://stszu.github.io/Typing-Race-2026-Hackathon/en/"><link rel="alternate" hreflang="x-default" href="https://stszu.github.io/Typing-Race-2026-Hackathon/"><meta property="og:locale:alternate" content="en_US"><link rel

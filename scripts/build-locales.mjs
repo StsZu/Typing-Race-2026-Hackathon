@@ -1,6 +1,7 @@
 // Генерує мовні версії головної сторінки (en/index.html, pl/index.html) з index.html і locales/<lang>.json.
 //   node scripts/build-locales.mjs              — зібрати всі мови з locales/
 //   node scripts/build-locales.mjs --verify-uk  — зібрати українську з власних рядків і звірити з index.html
+//   node scripts/build-locales.mjs --check      — не записувати, а перевірити, що <lang>/index.html збігаються зі збіркою
 //   node scripts/build-locales.mjs --pseudo     — псевдолокаль qps/index.html для перевірки верстки (не публікується, у .gitignore)
 import fs from "node:fs";
 import path from "node:path";
@@ -91,8 +92,15 @@ for (const lang of langs) {
   const { missing } = built;
   const html = localizeHead(built.html, lang);
   if (missing.length) { console.error(`${lang}: немає перекладу для ${missing.length} ключів: ${missing.join(", ")}`); failed = true; continue; }
+  const target = path.join(root, lang, "index.html");
+  if (process.argv.includes("--check")) {
+    const current = fs.existsSync(target) ? fs.readFileSync(target, "utf8") : null;
+    if (current !== html) { console.error(`${lang}: ${lang}/index.html ${current === null ? "відсутній" : "застарів"} — запустіть node scripts/build-locales.mjs`); failed = true; }
+    else console.log(`${lang}: ${lang}/index.html актуальний`);
+    continue;
+  }
   fs.mkdirSync(path.join(root, lang), { recursive: true });
-  fs.writeFileSync(path.join(root, lang, "index.html"), html);
+  fs.writeFileSync(target, html);
   console.log(`${lang}: ${lang}/index.html`);
 }
 process.exit(failed ? 1 : 0);

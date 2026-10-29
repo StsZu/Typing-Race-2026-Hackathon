@@ -1,0 +1,18 @@
+== en-root
+  /en/ lang en | Touch Typing — A Skill for the Digital Age
+  canonical https://stszu.github.io/Typing-Race-2026-Hackathon/en/ | og:url https://stszu.github.io/Typing-Race-2026-Hackathon/en/ | og:locale en_US alt uk_UA
+  hreflang uk=https://stszu.github.io/Typing-Race-2026-Hackathon/ en=https://stszu.github.io/Typing-Race-2026-Hackathon/en/ x-default=https://stszu.github.io/Typing-Race-2026-Hackathon/
+  switcher Українська→/ English*→/en/
+  images 11 broken 0 | resources 13 failed [] | styles true | cards 5
+== en-subdir
+  /Typing-race-2026-hackathon/en/ lang en | Touch Typing — A Skill for the Digital Age
+  canonical https://stszu.github.io/Typing-Race-2026-Hackathon/en/ | og:url https://stszu.github.io/Typing-Race-2026-Hackathon/en/ | og:locale en_US alt uk_UA
+  hreflang uk=https://stszu.github.io/Typing-Race-2026-Hackathon/ en=https://stszu.github.io/Typing-Race-2026-Hackathon/en/ x-default=https://stszu.github.io/Typing-Race-2026-Hackathon/
+  switcher Українська→/Typing-race-2026-hackathon/ English*→/Typing-race-2026-hackathon/en/
+  images 11 broken 0 | resources 14 failed ["404 /favicon.ico"] | styles true | cards 5
+== uk-subdir
+  /Typing-race-2026-hackathon/ lang uk | Сенсорний друк — навичка цифрової епохи
+  canonical https://stszu.github.io/Typing-Race-2026-Hackathon/ | og:url https://stszu.github.io/Typing-Race-2026-Hackathon/ | og:locale uk_UA alt en_US
+  hreflang uk=https://stszu.github.io/Typing-Race-2026-Hackathon/ en=https://stszu.github.io/Typing-Race-2026-Hackathon/en/ x-default=https://stszu.github.io/Typing-Race-2026-Hackathon/
+  switcher Українська*→/Typing-race-2026-hackathon/ English→/Typing-race-2026-hackathon/en/
+  images 11 broken 0 | resources 13 failed [] | styles true | cards 5
